@@ -1,0 +1,102 @@
+.errorAlert{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 9999;
+	transition: 2s;
+}
+
+.avatar {
+	width: 100px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.avatar img{
+	width: 100%;
+}
+
+.error {
+	color: red;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.imageForm{
+	max-width: 100%;
+	max-height: 300px;
+}
+
+.avatarImg100{
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	border-radius: 50%;
+}
+.avatarImg50{
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 50%;
+}
+.avatarImgSidebar{
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 50%;
+}
+.magazineImg{
+	height: 60px;
+
+}
+.magazineImg img{
+	height: 100%;
+}
+
+.modal_item{
+	margin: 10px;
+}
+.modal_item_title{
+	font-weight: bold;
+}
+.timeTiny{
+	font-size: 12px;
+    color: #999;
+}
+.nowrap{
+	white-space: nowrap;
+}
+.a_hover a:hover {
+	color: #007bff !important;
+}
+.report{
+	float: left;
+	margin-right: 10px;
+}
+#table_report .text-success{
+	font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+#table_report .text-success span {
+	position: absolute;
+    color: transparent;
+}
+@media only screen and (max-width: 768px) {
+	.hideResponsive768{
+		display: none;
+	}
+	.titleTable{
+		min-width: 212px;
+	}
+	.card-body{
+		overflow-x: scroll;
+	}
+	/*.table{
+		min-width: 1140px;
+		}*/
+}
+
+
+.index_master{
+	color: red;
+}
