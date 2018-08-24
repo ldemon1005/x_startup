@@ -15,7 +15,12 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
     Route::get('','IndexController@index')->name('admin');
     Route::group(['prefix' => 'account'],function (){
         Route::get('','AccountController@index')->name('list_user');
-        Route::get('/update_status/{id}','AccountController@update_status')->name('update_status');
+        Route::get('/update_status_account/{id}','AccountController@update_status')->name('update_status_account');
+    });
+
+    Route::group(['prefix' => 'group'],function (){
+        Route::get('','GroupController@index')->name('list_group');
+        Route::get('/update_status_group/{id}','GroupController@update_status')->name('update_status_group');
     });
 });
 
