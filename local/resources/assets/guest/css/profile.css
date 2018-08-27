@@ -80,5 +80,58 @@
 /*password*/
 
 .change-pass-form h5{
+    font-size: var(--font-size-4);
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 80px;
+    text-align: center;
+}
 
+.change-pass-form h5:after{
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 500px;
+    left:50%;
+    transform: translateX(-50%);
+    top: calc(100% + 40px);
+    background-color: var(--bg-4);
+}
+
+.change-pass-form input{
+    height: 56px;
+    line-height: 56px;
+    width: 100%;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #666;
+    padding: 0 20px;
+}
+
+.change-pass-form .group{
+    margin-bottom: 20px;
+}
+
+.change-pass-form .btn a, .change-pass-form .btn button{
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    width: 250px;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+.change-pass-form .btn{
+    text-align: center;
+    width: 100%;
+}
+.change-pass-form .btn a{
+    border: 1px solid #666;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+}
+.change-pass-form .btn button{
+    color: #FFF;
+    background-color: var(--bg-4);
+    border:none;
 }

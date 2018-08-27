@@ -47,5 +47,5 @@ Route::get('home',function(){
     return view('guest.home');
 });
 Route::get('test',function(){
-    return view('client.profile');
+    return view('client.password');
 });

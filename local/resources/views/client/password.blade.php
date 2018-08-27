@@ -34,13 +34,18 @@
                         </div>
 
                         <div class="group">
-                            <label>Mật khẩu cũ</label>
+                            <label>Mật khẩu mới</label>
                             <input type="password" name="">
                         </div>
 
                         <div class="group">
-                            <label>Mật khẩu cũ</label>
+                            <label>Nhập lại mật khẩu</label>
                             <input type="password" name="">
+                        </div>
+
+                        <div class="group btn">
+                            <a href="">Không</a>
+                            <button>Đổi mật khẩu</button>
                         </div>
                     </form>
                 </div>
