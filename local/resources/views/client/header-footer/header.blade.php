@@ -10,6 +10,8 @@
             <div class="login">
                 <a class="login-btn" href="">Đăng nhập</a>
                 <a class="signup-btn" href="">Đăng ký</a>
+
+                <a class="user">Cao T.Linh <span class="ava" style="background-image: url('');"></span></a>
             </div>
         </div>
     </section>
