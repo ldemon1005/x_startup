@@ -13,6 +13,7 @@
                     <a class="signup-btn" href="{{route('register_client')}}">Đăng ký</a>
                 @endif
 
+                <a class="user">Cao T.Linh <span class="ava" style="background-image: url('');"></span></a>
             </div>
         </div>
     </section>

@@ -717,3 +717,20 @@
 	background-color: var(--bg-4);
 	text-decoration: none;
 }
+
+#header .user{
+	color: var(--text-2);
+	font-weight: bold;
+}
+
+#header .user .ava{
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	background-color: var(--bg-4);
+	line-height: 35px;
+	color:#FFF;
+	position:relative;
+	border-radius: 50%;
+	transform: translateY(15px);
+}

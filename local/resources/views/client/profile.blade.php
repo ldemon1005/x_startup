@@ -31,31 +31,36 @@
                 <div class="row">
                     <div class="col-12 col-md-3 col-lg-3">
                         <div class="avatar-block">
-                            <div class="avatar" style="background-image: url(https://orig00.deviantart.net/7676/f/2015/336/6/e/beautiful_in_white_by_bwaworga-d9irza9.jpg);"></div>
+                            <div class="avatar"
+                                 style="background-image: url(https://orig00.deviantart.net/7676/f/2015/336/6/e/beautiful_in_white_by_bwaworga-d9irza9.jpg);"></div>
                             <a class="avatar-btn">Up avatar</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-8 offset-md-1">
-                        <h6>Cao T.Ling</h6>
-                        <div class="group">
-                            <label>Mail</label>
-                            <input type="email" name="">
-                        </div>
+                        <form class="profile-form">
+                            <h6>Cao T.Ling</h6>
+                            <div class="group">
+                                <label>Mail</label>
+                                <input type="email" name="">
+                            </div>
 
-                        <div class="group">
-                            <label>Phone</label>
-                            <input type="text" name="">
-                        </div>
+                            <div class="group">
+                                <label>Phone</label>
+                                <input type="text" name="">
+                            </div>
 
-                        <div class="group">
-                            <label>CMND</label>
-                            <input type="text" name="">
-                        </div>
+                            <div class="group">
+                                <label>CMND</label>
+                                <input type="text" name="">
+                            </div>
 
-                        <div class="group">
-                            <label>Facebook</label>
-                            <input type="text" name="">
-                        </div>
+                            <div class="group">
+                                <label>Facebook</label>
+                                <input type="text" name="">
+                            </div>
+
+                            <button>Lưu thay đổi</button>
+                        </form>
                     </div>
                 </div>
             </div>
