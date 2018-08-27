@@ -384,9 +384,11 @@
 
 
 /*home*/
-
 .section-2{
 
+}
+.content{
+	position: relative;
 }
 .introduce{
 	text-align: center;
