@@ -107,11 +107,9 @@
     border: 1px solid #666;
     padding: 0 20px;
 }
-
 .change-pass-form .group{
     margin-bottom: 20px;
 }
-
 .change-pass-form .btn a, .change-pass-form .btn button{
     display: inline-block;
     height: 56px;
