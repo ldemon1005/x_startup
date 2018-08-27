@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/home.css">
 @stop
 @section('js')
-    <script type="text/javascript" src="{{ asset('local/resources/assets/guest/js') }}/home.js"></script>
+
 @stop
 @section('main')
     <div id="main">

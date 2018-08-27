@@ -34,7 +34,7 @@
 $("#create_question").validate({
     ignore: [],
     rules: {
-        'name': {
+        'fullname': {
             required: true
         },
         'email': {
@@ -46,7 +46,7 @@ $("#create_question").validate({
         }
     },
     messages: {
-        'name': {
+        'fullname': {
             required: 'Vui lòng nhập họ và tên'
         },
         'email': {
@@ -56,5 +56,73 @@ $("#create_question").validate({
         'content': {
             required: 'Vui lòng nhập nội dung câu hỏi'
         }
+    }
+});
+
+$("#login").validate({
+    ignore: [],
+    rules: {
+        'email': {
+            required: true
+        },
+        'password': {
+            required: true,
+        }
+    },
+    messages: {
+        'email': {
+            required: 'Vui lòng nhập tên đăng nhập'
+        },
+        'password': {
+            required: 'Vui lòng nhập mật khẩu'
+        }
+    }
+});
+
+$("#register").validate({
+    ignore: [],
+    rules: {
+        'fullname': {
+            required: true
+        },
+        'email': {
+            required: true,
+            email : true
+        },
+        'password': {
+            required: true,
+        },
+        'password_1': {
+            required: true,
+            equalTo: "#password"
+        },
+        'card_id': {
+            required: true
+        },
+        'phone': {
+            required: true
+        },
+    },
+    messages: {
+        'fullname': {
+            required: 'Vui lòng nhập họ và tên'
+        },
+        'email': {
+            required: 'Vui lòng nhập email',
+            email: 'Email không đúng định dạng'
+        },
+        'password': {
+            required: 'Vui lòng nhập mật khẩu',
+        },
+        'password_1': {
+            required: 'Vui lòng xác nhận lại mật khẩu',
+            equalTo: "Mật khẩu nhập lại không đúng"
+        },
+        'card_id': {
+            required: 'Vui lòng nhập số chứng minh nhân dân'
+        },
+        'phone': {
+            required: 'Vui lòng nhập số điện thoại'
+        },
     }
 });

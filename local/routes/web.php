@@ -46,7 +46,9 @@ Route::group(['namespace' => 'Client'],function (){
     Route::post('action_question','IndexController@action_question')->name('action_question');
 
     Route::get('login_client','AuthController@form_login')->name('login_client');
+    Route::post('post_login_client','AuthController@login')->name('post_login_client');
     Route::get('register_client','AuthController@form_register')->name('register_client');
+    Route::post('post_register_client','AuthController@register')->name('post_register_client');
 });
 
 
