@@ -1,0 +1,40 @@
+.glitch{
+    height: 70vh;
+}
+.glitch__img{
+    height: calc(70vh + 20px);
+}
+.xstartup{
+    height: 50vh;
+}
+.avatar-block{
+    text-align: center;
+}
+.avatar{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    width: 100%;
+}
+.avatar:after{
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+.avatar-btn{
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    width: 150px;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+    margin-top: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.name{
+    font-size: var(--font-size-5);
+}
