@@ -55,7 +55,7 @@
                 <li class="nav-item has-treeview">
                     <a href="#"
                        class="nav-link @if (Request::segment(2) == 'group') active @endif">
-                        <i class="fa fa-user"></i>
+                        <i class="fa fa-users"></i>
                         <p>
                             Quản lý nhóm
                             <i class="right fa fa-angle-left"></i>
@@ -63,18 +63,30 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('list_user')}}" class="nav-link">
+                            <a href="{{route('list_group')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Danh sách nhóm</p>
                             </a>
                         </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#"
+                       class="nav-link @if (Request::segment(2) == 'question') active @endif">
+                        <i class="fa fa-question"></i>
+                        <p>
+                            Quản phản hồi
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('list_question')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Thêm mới</p>
+                                <p>Danh sách phản hồi</p>
                             </a>
                         </li>
-
                     </ul>
                 </li>
 

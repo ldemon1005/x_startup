@@ -46,6 +46,10 @@
 
     <!-- Main Footer -->
     @include('admin.layouts.footer')
+
+    <div class="errorAlert">
+        @include('errors.note')
+    </div>
 </div>
 <!-- ./wrapper -->
 
@@ -97,6 +101,13 @@
         })
     });
 
+    $('.errorAlert').css('bottom','100px');
+    setTimeout(function(){
+        $('.errorAlert').css('bottom', '-200px');
+    }, 3000);
+    setTimeout(function(){
+        $('.errorAlert').fadeOut();
+    }, 3900);
 </script>
 @yield('script')
 </body>

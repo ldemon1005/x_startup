@@ -21,10 +21,16 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
     Route::group(['prefix' => 'group'],function (){
         Route::get('','GroupController@index')->name('list_group');
         Route::get('/update_status_group/{id}','GroupController@update_status')->name('update_status_group');
+        Route::get('/detail_group/{id}','GroupController@detail_group')->name('detail_group');
+    });
+
+    Route::group(['prefix' => 'question'],function (){
+        Route::get('','QuestionController@index')->name('list_question');
+        Route::get('/update_status_question/{id}','QuestionController@update_status')->name('update_status_question');
+        Route::get('/form_send_mail/{id}','QuestionController@form_send_mail')->name('form_send_mail');
+        Route::post('/send_email','QuestionController@send_email')->name('send_mail');
     });
 });
-
-
 
 
 Route::get('login', 'Admin\LoginController@getLogin')->middleware('CheckLogoutAdmin');
