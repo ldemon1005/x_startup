@@ -54,3 +54,8 @@ Route::post('login', [ 'as' => 'login', 'uses' => 'Admin\LoginController@postLog
 Route::get('logout', 'Admin\LoginController@getLogout');
 Route::get('lockscreen', 'Admin\LoginController@getLockScreen');
 Route::post('lockscreen', 'Admin\LoginController@postLockScreen');
+
+
+Route::get('home',function(){
+    return view('guest.home');
+});
