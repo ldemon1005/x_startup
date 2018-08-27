@@ -59,3 +59,6 @@ Route::post('lockscreen', 'Admin\LoginController@postLockScreen');
 Route::get('home',function(){
     return view('guest.home');
 });
+Route::get('test',function(){
+    return view('client.login');
+});

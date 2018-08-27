@@ -424,12 +424,17 @@
 	top: calc( 100% + 20px );
 	left: 0;
 }
+.notify-text{
+	color: var(--text-1);
+	font-weight: bold;
+}
 .content-text>h6{
 	font-size: var(--font-size-2);
 	font-weight: bold;
 }
 .content-text>ul>li{
 	position: relative;
+	margin-left: 20px;
 }
 .content-text>ul>li:before{
 	content: "";
