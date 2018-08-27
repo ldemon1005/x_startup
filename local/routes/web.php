@@ -40,8 +40,13 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
     });
 });
 
-Route::group(['namespace' => 'Admin'],function (){
-    Route::get('','IndexController@index');
+Route::group(['namespace' => 'Client'],function (){
+    Route::get('','IndexController@index')->name('home');
+
+    Route::post('action_question','IndexController@action_question')->name('action_question');
+
+    Route::get('login_client','AuthController@form_login')->name('login_client');
+    Route::get('register_client','AuthController@form_register')->name('register_client');
 });
 
 

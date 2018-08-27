@@ -11,11 +11,12 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 offset-md-1">
-                    <form>
+                    <form id="create_question" action="{{route('action_question')}}" method="post">
+                        {{csrf_field()}}
                         <h6>Giải đáp thắc mắc</h6>
                         <div class="group">
                             <label>Họ và tên</label>
-                            <input type="text" name="name">
+                            <input type="text" name="fullname">
                         </div>
                         <div class="group">
                             <label>Mail</label>
@@ -23,10 +24,10 @@
                         </div>
                         <div class="group">
                             <label>Nội dung</label>
-                            <input type="text" name="content">
+                            <textarea class="form-control" name="content" cols="3"></textarea>
                         </div>
 
-                        <button>Gửi</button>
+                        <button style="cursor: pointer" type="submit">Gửi</button>
                     </form>
                 </div>
             </div>
