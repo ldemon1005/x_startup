@@ -6,3 +6,9 @@
     z-index: 9999;
     transition: 2s;
 }
+
+.error {
+    color: red;
+    font-weight: normal;
+    font-style: italic;
+}

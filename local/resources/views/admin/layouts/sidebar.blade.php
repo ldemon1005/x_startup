@@ -76,7 +76,7 @@
                        class="nav-link @if (Request::segment(2) == 'question') active @endif">
                         <i class="fa fa-question"></i>
                         <p>
-                            Quản phản hồi
+                            Quản lý phản hồi
                             <i class="right fa fa-angle-left"></i>
                         </p>
                     </a>
@@ -85,6 +85,33 @@
                             <a href="{{route('list_question')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Danh sách phản hồi</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#"
+                       class="nav-link @if (Request::segment(2) == 'article') active @endif">
+                        <i class="fa fa-newspaper"></i>
+                        <p>
+                            Quản lý tin tức
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('list_article')}}" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Danh sách tin tức</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('form_article',0)}}" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Thêm mới</p>
                             </a>
                         </li>
                     </ul>

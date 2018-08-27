@@ -7,7 +7,7 @@
     <base href="{{ asset('local/resources/assets/admin') }}/">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="shortcut icon" href="../images/icon.png" />
-    <title>VNHN | @yield('title')</title>
+    <title>X-startup | @yield('title')</title>
 
     <link rel="stylesheet" type="text/css" href="../css/all.css">
     <!-- Font Awesome Icons -->
@@ -100,6 +100,28 @@
             showInputs: false
         })
     });
+
+    $('.cssInput').click(function(){
+        $(this).prev().click();
+    })
+
+    function changeImg(input){
+        var inputFile = $(this);
+
+        console.log($(input).next());
+        //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+        if(input.files && input.files[0]){
+            var reader = new FileReader();
+            //Sự kiện file đã được load vào website
+            reader.onload = function(e){
+                //Thay đổi đường dẫn ảnh
+                // $('#avatar').attr('src',e.target.result);
+                $(input).next().attr('src',e.target.result);
+
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
     $('.errorAlert').css('bottom','100px');
     setTimeout(function(){

@@ -30,7 +30,27 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
         Route::get('/form_send_mail/{id}','QuestionController@form_send_mail')->name('form_send_mail');
         Route::post('/send_email','QuestionController@send_email')->name('send_mail');
     });
+
+    Route::group(['prefix' => 'article'],function (){
+        Route::get('','ArticleController@index')->name('list_article');
+        Route::get('/update_status_article/{id}','ArticleController@update_status')->name('update_status_article');
+        Route::get('/delete_article/{id}','ArticleController@delete_article')->name('delete_article');
+        Route::get('form_article/{id}','ArticleController@form_article')->name('form_article');
+        Route::post('action_article','ArticleController@action_article')->name('action_article');
+    });
 });
+
+Route::group(['namespace' => 'Client'],function (){
+    Route::get('','IndexController@index')->name('home');
+
+    Route::post('action_question','IndexController@action_question')->name('action_question');
+
+    Route::get('login_client','AuthController@form_login')->name('login_client');
+    Route::post('post_login_client','AuthController@login')->name('post_login_client');
+    Route::get('register_client','AuthController@form_register')->name('register_client');
+    Route::post('post_register_client','AuthController@register')->name('post_register_client');
+});
+
 
 
 Route::get('login', 'Admin\LoginController@getLogin')->middleware('CheckLogoutAdmin');

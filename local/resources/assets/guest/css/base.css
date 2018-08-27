@@ -47,6 +47,21 @@
 	--blend-color-4: #fb909a;
 	--blend-color-5: #1c1cc9;
 }
+.error {
+	color: red;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.errorAlert{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 9999;
+	transition: 2s;
+}
+
 .su-section{
 	padding: 100px 0;
 }

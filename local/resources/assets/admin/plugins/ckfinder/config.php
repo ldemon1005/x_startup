@@ -32,8 +32,8 @@ $config['authentication'] = function () {
 /*============================ License Key ============================================*/
 // https://docs.ckeditor.com/ckfinder/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'vietnamhoinhap.vn';
-$config['licenseKey']  = '1H7HJKRTTSG6EUJ16MQS8NRXJ3PC9';
+$config['licenseName'] = '';
+$config['licenseKey']  = '';
 
 /*============================ CKFinder Internal Directory ============================*/
 // https://docs.ckeditor.com/ckfinder/ckfinder3-php/configuration.html#configuration_options_privateDir
@@ -157,7 +157,7 @@ $config['cache'] = array(
 /*============================ Temp Directory settings ================================*/
 // https://docs.ckeditor.com/ckfinder/ckfinder3-php/configuration.html#configuration_options_tempDirectory
 
-$config['tempDirectory'] = __DIR__."/../../../../uploads";
+$config['tempDirectory'] = __DIR__."/../../../../../storage/app/public/uploads";
 
 /*============================ Session Cause Performance Issues =======================*/
 // https://docs.ckeditor.com/ckfinder/ckfinder3-php/configuration.html#configuration_options_sessionWriteClose
