@@ -117,6 +117,33 @@
                     </ul>
                 </li>
 
+                <li class="nav-item has-treeview">
+                    <a href="#"
+                       class="nav-link @if (Request::segment(2) == 'careers') active @endif">
+                        <i class="fa fa-user-md"></i>
+                        <p>
+                            Quản lý ngành nghề
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('list_career')}}" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Danh sách ngành nghề</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('form_career',0)}}" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Thêm mới</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
 
                 <li class="nav-item has-treeview">
                     <a href="{{ asset('logout') }}" class="nav-link">

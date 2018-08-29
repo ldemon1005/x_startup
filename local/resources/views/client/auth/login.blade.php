@@ -25,7 +25,14 @@
                     <div id="login">
                         <div class="login-form">
                             <h5>Đăng nhập</h5>
-                            <form method="post" action="{{route('post_login_client')}}">
+
+                            @if (session('error'))
+                                <div class="alert alert-error">
+                                    <p class="text-danger">{{ session('error') }}</p>
+                                </div>
+                            @endif
+
+                            <form id="login_form" method="post" action="{{route('post_login_client')}}">
                                 {{csrf_field()}}
                                 <input type="email" placeholder="Email" name="email">
 

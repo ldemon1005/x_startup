@@ -59,11 +59,12 @@ $("#create_question").validate({
     }
 });
 
-$("#login").validate({
+$("#login_form").validate({
     ignore: [],
     rules: {
         'email': {
-            required: true
+            required: true,
+            email: true
         },
         'password': {
             required: true,
@@ -71,7 +72,8 @@ $("#login").validate({
     },
     messages: {
         'email': {
-            required: 'Vui lòng nhập tên đăng nhập'
+            required: 'Vui lòng nhập email',
+            email: 'Email không đúng định dạng'
         },
         'password': {
             required: 'Vui lòng nhập mật khẩu'
