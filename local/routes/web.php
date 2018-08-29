@@ -67,5 +67,5 @@ Route::get('home',function(){
     return view('guest.home');
 });
 Route::get('test',function(){
-    return view('client.group-2');
+    return view('client.group-4');
 });

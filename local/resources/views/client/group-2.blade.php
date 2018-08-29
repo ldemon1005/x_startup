@@ -32,7 +32,7 @@
                     <div id="navigation">
                         <a href="" class="active">Tạo nhóm</a>
                         <a href="">Thông tin dự án</a>
-                        <a href="">Gửi bài</a>
+                        <a href="">Nộp bài</a>
                     </div>
                     <div>
                         <div class="member">
@@ -66,8 +66,8 @@
                         </form>
 
                         <div>
-                            <a class="back">Quay lại</a>
-                            <button>Bước tiếp theo</button>
+                            <a href="" class="back">Quay lại</a>
+                            <a href="" class="red-btn">Bước tiếp theo</a>
                         </div>
                     </div>
                 </div>
