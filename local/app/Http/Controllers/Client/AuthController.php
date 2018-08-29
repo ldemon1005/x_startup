@@ -19,10 +19,15 @@ class AuthController extends Controller
         $arr = ['username' => $request->email, 'password' => $request->password];
 
         if(Auth::attempt($arr, false)){
+            if(Auth::user()->status == 1){
+                Auth::logout();
+                Session::flush();
+                return redirect()->route('login_client')->with('error','Tài khoản không hoạt động, vui lòng liên hệ ban quản trị!');
+            }
             return redirect()->route('home')->with('success','Đăng nhập thành công');
         }
         else{
-            return back()->withInput()->with('error','Tài khoản khặc mật khẩu của bạn không đúng');
+            return redirect()->route('login_client')->with('error','Tài khoản khặc mật khẩu của bạn không đúng');
         }
     }
 
@@ -33,7 +38,16 @@ class AuthController extends Controller
     }
 
     function form_register(){
-        return view('client.auth.signup');
+        $data = [
+            'fullname' => '',
+            'email' => '',
+            'password' => '',
+            'password_1' => '',
+            'card_id' => '',
+            'phone' => ''
+        ];
+
+        return view('client.auth.signup',$data);
     }
 
     function register(Request $request){
@@ -41,14 +55,22 @@ class AuthController extends Controller
 
         $user = DB::table('accounts')->where('email',$req['email'])->orWhere('phone',$req['phone'])->orWhere('card_id',$req['card_id'])->first();
         if($user){
-            return view('client.auth.signup',$req);
+            return view('client.auth.signup',$req)->with('error','Email hoặc số điện thoại hoặc số CMND đã tồn tại trên hệ thống ');
         }
         else {
             $req['status'] = 2;
+            $pass = $req['password'];
             $req['password'] = bcrypt($req['password']);
             $req['created_at'] = time();
-
+            $req['username'] = $req['email'];
+            unset($req['password_1']);
+            if(Account::create($req)){
+                $arr = ['username' => $req['email'], 'password' => $pass];
+                Auth::attempt($arr, false);
+                return redirect()->route('home')->with('success','Đăng ký thành công');
+            }else {
+                return view('client.auth.signup',$req)->with('error','Đăng ký không thành công, vui lòng thử lại ');
+            }
         }
-
     }
 }

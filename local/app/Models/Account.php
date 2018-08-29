@@ -11,5 +11,5 @@ class Account extends Model
 
     protected $table = "accounts";
     protected $primaryKey = "id";
-    protected $graud = [];
+    protected $guarded = [];
 }

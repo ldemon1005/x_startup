@@ -38,6 +38,14 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
         Route::get('form_article/{id}','ArticleController@form_article')->name('form_article');
         Route::post('action_article','ArticleController@action_article')->name('action_article');
     });
+
+    Route::group(['prefix' => 'career'],function (){
+        Route::get('','CareerController@index')->name('list_career');
+        Route::get('/update_status_career/{id}','CareerController@update_status')->name('update_status_career');
+        Route::get('/delete_career/{id}','CareerController@delete_career')->name('delete_career');
+        Route::get('form_career/{id}','CareerController@form_career')->name('form_career');
+        Route::post('action_career','CareerController@action_career')->name('action_career');
+    });
 });
 
 Route::group(['namespace' => 'Client'],function (){
@@ -49,6 +57,8 @@ Route::group(['namespace' => 'Client'],function (){
     Route::post('post_login_client','AuthController@login')->name('post_login_client');
     Route::get('register_client','AuthController@form_register')->name('register_client');
     Route::post('post_register_client','AuthController@register')->name('post_register_client');
+
+    Route::get('logout_client','AuthController@logout')->name('logout_client');
 });
 
 
