@@ -165,6 +165,54 @@ $("#add-member").validate({
     }
 });
 
+$("#info_project").validate({
+    ignore: [],
+    rules: {
+        'group[name_topic]': {
+            required: true
+        },
+        'group[career]': {
+            required: true
+        },
+        'group[description]': {
+            required: true
+        },
+        'group[url_video]': {
+            required: true
+        },
+        'group[type_product]': {
+            required: true
+        },
+        'group[source]': {
+            required: true
+        }
+    },
+    messages: {
+        'group[name_topic]': {
+            required: 'Vui lòng nhập tên dự án'
+        },
+        'group[career]': {
+            required: 'Vui lòng chọn ngành nghề'
+        },
+        'group[description]': {
+            required: 'Vui lòng nhập mô tả'
+        },
+        'group[url_video]': {
+            required: 'Vui lòng chọn video'
+        },
+        'group[type_product]': {
+            required: 'Vui lòng chọn loại sản phẩm'
+        },
+        'group[source]': {
+            required: 'Vui lòng chọn nguồn thông tin'
+        }
+    }
+});
+
+
+
+
+
 function changeImage(input) {
     //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
     if(input.files && input.files[0]){

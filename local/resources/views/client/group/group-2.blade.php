@@ -77,8 +77,8 @@
                             </form>
                         @endif
                         <div>
-                            <a class="back" onclick="window.history.back();">Quay lại</a>
-                            <button>Bước tiếp theo</button>
+                            <a class="back" href="{{route('group')}}">Quay lại</a>
+                            <a class="btn btn-primary" href="{{route('group_3')}}">Bước tiếp theo</a>
                         </div>
                     </div>
                 </div>

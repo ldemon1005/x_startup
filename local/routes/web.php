@@ -67,7 +67,10 @@ Route::group(['namespace' => 'Client'],function (){
     Route::group(['prefix' => 'group','middleware' => 'CheckLoginClient'],function (){
        Route::get('','GroupController@index')->name('group');
        Route::get('group_1','GroupController@group_1')->name('group_1');
+       Route::get('group_3','GroupController@group_3')->name('group_3');
+       Route::get('group_complete','GroupController@group_complete')->name('group_complete');
        Route::post('action_group','GroupController@action_group')->name('action_group');
+       Route::post('action_group_3','GroupController@action_group_3')->name('action_group_3');
        Route::post('add_member','GroupController@add_member')->name('add_member');
     });
 });
@@ -87,5 +90,5 @@ Route::get('home',function(){
     return view('guest.home');
 });
 Route::get('test',function(){
-    return view('client.profile');
+    return view('client.group-3');
 });

@@ -20,7 +20,7 @@ class CheckLoginClient
             return $next($request);
         }
         else{
-            return redirect('login');
+            return redirect('login_client');
         }
     }
 }

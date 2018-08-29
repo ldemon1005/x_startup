@@ -61,7 +61,8 @@
     background-color: var(--bg-4);
 }
 #group-create input[type="text"]{
-    height: 56px;
+    height: 48px;
+    line-height: 48px;
     width: 100%;
     border-radius: 15px;
     padding-left: 15px;
@@ -76,7 +77,7 @@
 #group-create form{
     margin-top: 20px;
 }
-#group-create button{
+#group-create button, #group-create a.red-btn, .complete button, .complete a.red-btn{
     border-radius: 15px;
     height: 56px;
     width: 250px;
@@ -87,8 +88,9 @@
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    display: inline-block;
 }
-#group-create a.back{
+#group-create a.back,.complete a.back{
     display: inline-block;
     text-decoration: none;
     border-radius: 15px;
@@ -169,4 +171,76 @@
     border: none;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.update-info .group{
+    margin-top: 20px;
+}
+.update-info .group input, .update-info .group select, .update-info .group textarea{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    height: 48px;
+    padding: 0 10px;
+    outline: none;
+}
+.complete{
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 80px;
+    border-radius: 25px;
+}
+.complete h6{
+    font-size: var(--font-size-3);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.member-item{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.member-item .ava{
+    height:200px;
+    width: 200px;
+    margin:auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.member-item .name{
+    font-size: var(--font-size-5);
+    font-weight: bold;
+    text-align: center;
+}
+
+.member-item .position{
+    height: 28px;
+    width: 166px;
+    line-height: 28px;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: var(--font-size-1);
+    background-color: var(--bg-5);
+    margin: auto;
+    text-align: center;
+}
+.member-item .position.lead{
+    background-color: var(--bg-4);
+}
+.member-item .info{
+    width: 100%;
+    margin-top: 30px;
+}
+.member-item .info td{
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    text-align:right;
+}
+.member-item .info td:first-child{
+    font-weight:bold;
+    text-align:left;
 }

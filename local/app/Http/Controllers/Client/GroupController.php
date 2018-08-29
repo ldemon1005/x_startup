@@ -105,4 +105,35 @@ class GroupController extends Controller
 
         return redirect()->route('group_1')->with('success','Thêm thành viên thành công');
     }
+
+    function group_3(){
+        $list_career = DB::table('careers')->where('status',2)->get();
+
+        $user = Auth::user();
+
+        $group = Group::find($user->group_id);
+
+        $data = [
+            'group' => $group,
+            'list_career' => $list_career
+        ];
+
+        return view('client.group.group-3',$data);
+    }
+
+    function action_group_3(Request $request){
+        $req = $request->get('group');
+
+        $user = Auth::user();
+
+        if(DB::table('group')->where('id',$user->group_id)->update($req)){
+            return redirect()->route('group_complete');
+        }else {
+            return redirect()->route('group_3')->with('error','Nộp bài không thành công');
+        }
+    }
+
+    function group_complete(){
+        return view('client.group.group-4');
+    }
 }
