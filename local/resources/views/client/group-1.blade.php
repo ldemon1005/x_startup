@@ -2,7 +2,7 @@
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/home.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/profile.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/group.css">
 @stop
 
 @section('main')
@@ -25,23 +25,20 @@
 
         <section class="su-section">
             <div class="container">
-                <div class="change-pass-form">
-                    <h5>Đổi mật khẩu</h5>
+                <h2 class="section-label">Nộp bài dự thi</h2>
+
+                <p class="mt-5">Thí sinh chỉ được đăng ký 1 dự án theo cá nhân hoặc nhóm tối đa 3 người, ý tưởng khởi nghiệp.</p>
+                <div id="group-create">
+                    <div id="navigation">
+                        <a href="" class="active">Tạo nhóm</a>
+                        <a href="">Thông tin dự án</a>
+                        <a href="">Gửi bài</a>
+                    </div>
                     <form>
-                        <div class="group">
-                            <label>Mật khẩu cũ</label>
-                            <input type="password" name="">
-                        </div>
-
-                        <div class="group">
-                            <label>Mật khẩu cũ</label>
-                            <input type="password" name="">
-                        </div>
-
-                        <div class="group">
-                            <label>Mật khẩu cũ</label>
-                            <input type="password" name="">
-                        </div>
+                        <label>Tạo nhóm</label>
+                        <input type="text" name="">
+                        <input type="checkbox" name=""> Tôi đã đọc điều khoản của chương trình <br>
+                        <button>Tạo nhóm</button>
                     </form>
                 </div>
             </div>

@@ -645,6 +645,15 @@
 	background: none;
 	outline: none;
 }
+.section-footer textarea{
+	width: 100%;
+	border-radius: 10px;
+	padding: 0 10px;
+	box-shadow: none;
+	border: 1px solid;
+	background: none;
+	outline: none;
+}
 .section-footer .group{
 	margin: 25px 0;
 }

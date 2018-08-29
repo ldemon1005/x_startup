@@ -96,7 +96,7 @@
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                  aria-labelledby="v-pills-home-tab">
                                 <div class="content-text">
-                                    <h4>Tìm kiếm (24/8/2018 – 10/10/2018)</h4>
+                                    <h4>Ý tưởng (27/8/2018 – 10/10/2018)</h4>
 
                                     <div class="content-text">
                                         <b>Hình thức sơ tuyển vòng 1</b>
@@ -109,18 +109,19 @@
                                             <li>Thông tin cá nhân (Họ và tên nhóm trưởng, giới tính, sđt, email, link
                                                 facebook, trường, họ và tên + tên trường các thành viên còn lại)
                                             </li>
-                                            <li>Lệ phí đăng ký tham gia là 100k, gửi hình thức CHUYỂN KHOẢN vào tài
-                                                khoản số: _________________ => để tránh spam, phá hoại cuộc thi của kẻ
-                                                xấu) Sau Vòng 1 của cuộc thi số tiền sẽ được hoàn trả đầy đủ cho các thí
-                                                sinh.
-                                            </li>
                                             <li>Tên ý tưởng</li>
                                             <li>Lĩnh vực</li>
                                             <li>Mô tả ngắn gọn ý tưởng? (tối thiểu 100 từ)</li>
-                                            <li>sản phẩm của nhóm đã có mô hình chưa</li>
-                                            <li>Thể hiện tính khả thi, tính vận hành, tính thực tế của ý tưởng?</li>
+                                            <li>Video giới thiệu Nhóm và Ý tưởng (Video dài 3 - 5p): Nội dung video bao
+                                                gồm: giới thiệu nhóm, thành viên, ý tưởng, tính khả thi, tính vận hành,
+                                                tính thực tế của ý tưởng
+                                            </li>
+                                            <li>Sản phẩm của nhóm đã có mô hình chưa?</li>
                                             <li>Bạn biết đến cuộc thi qua phương tiện nào?</li>
                                         </ul>
+                                        Lưu ý: Những dự án hợp lệ là những dự án đã điền đầy đủ thông tin và video (Các
+                                        thông tin trong Landing Page chuyển về Email: xstartup@zikzak.co.vn)
+                                        <br>
                                         Không giới hạn số lượng đội thi tham gia, 1 thành viên chỉ được tham gia 1 đội
                                         thi.
                                         <br>
@@ -133,23 +134,40 @@
                             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                  aria-labelledby="v-pills-profile-tab">
                                 <div class="content-text">
-                                    <h4>Khởi động (11/10/2018 – 1/11/2018)</h4>
+                                    <h4>Lan tỏa (11/10/2018 – 1/11/2018)</h4>
                                     <p><b>Hình thức</b></p>
-                                    <p>Thi online; các đội tham dự sẽ gửi 1 video ngắn (giới hạn độ dài 8p)</p>
-                                    <div>Nội dung video bao gồm:</div>
-                                    <ul>
-                                        <li>Giới thiệu nhóm</li>
-                                        <li>Giới thiệu ý tưởng</li>
-                                        <li>Giới thiệu tính khả thi, tính vận hành, tính thực tế của ý tưởng</li>
-                                        <li>Thu hút bình chọn từ phía khản giả</li>
-                                    </ul>
-                                    <p>Thí sinh gửi trực tiếp vào email, hoặc thông qua Landing page của website</p>
-                                    <ul>
-                                        <li>Email: xstartup@zikzak.co.vn</li>
-                                        <li>Landing page: http://xstartup-zikzak.co.vn</li>
-                                    </ul>
-                                    <p>Kết quả Vòng 2: chỉ 20 đội sẽ bước vào vòng 3 (10 đội khu vực miền Bắc và 10 đội
-                                        khu vực miền Nam)</p>
+                                    Thi online; các đội tham dự sẽ gửi 1 video ngắn (giới hạn độ dài 8p)
+                                    <br>
+                                    Với 60 đội được lựa chọn tham gia vòng 2 (30 đội khu vực miền Bắc và 30 đội khu vực
+                                    miền Nam)
+                                    <br>
+                                    Cách thức tính điểm: Điểm số sẽ 50% do khán giả bình chọn và 50% do BGK bình chọn;
+                                    điểm số tối đa 1 đội đạt được là 60 điểm, cụ thể như sau:
+                                    <br>
+                                    - Về bình chọn của khán giả: (điểm số tối đa của phần bình chọn của khán giả là 30
+                                    điểm)
+                                    <br>
+                                    + like = 1đ; thả tim = 2đ; comment = 3đ; share = 5đ
+                                    <br>
+                                    + Đội nào đạt số like/comment/share cao nhất sẽ dành 30 điểm; tương ứng đội thấp
+                                    nhất sẽ dành 1 điểm
+                                    <br>
+                                    - Về bình chọn của BGK: (điểm số tối đa phần chấm điểm của BGK là 30 điểm)
+                                    <br>
+                                    + Điểm số tối đa của 1 BGK chấm cho 1 đội sẽ là 30 điểm.
+                                    <br>
+                                    + Sau khi 4 BGK chấm điểm cho 1 đội, số điểm đó sẽ chia cho 4 để ra kết quả chấm
+                                    điểm cuối cùng của tổ BGK cho đội đó.
+                                    <br>
+                                    - Xếp hạng: thang điểm 60.
+                                    <br>
+                                    Điểm số cuối cùng cho 1 đội = Bình chọn khán giả + chấm điểm của BGK
+                                    <br>
+                                    Nếu phát hiện gian lận (like, comment, share), , BTC được phép hủy quyền dự thi của
+                                    ứng viên.
+                                    <br>
+                                    <span class="notify-text">Kết quả Vòng 2: chỉ 20 đội sẽ bước vào vòng 3 (10 đội khu vực miền Bắc và 10 đội
+                                        khu vực miền Nam)</span>
                                 </div>
                             </div>
 
@@ -157,31 +175,37 @@
                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                  aria-labelledby="v-pills-messages-tab">
                                 <div class="content-text">
-                                    <h4>Tìm kiếm (24/8/2018 – 10/10/2018)</h4>
-                                    <p><b>Hình thức sơ tuyển vòng 1</b></p>
-                                    <p>Thi online, đăng ký và nộp ý tưởng thông qua page
-                                        http://xstartup-zikzak.co.vn</p>
-                                    <p>Nộp ý tưởng tham gia cho BGK thông qua cách điền thông tin trên Landing Page</p>
-                                    <ul>
-                                        <li>Tên nhóm</li>
-                                        <li>Số lượng thành viên</li>
-                                        <li>Thông tin cá nhân (Họ và tên nhóm trưởng, giới tính, sđt, email, link
-                                            facebook, trường, họ và tên + tên trường các thành viên còn lại)
-                                        </li>
-                                        <li>Lệ phí đăng ký tham gia là 100k, gửi hình thức CHUYỂN KHOẢN vào tài khoản
-                                            số: _________________ => để tránh spam, phá hoại cuộc thi của kẻ xấu) Sau
-                                            Vòng 1 của cuộc thi số tiền sẽ được hoàn trả đầy đủ cho các thí sinh.
-                                        </li>
-                                        <li>Tên ý tưởng</li>
-                                        <li>Lĩnh vực</li>
-                                        <li>Mô tả ngắn gọn ý tưởng? (tối thiểu 100 từ)</li>
-                                        <li>sản phẩm của nhóm đã có mô hình chưa</li>
-                                        <li>Thể hiện tính khả thi, tính vận hành, tính thực tế của ý tưởng?</li>
-                                        <li>Bạn biết đến cuộc thi qua phương tiện nào?</li>
-                                    </ul>
-                                    <p>Không giới hạn số lượng đội thi tham gia, 1 thành viên chỉ được tham gia 1 đội
-                                        thi.</p>
-                                    <p class="notify-text">Kết quả Vòng 1: chọn ra 60 dự án nổi bật nhất của 2 khu vực Bắc và Nam.</p>
+                                    <h4>Bùng nổ (1/11/2018 – 17/11/2018)</h4>
+                                    <p><b>Hình thức</b></p>
+                                    <p>Thi Offline tại 2 khu vực miền Bắc và miền Nam</p>
+                                    Tổng số đội = 20 đội trong đó có 10 đội khu vực miền Bắc và 10 đội khu vực miền Nam.
+                                    <br>
+                                    Các đội có nhiệm vụ:
+                                    <br>
+                                    Các đội có 10 phút để trình bày và 10 phút phản biện ý tưởng sản phẩm và kế hoạch
+                                    của mình trước BGK
+                                    <br>
+                                    *Lưu ý:
+                                    <br>
+                                    - 10 đội khu vực miền Bắc sẽ thuyết phục BGK để được đi vào vòng Chung Kết bằng cách
+                                    trực tiếp present trước BGK tại địa điểm [HN] Tầng 5, Tòa nhà Diamond Flower, số
+                                    1 Hoàng Đạo Thúy, Thanh Xuân, HN.
+                                    <br>
+                                    - 10 đội khu vực miền Nam sẽ thuyết phục BGK để được đi vào vòng Chung Kết bằng cách
+                                    trực tiêp present trước BGK tại địa điểm [HCM] Tòa nhà Cgroup, 456 Xô Viết Nghệ
+                                    Tĩnh, phường 25, Bình Thạnh, HCM.
+                                    <br>
+                                    - Để chuẩn bị cho Vòng 4, 6 đội này sẽ phải hoàn thiện:
+                                    <br>
+                                    + BẢN KẾ HOẠCH KINH DOANH CHI TIẾT
+                                    <br>
+                                    + BẢN C N ĐỐI TÀI CHÍNH
+                                    <br>
+                                    + THIẾT KẾ BỘ NHẬN DIỆN THƯƠNG HIỆU
+                                    <br>
+                                    + TVC QUẢNG BÁ Ý TƯỞNG/ SẢN PHẨM
+                                    <br>
+                                    + SẢN PHẨM MẪU
                                 </div>
                             </div>
 
@@ -189,35 +213,13 @@
                             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                                  aria-labelledby="v-pills-settings-tab">
                                 <div class="content-text">
-                                    <h4>Tìm kiếm (24/8/2018 – 10/10/2018)</h4>
-                                    <p><b>Hình thức sơ tuyển vòng 1</b></p>
-                                    <p>Thi online, đăng ký và nộp ý tưởng thông qua page
-                                        http://xstartup-zikzak.co.vn</p>
-                                    <p>Nộp ý tưởng tham gia cho BGK thông qua cách điền thông tin trên Landing Page</p>
-                                    <ul>
-                                        <li>Tên nhóm</li>
-                                        <li>Số lượng thành viên</li>
-                                        <li>Thông tin cá nhân (Họ và tên nhóm trưởng, giới tính, sđt, email, link
-                                            facebook, trường, họ và tên + tên trường các thành viên còn lại)
-                                        </li>
-                                        <li>Lệ phí đăng ký tham gia là 100k, gửi hình thức CHUYỂN KHOẢN vào tài khoản
-                                            số: _________________ => để tránh spam, phá hoại cuộc thi của kẻ xấu) Sau
-                                            Vòng 1 của cuộc thi số tiền sẽ được hoàn trả đầy đủ cho các thí sinh.
-                                        </li>
-                                        <li>Tên ý tưởng</li>
-                                        <li>Lĩnh vực</li>
-                                        <li>Mô tả ngắn gọn ý tưởng? (tối thiểu 100 từ)</li>
-                                        <li>sản phẩm của nhóm đã có mô hình chưa</li>
-                                        <li>Thể hiện tính khả thi, tính vận hành, tính thực tế của ý tưởng?</li>
-                                        <li>Bạn biết đến cuộc thi qua phương tiện nào?</li>
-                                    </ul>
-                                    <div>
-                                        Không giới hạn số lượng đội thi tham gia, 1 thành viên chỉ được tham gia 1 đội
-                                        thi.
-                                        <br>
-                                        Kết quả Vòng 2: chỉ 20 đội sẽ bước vào vòng 3 (10 đội khu vực miền Bắc và 10 đội
-                                        khu vực miền Nam)
-                                    </div>
+                                    <h4>Nhân tố X (18/11/2018 – 24/12/2018)</h4>
+                                    <p><b>Hình thức</b></p>
+                                    - 6 đội thi lọt vào vòng Chung Kết sẽ đối đầu trực tiếp với nhau và thuyết phục Ban giám khảo, các vị khách mời, các nhà đầu tư cùng 1000 khán giả để giành lấy ngôi vị Quán quân danh giá.
+                                    <br>
+                                    - Nội dung thi: thí sinh thuyết trình về dự án trong 20 phút, sau đó phản biện với Hội đồng giám khảo trong vòng 20 phút.
+                                    <br>
+                                    *Lưu ý: Lịch trình chi tiết cũng như nội dung các vòng thi có thể được thay đổi cho phù hợp với điều kiện và tình hình thực tế. Thí sinh phải cam kết tham gia đầy đủ các phần thi do BTC yêu cầu.
                                 </div>
                             </div>
                         </div>

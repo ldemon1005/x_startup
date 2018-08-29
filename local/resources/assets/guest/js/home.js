@@ -128,3 +128,60 @@ $("#register").validate({
         },
     }
 });
+
+$("#group_create_client").validate({
+    ignore: [],
+    rules: {
+        'group[name]': {
+            required: true,
+        },
+        'license': {
+            required: true,
+        }
+    },
+    messages: {
+        'group[name]': {
+            required: 'Vui lòng nhập email',
+        },
+        'license': {
+            required: 'Bạn chưa chấp nhận các điều khoản của cuộc thi'
+        }
+    }
+});
+
+$("#add-member").validate({
+    ignore: [],
+    rules: {
+        'email': {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        'email': {
+            required: 'Bạn vui lòng nhập email',
+            email: 'Email không đúng định dạng'
+        }
+    }
+});
+
+function changeImage(input) {
+    //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+    if(input.files && input.files[0]){
+        var reader = new FileReader();
+        //Sự kiện file đã được load vào website
+        reader.onload = function(e){
+            //Thay đổi đường dẫn ảnh
+            var str = "background-image: url(" + e.target.result + ");";
+            $('#avatar_img').attr('style',str)
+
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$('#upload_avatar').click(function () {
+    $('#img').click();
+})
+
+

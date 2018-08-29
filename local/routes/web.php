@@ -51,6 +51,10 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
 Route::group(['namespace' => 'Client'],function (){
     Route::get('','IndexController@index')->name('home');
 
+    Route::get('profile','AuthController@profile')->name('profile');
+
+    Route::post('update_user','AuthController@update_user')->name('update_user');
+
     Route::post('action_question','IndexController@action_question')->name('action_question');
 
     Route::get('login_client','AuthController@form_login')->name('login_client');
@@ -59,8 +63,14 @@ Route::group(['namespace' => 'Client'],function (){
     Route::post('post_register_client','AuthController@register')->name('post_register_client');
 
     Route::get('logout_client','AuthController@logout')->name('logout_client');
-});
 
+    Route::group(['prefix' => 'group','middleware' => 'CheckLoginClient'],function (){
+       Route::get('','GroupController@index')->name('group');
+       Route::get('group_1','GroupController@group_1')->name('group_1');
+       Route::post('action_group','GroupController@action_group')->name('action_group');
+       Route::post('add_member','GroupController@add_member')->name('add_member');
+    });
+});
 
 
 Route::get('login', 'Admin\LoginController@getLogin')->middleware('CheckLogoutAdmin');
