@@ -109,6 +109,7 @@
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 .image{
     height: 223px;
