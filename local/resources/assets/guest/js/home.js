@@ -275,4 +275,14 @@ $(window).scroll(function(){
     }else{
         $('#header').css('background-color','unset');
     }
+
+    if( $(window).scrollTop() > 600 ){
+        $('#to-top').show();
+    }else{
+        $('#to-top').hide();
+    }
+});
+
+$('#to-top').click(function(){
+    $('html').animate({ scrollTop: 0 }, 'fast');
 });

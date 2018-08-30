@@ -58,7 +58,7 @@
                     <div class="col-12 col-md-4 col-lg-4">
                         <h2 class="section-label">Đối tượng</h2>
                     </div>
-                    <div class="col-12 col-md-7 col-lg-7 offset-md-1">
+                    <div class="col-12 col-md-7 col-lg-7 offset-md-1 mt-2">
                         <div class="content-text">
                             <h6>Cuộc thi dành cho đối tượng:</h6>
                             <p>Độ tuổi trên 18 tuổi.</p>
@@ -135,39 +135,46 @@
                                  aria-labelledby="v-pills-profile-tab">
                                 <div class="content-text">
                                     <h4>Lan tỏa (11/10/2018 – 1/11/2018)</h4>
-                                    <p><b>Hình thức</b></p>
-                                    Thi online; các đội tham dự sẽ gửi 1 video ngắn (giới hạn độ dài 8p)
-                                    <br>
-                                    Với 60 đội được lựa chọn tham gia vòng 2 (30 đội khu vực miền Bắc và 30 đội khu vực
-                                    miền Nam)
-                                    <br>
-                                    Cách thức tính điểm: Điểm số sẽ 50% do khán giả bình chọn và 50% do BGK bình chọn;
-                                    điểm số tối đa 1 đội đạt được là 60 điểm, cụ thể như sau:
-                                    <br>
-                                    - Về bình chọn của khán giả: (điểm số tối đa của phần bình chọn của khán giả là 30
-                                    điểm)
-                                    <br>
-                                    + like = 1đ; thả tim = 2đ; comment = 3đ; share = 5đ
-                                    <br>
-                                    + Đội nào đạt số like/comment/share cao nhất sẽ dành 30 điểm; tương ứng đội thấp
-                                    nhất sẽ dành 1 điểm
-                                    <br>
-                                    - Về bình chọn của BGK: (điểm số tối đa phần chấm điểm của BGK là 30 điểm)
-                                    <br>
-                                    + Điểm số tối đa của 1 BGK chấm cho 1 đội sẽ là 30 điểm.
-                                    <br>
-                                    + Sau khi 4 BGK chấm điểm cho 1 đội, số điểm đó sẽ chia cho 4 để ra kết quả chấm
-                                    điểm cuối cùng của tổ BGK cho đội đó.
-                                    <br>
-                                    - Xếp hạng: thang điểm 60.
-                                    <br>
-                                    Điểm số cuối cùng cho 1 đội = Bình chọn khán giả + chấm điểm của BGK
-                                    <br>
-                                    Nếu phát hiện gian lận (like, comment, share), , BTC được phép hủy quyền dự thi của
-                                    ứng viên.
-                                    <br>
-                                    <span class="notify-text">Kết quả Vòng 2: chỉ 20 đội sẽ bước vào vòng 3 (10 đội khu vực miền Bắc và 10 đội
+
+                                    <div class="content-text">
+                                        <p><b>Hình thức</b></p>
+                                        Thi online; các đội tham dự sẽ gửi 1 video ngắn (giới hạn độ dài 8p)
+                                        <br>
+                                        Với 60 đội được lựa chọn tham gia vòng 2 (30 đội khu vực miền Bắc và 30 đội khu
+                                        vực
+                                        miền Nam)
+                                        <br>
+                                        Cách thức tính điểm: Điểm số sẽ 50% do khán giả bình chọn và 50% do BGK bình
+                                        chọn;
+                                        điểm số tối đa 1 đội đạt được là 60 điểm, cụ thể như sau:
+                                        <br>
+                                        - Về bình chọn của khán giả: (điểm số tối đa của phần bình chọn của khán giả là
+                                        30
+                                        điểm)
+                                        <br>
+                                        + like = 1đ; thả tim = 2đ; comment = 3đ; share = 5đ
+                                        <br>
+                                        + Đội nào đạt số like/comment/share cao nhất sẽ dành 30 điểm; tương ứng đội thấp
+                                        nhất sẽ dành 1 điểm
+                                        <br>
+                                        - Về bình chọn của BGK: (điểm số tối đa phần chấm điểm của BGK là 30 điểm)
+                                        <br>
+                                        + Điểm số tối đa của 1 BGK chấm cho 1 đội sẽ là 30 điểm.
+                                        <br>
+                                        + Sau khi 4 BGK chấm điểm cho 1 đội, số điểm đó sẽ chia cho 4 để ra kết quả chấm
+                                        điểm cuối cùng của tổ BGK cho đội đó.
+                                        <br>
+                                        - Xếp hạng: thang điểm 60.
+                                        <br>
+                                        Điểm số cuối cùng cho 1 đội = Bình chọn khán giả + chấm điểm của BGK
+                                        <br>
+                                        Nếu phát hiện gian lận (like, comment, share), , BTC được phép hủy quyền dự thi
+                                        của
+                                        ứng viên.
+                                        <br>
+                                        <span class="notify-text">Kết quả Vòng 2: chỉ 20 đội sẽ bước vào vòng 3 (10 đội khu vực miền Bắc và 10 đội
                                         khu vực miền Nam)</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -215,11 +222,16 @@
                                 <div class="content-text">
                                     <h4>Nhân tố X (18/11/2018 – 24/12/2018)</h4>
                                     <p><b>Hình thức</b></p>
-                                    - 6 đội thi lọt vào vòng Chung Kết sẽ đối đầu trực tiếp với nhau và thuyết phục Ban giám khảo, các vị khách mời, các nhà đầu tư cùng 1000 khán giả để giành lấy ngôi vị Quán quân danh giá.
+                                    - 6 đội thi lọt vào vòng Chung Kết sẽ đối đầu trực tiếp với nhau và thuyết phục Ban
+                                    giám khảo, các vị khách mời, các nhà đầu tư cùng 1000 khán giả để giành lấy ngôi vị
+                                    Quán quân danh giá.
                                     <br>
-                                    - Nội dung thi: thí sinh thuyết trình về dự án trong 20 phút, sau đó phản biện với Hội đồng giám khảo trong vòng 20 phút.
+                                    - Nội dung thi: thí sinh thuyết trình về dự án trong 20 phút, sau đó phản biện với
+                                    Hội đồng giám khảo trong vòng 20 phút.
                                     <br>
-                                    *Lưu ý: Lịch trình chi tiết cũng như nội dung các vòng thi có thể được thay đổi cho phù hợp với điều kiện và tình hình thực tế. Thí sinh phải cam kết tham gia đầy đủ các phần thi do BTC yêu cầu.
+                                    *Lưu ý: Lịch trình chi tiết cũng như nội dung các vòng thi có thể được thay đổi cho
+                                    phù hợp với điều kiện và tình hình thực tế. Thí sinh phải cam kết tham gia đầy đủ
+                                    các phần thi do BTC yêu cầu.
                                 </div>
                             </div>
                         </div>
@@ -321,7 +333,7 @@
 
                             <!-- Giải nhì -->
                             <div class="tab-pane fade" id="v-profile" role="tabpanel" aria-labelledby="v-profile-tab">
-                                <div>
+                                <div class="content-text">
                                     <h4>Trị giá 130 triệu</h4>
                                     <ul>
                                         <li>Tiền mặt: 6 triệu</li>
@@ -342,7 +354,7 @@
 
                             <!-- Giải ba -->
                             <div class="tab-pane fade" id="v-messages" role="tabpanel" aria-labelledby="v-messages-tab">
-                                <div>
+                                <div class="content-text">
                                     <h4>Trị giá 60 triệu</h4>
                                     <ul>
                                         <li>Tiền mặt: 3 triệu</li>
@@ -359,7 +371,7 @@
 
                             <!-- Giải khuyến khích -->
                             <div class="tab-pane fade" id="v-settings" role="tabpanel" aria-labelledby="v-settings-tab">
-                                <div>
+                                <div class="content-text">
                                     <h4>Trị giá 30 triệu</h4>
                                     <ul>
                                         <li>Tiền mặt: 1 triệu.</li>

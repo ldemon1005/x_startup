@@ -17,7 +17,7 @@
                         <ul>
                             <li><a href="{{route('profile')}}">Hồ sơ cá nhân</a></li>
                             <li><a href="{{route('change_pass')}}">Thay đổi mật khẩu</a></li>
-                            <li><a href="{{route('change_pass')}}">Đăng xuất</a></li>
+                            <li><a href="{{route('logout_client')}}">Đăng xuất</a></li>
                         </ul>
                     </div>
                 @endif
@@ -25,3 +25,5 @@
         </div>
     </section>
 </div>
+
+<div id="to-top"><img src="{{ asset('local/resources/assets/guest/image') }}/arrows.ico"></div>
