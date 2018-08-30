@@ -244,3 +244,20 @@
     font-weight:bold;
     text-align:left;
 }
+
+.upload, a.upload{
+    display: inline-block;
+    height: 41px;
+    width: 191px;
+    color: var(--text-1)!important;
+    line-height: 41px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.file-name{
+    font-style: italic;
+}

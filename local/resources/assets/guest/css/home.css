@@ -766,6 +766,7 @@
     position: absolute;
     right: 40px;
     top: 0;
+    text-align: right;
 }
 
 #header .login .login-btn {
@@ -789,6 +790,7 @@
 #header .user {
     color: var(--text-2);
     font-weight: bold;
+    cursor: pointer;
 }
 
 #header .user .ava {
@@ -805,9 +807,14 @@
 
 #header .dropdown ul {
     background-color: #FFF;
-
+    border-radius: 15px;
+    padding: 15px 30px;
+    line-height: 2;
+    font-weight: 600;
+    display: none;
+}
 #header .dropdown ul li {
-    line-height: 16px;
+    line-height: 2;
 }
 #header .dropdown ul li a {
     color: unset;

@@ -1,23 +1,26 @@
 <div id="header">
     <section>
         <div class="d-flex">
-            <div class="logo"></div>
+            <a href="{{asset('/')}}" class="logo"></a>
             <ul class="menu">
-                <li><a href="{{asset('')}}">Trang chủ</a></li>
+                <li><a href="{{ asset('/') }}">Trang chủ</a></li>
                 <li><a href="">Tin tức</a></li>
                 <li><a href="{{route('group')}}">Trang nhóm</a></li>
             </ul>
             <div class="login">
-                <a class="login-btn" href="{{\Illuminate\Support\Facades\Auth::user() ? route('profile') : route('login_client')}}">{{\Illuminate\Support\Facades\Auth::user() ? \Illuminate\Support\Facades\Auth::user()->fullname : 'Đăng nhập'}}</a>
-                @if(! \Illuminate\Support\Facades\Auth::user())
+                @if( !Auth::check() )
+                    <a class="login-btn" href="{{route('login_client')}}">Đăng nhập</a>
                     <a class="signup-btn" href="{{route('register_client')}}">Đăng ký</a>
                 @else
-                    <a class="signup-btn" href="{{route('logout_client')}}">Đăng xuất</a>
-
-                    <a class="signup-btn" href="{{route('change_pass')}}">Đổi mật khẩu</a>
+                    <a class="user">{{\Illuminate\Support\Facades\Auth::user()->fullname}} <span class="ava" style="background-image: url({{file_exists(storage_path('app/user/resized500-'.Auth::user()->avatar)) ? asset('local/storage/app/user/resized500-'.Auth::user()->avatar) : asset('local/resources/assets/images/default-image.png')}});"></span></a>
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="{{route('profile')}}">Hồ sơ cá nhân</a></li>
+                            <li><a href="{{route('change_pass')}}">Thay đổi mật khẩu</a></li>
+                            <li><a href="{{route('change_pass')}}">Đăng xuất</a></li>
+                        </ul>
+                    </div>
                 @endif
-
-                <a class="user">Cao T.Linh <span class="ava" style="background-image: url('');"></span></a>
             </div>
         </div>
     </section>

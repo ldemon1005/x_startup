@@ -259,3 +259,6 @@ $('#upload_avatar').click(function () {
 })
 
 
+$('.user').click(function() {
+    $('#header .dropdown ul').slideToggle();
+});

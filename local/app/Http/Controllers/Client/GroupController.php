@@ -188,7 +188,18 @@ class GroupController extends Controller
 
     function action_group_5(Request $request){
         $req = $request->get('group');
+
         $user = Auth::user();
+
+        if($request->hasFile('video')){
+
+            $file = $request->file('video');
+            $filename = $user->id.'-'.$file->getClientOriginalName();
+            $path = storage_path().'app/video/';
+            $file->move($path, $filename);
+
+            $req['url_video'] = $filename;
+        }
 
         if(DB::table('group')->where('id',$user->group_id)->update($req)){
             return back()->with('success','Cập nhật thành công');
