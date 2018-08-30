@@ -1,8 +1,10 @@
 *{
 	font-size: 16px;
 	color: var(--text-4);
+	font-family: UTMAvo;
 }
 #wrapper{
+	font-family: UTMAvo;
 	--bg-1: #FFF;
 	--bg-2: #f5f5f5;
 	--bg-3: #000;
