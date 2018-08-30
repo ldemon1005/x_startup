@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
@@ -98,4 +99,24 @@ class AuthController extends Controller
             return back()->with('error','Cập nhật không thành công');
         }
     }
+
+    function change_pass(){
+        return view('client.auth.password');
+    }
+
+    function action_change_pass(Request $request){
+        $req = $request->all();
+        $user = Auth::user();
+
+        if(!Hash::check($req['pass_old'],$user->password)){
+            return back()->with('error','Mật khẩu cũ không chính xác');
+        }else{
+            if(DB::table('accounts')->where('id',$user->id)->update(['password' => bcrypt($req['pass_new_1'])])){
+                return back()->with('success','Đổi mật khẩu thành công');
+            }else {
+                return back()->with('error','Đổi mật khẩu không thành công, vui lòng thử lại sau');
+            }
+        }
+    }
+
 }

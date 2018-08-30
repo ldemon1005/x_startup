@@ -57,6 +57,10 @@ Route::group(['namespace' => 'Client'],function (){
 
     Route::post('action_question','IndexController@action_question')->name('action_question');
 
+    Route::get('change_pass','AuthController@change_pass')->name('change_pass');
+
+    Route::post('action_change_pass','AuthController@action_change_pass')->name('action_change_pass');
+
     Route::get('login_client','AuthController@form_login')->name('login_client');
     Route::post('post_login_client','AuthController@login')->name('post_login_client');
     Route::get('register_client','AuthController@form_register')->name('register_client');
@@ -70,8 +74,10 @@ Route::group(['namespace' => 'Client'],function (){
        Route::get('group_3','GroupController@group_3')->name('group_3');
        Route::get('group_complete','GroupController@group_complete')->name('group_complete');
        Route::post('action_group','GroupController@action_group')->name('action_group');
+       Route::post('action_group_5','GroupController@action_group_5')->name('action_group_5');
        Route::post('action_group_3','GroupController@action_group_3')->name('action_group_3');
        Route::post('add_member','GroupController@add_member')->name('add_member');
+       Route::get('remove_member/{id}','GroupController@remove_member')->name('remove_member');
     });
 });
 
@@ -90,5 +96,5 @@ Route::get('home',function(){
     return view('guest.home');
 });
 Route::get('test',function(){
-    return view('client.group-3');
+    return view('client.group-5');
 });

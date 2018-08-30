@@ -209,7 +209,33 @@ $("#info_project").validate({
     }
 });
 
-
+$("#change_pass").validate({
+    ignore: [],
+    rules: {
+        'pass_old': {
+            required: true,
+        },
+        'pass_new_1': {
+            required: true,
+        },
+        'pass_new_2': {
+            required: true,
+            equalTo: "#pass_new_1"
+        }
+    },
+    messages: {
+        'pass_old': {
+            required: 'Vui lòng nhập mật khẩu cũ',
+        },
+        'pass_new_1': {
+            required: 'Vui lòng nhập mật khẩu mới'
+        },
+        'pass_new_2': {
+            required: 'Vui lòng xác nhận mật khẩu mới',
+            equalTo: 'Mật khẩu mới không khớp'
+        }
+    }
+});
 
 
 

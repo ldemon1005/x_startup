@@ -33,7 +33,7 @@
                     <div class="col-12 col-md-3 col-lg-3">
                         <div class="avatar-block">
                             <div class="avatar" id="avatar_img"
-                                 style="background-image: url({{asset('local/storage/app/user/resized500-'.$user->avatar)}});"></div>
+                                 style="background-image: url({{file_exists(storage_path('app/user/resized500-'.$user->avatar)) ? asset('local/storage/app/user/resized500-'.$user->avatar) : asset('local/resources/assets/images/default-image.png')}});"></div>
                             <a id="upload_avatar" class="avatar-btn btn">Up avatar</a>
                         </div>
                     </div>

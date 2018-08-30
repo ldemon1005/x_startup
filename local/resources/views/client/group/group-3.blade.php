@@ -73,10 +73,10 @@
                             <div class="group">
                                 <label>Bạn biết cuộc thi qua phương tiện?</label>
                                 <select name="group[source]">
-                                    <option {{$group->type_product == 1 ? 'selected' : ''}} value="1">Fanpage facebook</option>
-                                    <option {{$group->type_product == 2 ? 'selected' : ''}} value="2">Bạn bè</option>
-                                    <option {{$group->type_product == 3 ? 'selected' : ''}} value="3">Báo chí</option>
-                                    <option {{$group->type_product == 0 ? 'selected' : ''}} value="0">Khác</option>
+                                    <option {{$group->source == 1 ? 'selected' : ''}} value="1">Fanpage facebook</option>
+                                    <option {{$group->source == 2 ? 'selected' : ''}} value="2">Bạn bè</option>
+                                    <option {{$group->source == 3 ? 'selected' : ''}} value="3">Báo chí</option>
+                                    <option {{$group->source == 0 ? 'selected' : ''}} value="0">Khác</option>
                                 </select>
                             </div>
 

@@ -13,6 +13,8 @@
                     <a class="signup-btn" href="{{route('register_client')}}">Đăng ký</a>
                 @else
                     <a class="signup-btn" href="{{route('logout_client')}}">Đăng xuất</a>
+
+                    <a class="signup-btn" href="{{route('change_pass')}}">Đổi mật khẩu</a>
                 @endif
 
                 <a class="user">Cao T.Linh <span class="ava" style="background-image: url('');"></span></a>
