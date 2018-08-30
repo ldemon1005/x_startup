@@ -26,4 +26,4 @@
     </section>
 </div>
 
-<div id="to-top"></div>
+<div id="to-top"><img src="{{ asset('local/resources/assets/guest/image') }}/arrows.ico"></div>
