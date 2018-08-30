@@ -27,7 +27,7 @@
             <div class="container">
                 <h2 class="section-label">Nộp bài dự thi</h2>
 
-                <p class="mt-5">Thí sinh chỉ được đăng ký 1 dự án theo cá nhân hoặc nhóm tối đa 3 người, ý tưởng khởi nghiệp.</p>
+                <p class="mt-5">Thí sinh chỉ được đăng ký 1 dự án theo cá nhân hoặc nhóm tối đa 3 người.</p>
                 <div id="group-create">
                     <div id="navigation">
                         <a href="" class="active">Tạo nhóm</a>

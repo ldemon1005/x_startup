@@ -6,15 +6,16 @@
     width: 100%;
 }
 .login-form{
-    padding: 40px;
+    padding: 30px 40px;
     background-color: var(--bg-1);
     width: 50%;
     border-radius: 15px;
+    margin-top: calc( var(--header-height)/2 );
 }
 .login-form h5{
     position: relative;
-    font-size: var(--font-size-5);
-    margin-bottom: 80px;
+    font-size: var(--font-size-h5);
+    margin-bottom: 40px;
     font-weight: bold;
 }
 .login-form h5:after{
@@ -22,26 +23,27 @@
     content: "";
     display: block;
     background-color: var(--bg-4);
-    height: 7px;
+    height: 5px;
     width: 325px;
-    left:0;
-    top: calc(100% + 20px);
+    left: 0;
+    top: calc(100% + 10px);
 }
 .login-form input{
     width: 100%;
-    height: 48px;
+    height: 36px;
     border-radius: 15px;
-    line-height: 48px;
+    line-height: 36px;
     padding: 0 20px;
     border: 1px solid #d5d5d5;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     outline: none;
+    font-size: var(--font-size-1);
 }
 .login-form button{
     width: 225px;
-    height: 48px;
+    height: 36px;
     border-radius: 15px;
-    line-height: 48px;
+    line-height: 36px;
     padding: 0 20px;
     border: 1px solid #d5d5d5;
     margin-bottom: 20px;
@@ -57,4 +59,5 @@
 .xstartup{
     width: 50%;
     left: 75%;
+    margin-top: calc( var(--header-height)/2 );
 }

@@ -31,10 +31,10 @@
                     @foreach($list_article as $article)
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="news-item">
-                                <a href="" class="image"
+                                <a href="{{route('detail_client',$article->slug.'---n-'.$article->id)}}" class="image"
                                    style="background-image: url({{file_exists(storage_path('app/article/resized500-'.$article->avatar)) ? asset('local/storage/app/article/resized500-'.$article->avatar) : asset('local/resources/assets/images/default-image.png')}})"></a>
                                 <div class="content">
-                                    <a href="" class="title">{{$article->title}}</a>
+                                    <a href="{{route('detail_client',$article->slug.'---n-'.$article->id)}}" class="title">{{$article->title}}</a>
                                     <div class="date">{{date('d-m-Y',$article->created_at)}}</div>
                                     <a href="{{route('detail_client',$article->slug.'---n-'.$article->id)}}" class="see-more">Xem thêm</a>
                                 </div>

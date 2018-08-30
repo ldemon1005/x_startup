@@ -99,6 +99,7 @@
     margin-top: 20px;
     cursor: pointer;
     display: inline-block;
+    text-align: center;
 }
 #group-create a.back,.complete a.back{
     display: inline-block;
@@ -108,11 +109,11 @@
     width: 250px;
     line-height: 56px;
     font-weight: bold;
-    border: none;
     margin-top: 20px;
     cursor: pointer;
     text-align: center;
     border: 1px solid #666;
+    color: unset;
 }
 .member{
     height: 223px;

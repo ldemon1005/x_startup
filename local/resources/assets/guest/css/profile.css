@@ -34,6 +34,7 @@
     margin-top: 15px;
     border-radius: 15px;
     text-decoration: none;
+    cursor: pointer;
 }
 .name{
     font-size: var(--font-size-5);
@@ -75,6 +76,7 @@
     text-align: center;
     margin-top: 30px;
     background-color: var(--bg-4);
+    cursor: pointer;
 }
 
 /*password*/
