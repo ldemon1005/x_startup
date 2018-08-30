@@ -128,3 +128,108 @@ $("#register").validate({
         },
     }
 });
+
+$("#group_create_client").validate({
+    ignore: [],
+    rules: {
+        'group[name]': {
+            required: true,
+        },
+        'license': {
+            required: true,
+        }
+    },
+    messages: {
+        'group[name]': {
+            required: 'Vui lòng nhập email',
+        },
+        'license': {
+            required: 'Bạn chưa chấp nhận các điều khoản của cuộc thi'
+        }
+    }
+});
+
+$("#add-member").validate({
+    ignore: [],
+    rules: {
+        'email': {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        'email': {
+            required: 'Bạn vui lòng nhập email',
+            email: 'Email không đúng định dạng'
+        }
+    }
+});
+
+$("#info_project").validate({
+    ignore: [],
+    rules: {
+        'group[name_topic]': {
+            required: true
+        },
+        'group[career]': {
+            required: true
+        },
+        'group[description]': {
+            required: true
+        },
+        'group[url_video]': {
+            required: true
+        },
+        'group[type_product]': {
+            required: true
+        },
+        'group[source]': {
+            required: true
+        }
+    },
+    messages: {
+        'group[name_topic]': {
+            required: 'Vui lòng nhập tên dự án'
+        },
+        'group[career]': {
+            required: 'Vui lòng chọn ngành nghề'
+        },
+        'group[description]': {
+            required: 'Vui lòng nhập mô tả'
+        },
+        'group[url_video]': {
+            required: 'Vui lòng chọn video'
+        },
+        'group[type_product]': {
+            required: 'Vui lòng chọn loại sản phẩm'
+        },
+        'group[source]': {
+            required: 'Vui lòng chọn nguồn thông tin'
+        }
+    }
+});
+
+
+
+
+
+function changeImage(input) {
+    //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+    if(input.files && input.files[0]){
+        var reader = new FileReader();
+        //Sự kiện file đã được load vào website
+        reader.onload = function(e){
+            //Thay đổi đường dẫn ảnh
+            var str = "background-image: url(" + e.target.result + ");";
+            $('#avatar_img').attr('style',str)
+
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$('#upload_avatar').click(function () {
+    $('#img').click();
+})
+
+

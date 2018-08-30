@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\Session;
 class IndexController extends Controller
 {
     function index(){
-//        Auth::logout();
-//        Session::flush();
         return view('client.index.home');
     }
 

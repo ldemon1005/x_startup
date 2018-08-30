@@ -73,4 +73,29 @@ class AuthController extends Controller
             }
         }
     }
+
+
+    function profile(){
+        $user = Auth::user();
+        $data = [
+            'user' => $user
+        ];
+        return view('client.auth.profile',$data);
+    }
+
+    function update_user(Request $request){
+        $req = $request->get('user');
+        $user = Auth::user();
+
+        $image = $request->file('img');
+        if ($request->hasFile('img')) {
+            $req['avatar'] = saveImageArticle([$image], 'user');
+        }
+
+        if(DB::table('accounts')->where('id',$user->id)->update($req)){
+            return back()->with('success','Cập nhật thành công');
+        }else {
+            return back()->with('error','Cập nhật không thành công');
+        }
+    }
 }
