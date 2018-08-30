@@ -5,6 +5,21 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/group.css">
 @stop
 
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $('.upload').click(function() {
+                $('.file').click();
+            });
+
+            $('.file').change(function(){
+                var filename = $('.file')[0].files[0].name;
+                $('.file-name').html(filename);
+            });
+        });
+    </script>
+@stop
+
 @section('main')
     <div id="main">
         <section class="demo-2 loading section-1">
@@ -124,7 +139,9 @@
 
                         <div class="group">
                             <label>Video (Giới thiệu nhóm, thành viên, ý tưởng, tính khả thi...)</label>
-                            <input type="file" name="">
+                            <br>
+                            <a class="upload">Upload</a> <span class="file-name">abc.mp4</span>
+                            <input class="file" style="display: none;" type="file" name="">
                         </div>
 
                         <div class="group">

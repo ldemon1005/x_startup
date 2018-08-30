@@ -90,5 +90,5 @@ Route::get('home',function(){
     return view('guest.home');
 });
 Route::get('test',function(){
-    return view('client.group-3');
+    return view('client.group-5');
 });
