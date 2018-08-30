@@ -262,3 +262,17 @@ $('#upload_avatar').click(function () {
 $('.user').click(function() {
     $('#header .dropdown ul').slideToggle();
 });
+
+if( $('#header').offset().top > 0 ){
+    $('#header').css('background-color','#000');
+}else{
+    $('#header').css('background-color','unset');
+}
+
+$(window).scroll(function(){
+    if( $('#header').offset().top > 0 ){
+        $('#header').css('background-color','#000');
+    }else{
+        $('#header').css('background-color','unset');
+    }
+});

@@ -113,7 +113,7 @@
                 <h2 class="section-label mt-5">Thông tin bài thi</h2>
 
                 <div id="group-create">
-                    <div class="notify-text mt-5">Bài thi của bạn chưa đc xác nhận</div>
+                    <div class="notify-text mt-5">Bài thi của bạn chưa được xác nhận</div>
                     <form class="update-info mt-5">
                         <div class="group">
                             <label>Tên dự án</label>

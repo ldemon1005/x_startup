@@ -4,7 +4,7 @@
             <a href="{{asset('/')}}" class="logo"></a>
             <ul class="menu">
                 <li><a href="{{ asset('/') }}">Trang chủ</a></li>
-                <li><a href="">Tin tức</a></li>
+                <li><a href="{{route('list_article_client')}}">Tin tức</a></li>
                 <li><a href="{{route('group')}}">Trang nhóm</a></li>
             </ul>
             <div class="login">

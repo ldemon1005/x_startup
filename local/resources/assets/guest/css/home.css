@@ -438,7 +438,7 @@
     font-size: var(--font-size-h2);
     font-weight: bold;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .section-label:after {
@@ -725,9 +725,9 @@
 
 /*header*/
 #header {
-    position: absolute;
+    position: fixed;
     z-index: 1;
-    line-height: 80px;
+    line-height: var(--header-height);
     width: 100%;
     top: 0;
     left: 0;
@@ -736,7 +736,7 @@
 
 #header .logo {
     background: url(../image/logo.png) no-repeat center/contain;
-    height: 80px;
+    height: var(--header-height);
     width: 200px;
     position: absolute;
     left: 40px;
@@ -760,6 +760,7 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    margin:0;
 }
 
 #header .login {

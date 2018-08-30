@@ -2,6 +2,13 @@
 <html>
 <head>
 	<title></title>
+
+	<meta property="og:url"           content="@yield('fb_url')" />
+	<meta property="og:type"          content="article" />
+	<meta property="og:title"         content="@yield('fb_title')" />
+	<meta property="og:description"   content="@yield('fb_des')" />
+	<meta property="og:image"         content="@yield('fb_img')" />
+
 	<link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/base.css">
@@ -36,6 +43,15 @@
             $('.errorAlert').fadeOut();
         }, 3900);
     </script>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=1084775134984999&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 	@yield('js')
 </body>
 </html>

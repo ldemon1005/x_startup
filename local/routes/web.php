@@ -79,6 +79,11 @@ Route::group(['namespace' => 'Client'],function (){
        Route::post('add_member','GroupController@add_member')->name('add_member');
        Route::get('remove_member/{id}','GroupController@remove_member')->name('remove_member');
     });
+
+    Route::group(['prefix' => 'article'],function (){
+        Route::get('','ArticleController@index')->name('list_article_client');
+        Route::get('detail/{slug}','ArticleController@detail')->name('detail_client');
+    });
 });
 
 
@@ -96,5 +101,5 @@ Route::get('home',function(){
     return view('guest.home');
 });
 Route::get('test',function(){
-    return view('client.group-3');
+    return view('client.news.list');
 });
