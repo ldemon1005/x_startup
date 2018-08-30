@@ -12,7 +12,7 @@
                     <a class="login-btn" href="{{route('login_client')}}">Đăng nhập</a>
                     <a class="signup-btn" href="{{route('register_client')}}">Đăng ký</a>
                 @else
-                    <a class="user">Linh <span class="ava" style="background-image: url('');"></span></a>
+                    <a class="user">Linh <span class="ava" style="background-image: url();"></span></a>
                     <div class="dropdown">
                         <ul>
                             <li><a href="">Đăng xuất</a></li>

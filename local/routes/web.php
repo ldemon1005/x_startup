@@ -57,8 +57,6 @@ Route::group(['namespace' => 'Client'],function (){
     Route::post('post_login_client','AuthController@login')->name('post_login_client');
     Route::get('register_client','AuthController@form_register')->name('register_client');
     Route::post('post_register_client','AuthController@register')->name('post_register_client');
-
-    Route::get('logout_client','AuthController@logout')->name('logout_client');
 });
 
 
