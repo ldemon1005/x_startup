@@ -16,18 +16,32 @@ class GroupController extends Controller
 
         $group = Group::find($user->group_id);
 
-        if(!$group){
+        if($group){
+            $user_ids = explode(',',$group->user_id);
+
+            $list_user = DB::table('accounts')->whereIn('id',$user_ids)->get();
+
+            $list_career = DB::table('careers')->where('status',2)->get();
+
+            $data = [
+                'group' => $group,
+                'list_user' => $list_user,
+                'list_career' => $list_career
+            ];
+
+            return view('client.group.group-5',$data);
+        }else {
             $group = [
                 'id' => 0,
                 'name' =>''
             ];
             $group = (object)$group;
-        }
 
-        $data = [
-            'group' => $group
-        ];
-        return view('client.group.group-1',$data);
+            $data = [
+                'group' => $group
+            ];
+            return view('client.group.group-1',$data);
+        }
     }
 
     function action_group(Request $request){
@@ -106,6 +120,41 @@ class GroupController extends Controller
         return redirect()->route('group_1')->with('success','Thêm thành viên thành công');
     }
 
+    function remove_member($id){
+        $user = Auth::user();
+
+        $group = DB::table('group')->find($user->group_id);
+
+        $user_ids = explode(',',$group->user_id);
+
+        $key = array_search($id,$user_ids);
+
+        unset($user_ids[$key]);
+
+        $user_ids = implode(',',$user_ids);
+
+        DB::beginTransaction();
+
+        $check = 1;
+
+        if(!DB::table('group')->where('id',$user->group_id)->update(['user_id'=>$user_ids])){
+            $check = 0;
+        }
+
+        if(!DB::table('accounts')->where('id',$id)->update(['group_id' => null])){
+            $check = 0;
+        }
+
+        if($check == 1){
+            DB::commit();
+            return back()->with('success','Xóa thành viên thành công');
+        }else {
+            DB::rollBack();
+            return back()->with('error','Xóa thành viên không thành công');
+        }
+
+    }
+
     function group_3(){
         $list_career = DB::table('careers')->where('status',2)->get();
 
@@ -135,5 +184,16 @@ class GroupController extends Controller
 
     function group_complete(){
         return view('client.group.group-4');
+    }
+
+    function action_group_5(Request $request){
+        $req = $request->get('group');
+        $user = Auth::user();
+
+        if(DB::table('group')->where('id',$user->group_id)->update($req)){
+            return back()->with('success','Cập nhật thành công');
+        }else {
+            return back()->with('error','Cập nhật không thành công');
+        }
     }
 }
