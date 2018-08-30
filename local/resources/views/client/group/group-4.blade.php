@@ -41,8 +41,8 @@
                     <h6>Bạn đã nộp bài thành công</h6>
                     <p>Cảm ơn bạn đã tham gia chương trình của chúng tôi</p>
                     <div>
-                        <a class="back">Quay về trang nhóm</a>
-                        <a class="red-btn">Quay về trang chủ</a>
+                        <a class="back" href="{{route('group')}}">Quay về trang nhóm</a>
+                        <a class="red-btn" href="{{route('home')}}">Quay về trang chủ</a>
                     </div>
                 </div>
             </div>

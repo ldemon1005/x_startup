@@ -28,7 +28,7 @@ class AuthController extends Controller
             return redirect()->route('home')->with('success','Đăng nhập thành công');
         }
         else{
-            return redirect()->route('login_client')->with('error','Tài khoản khặc mật khẩu của bạn không đúng');
+            return redirect()->route('login_client')->with('error','Tài khoản hoặc mật khẩu của bạn không đúng');
         }
     }
 

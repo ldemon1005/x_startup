@@ -37,7 +37,7 @@
                     <div>
                         @foreach($list_user as $user)
                             <div class="member">
-                                <div class="image" style="background-image:url('https://timedotcom.files.wordpress.com/2014/05/mariah-carey-thirsty.jpg')"></div>
+                                <div class="image" style="background-image:url({{file_exists(storage_path('app/user/resized500-'.$user->avatar)) ? asset('local/storage/app/user/resized500-'.$user->avatar) : asset('local/resources/assets/images/default-image.png')}})"></div>
                                 <div class="info">
                                     <div class="member-name">{{$user->fullname}}</div>
 
