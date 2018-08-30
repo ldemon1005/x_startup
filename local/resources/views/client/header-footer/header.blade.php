@@ -15,6 +15,8 @@
                     <a class="user">Linh <span class="ava" style="background-image: url();"></span></a>
                     <div class="dropdown">
                         <ul>
+                            <li><a href="">Hồ sơ cá nhân</a></li>
+                            <li><a href="">Thay đổi mật khẩu</a></li>
                             <li><a href="">Đăng xuất</a></li>
                         </ul>
                     </div>
