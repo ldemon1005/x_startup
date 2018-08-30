@@ -25,21 +25,20 @@
 
         <section class="su-section">
             <div class="container">
-                <h2 class="section-label">Nộp bài dự thi</h2>
+                <h2 class="section-label">Tin tức</h2>
 
-                <p class="mt-5">Thí sinh chỉ được đăng ký 1 dự án theo cá nhân hoặc nhóm tối đa 3 người, ý tưởng khởi nghiệp.</p>
-                <div id="group-create">
-                    <div id="navigation">
-                        <a href="" class="active">Tạo nhóm</a>
-                        <a href="">Thông tin dự án</a>
-                        <a href="">Nộp bài</a>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="news-item">
+                            <a href="" class="image"
+                               style="background-image: url('http://cdn.uvideo.vn/images/04-2017/050cc813246aceafa408863a35810733.jpg')"></a>
+                            <div class="content">
+                                <a href="" class="title">8 lợi ích của APIs dành cho nhà phát triển ứng dụng </a>
+                                <div class="date">28-08-2018</div>
+                                <a href="" class="see-more">Xem thêm</a>
+                            </div>
+                        </div>
                     </div>
-                    <form>
-                        <label>Tạo nhóm</label>
-                        <input type="text" name="">
-                        <input type="checkbox" name=""> Tôi đã đọc điều khoản của chương trình <br>
-                        <button>Tạo nhóm</button>
-                    </form>
                 </div>
             </div>
         </section>
