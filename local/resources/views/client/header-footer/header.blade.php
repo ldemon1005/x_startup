@@ -8,7 +8,7 @@
                 <li><a href="">Trang nhóm</a></li>
             </ul>
             <div class="login">
-                @if( Auth::check() )
+                @if( Auth::guest() )
                     <a class="login-btn" href="{{route('login_client')}}">Đăng nhập</a>
                     <a class="signup-btn" href="{{route('register_client')}}">Đăng ký</a>
                 @else
@@ -25,3 +25,5 @@
         </div>
     </section>
 </div>
+
+<div id="to-top"></div>
