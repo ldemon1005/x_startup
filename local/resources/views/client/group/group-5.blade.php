@@ -5,6 +5,46 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/group.css">
 @stop
 
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $('.upload').click(function() {
+                $('.file').click();
+            });
+
+            $('.file').change(function(){
+                var filename = $('.file')[0].files[0].name;
+
+                if (isVideo(filename)){
+                    if($('.file')[0].files[0].size > 209715200){
+                        $('.file-name').addClass('text-danger');
+                        $('.file-name').html("File quá lớn.");
+                    }
+                    $('.file-name').removeClass('text-danger');
+                    $('.file-name').html(filename);
+                }else  {
+                    $('.file-name').addClass('text-danger');
+                    $('.file-name').html("File không đúng định dạng.");
+                }
+            });
+        });
+
+        function isVideo(filename) {
+            var ext = getExtension(filename);
+            switch (ext.toLowerCase()) {
+                case 'mp4': return true;
+            }
+            return false;
+        }
+
+        function getExtension(filename) {
+            var parts = filename.split('.');
+            return parts[parts.length - 1];
+        }
+
+    </script>
+@stop
+
 @section('main')
     <div id="main">
         <section class="demo-2 loading section-1">
@@ -90,8 +130,17 @@
                         </div>
 
                         <div class="group">
-                            <label>Video (Giới thiệu nhóm, thành viên, ý tưởng, tính khả thi...)</label>
-                            <input type="file" name="group[url_video]" value="{{$group->url_video}}">
+                            <label>Video (Giới thiệu nhóm, thành viên, ý tưởng, tính khả thi... Video ở định dạng mp4,và nhỏ hơn 200mb)</label>
+                            <br>
+                            <a class="upload">Upload</a>
+                            <span class="file-name">
+                                @if($group->url_video)
+                                    {{$group->url_video}}
+                                @else
+                                    Bạn chưa có file video nào
+                                @endif
+                            </span>
+                            <input class="file" style="display: none;" type="file" name="video">
                         </div>
 
                         <div class="group">
