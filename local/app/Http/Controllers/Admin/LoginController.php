@@ -21,11 +21,11 @@ class LoginController extends Controller
     	    else {
                 Auth::logout();
                 Session::flush();
-                return back()->withInput()->with('error','Tài khoản không có quyền truy cập');
+                return redirect()->route('login')->with('error','Tài khoản không có quyền truy cập');
             }
         }
     	else{
-    		return back()->withInput()->with('error','Tài khoản khặc mật khẩu của bạn không đúng');
+    		return redirect()->route('login')->with('error','Tài khoản khặc mật khẩu của bạn không đúng');
     	}
     }
     public function getLogout(){

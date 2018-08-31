@@ -195,7 +195,7 @@ class GroupController extends Controller
 
             $file = $request->file('video');
             $filename = $user->id.'-'.$file->getClientOriginalName();
-            $path = storage_path().'app/video/';
+            $path = storage_path().'/app/video/';
             $file->move($path, $filename);
 
             $req['url_video'] = $filename;

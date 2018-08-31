@@ -16,9 +16,11 @@
                 var filename = $('.file')[0].files[0].name;
 
                 if (isVideo(filename)){
+                    // console.log($('.file')[0].files[0].size);
                     if($('.file')[0].files[0].size > 209715200){
                         $('.file-name').addClass('text-danger');
                         $('.file-name').html("File quá lớn.");
+                        return;
                     }
                     $('.file-name').removeClass('text-danger');
                     $('.file-name').html(filename);
