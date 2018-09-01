@@ -51,4 +51,14 @@ class GroupController extends Controller
             'content' => $view
         ]);
     }
+
+    function watch_video($id){
+        $group = DB::table('group')->find($id);
+
+        $data = [
+            'group' => $group
+        ];
+
+        return view('admin.groups.watch_video',$data);
+    }
 }

@@ -22,6 +22,8 @@ class CheckLoginAdmin
             return $next($request);
         }
         else{
+            Auth::logout();
+            Session::flush();
             return redirect('login');
         }
     }
