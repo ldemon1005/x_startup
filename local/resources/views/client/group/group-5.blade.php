@@ -27,6 +27,10 @@
                     $('.file-name').html("File không đúng định dạng.");
                 }
             });
+
+            $('.add-image').click(function(){
+                $('#myModal').modal();
+            });
         });
 
         function isVideo(filename) {
@@ -174,5 +178,17 @@
                 </div>
             </div>
         </section>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="padding: 50px;">
+                <form class="add-member" style="margin-top: 0;">
+                    <labe>Email</labe>
+                    <input type="email" name="">
+                    <button>Thêm thành viên</button>
+                </form>
+            </div>
+        </div>
     </div>
 @stop
