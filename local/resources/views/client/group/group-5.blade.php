@@ -96,6 +96,11 @@
                             </div>
                         </div>
                     @endforeach
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="add-image">
+                            <div class="plus"></div>
+                        </div>
+                    </div>
                 </div>
 
                 <h2 class="section-label mt-5">Thông tin bài thi</h2>
