@@ -78,7 +78,7 @@
                         @endif
                         <div>
                             <a class="back" href="{{route('group')}}">Quay lại</a>
-                            <a class="red-btn" href="{{route('group_3')}}">Bước tiếp theo</a>
+                            <a class="btn btn-primary" href="{{route('group_3')}}">Bước tiếp theo</a>
                         </div>
                     </div>
                 </div>

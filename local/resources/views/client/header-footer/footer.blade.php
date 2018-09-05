@@ -5,9 +5,9 @@
                 <div class="col-12 col-md-5 col-lg-5">
                     <div>
                         <h5>Liên hệ</h5>
-                        <p class="email">xstartup@zikzak.co.vn</p>
+                        <p class="email">xstartup@zikzak-co.vn</p>
                         <p class="facebook">facebook.com/zikzak-coworkingspace</p>
-                        <p class="phone">1900-63-39-72</p>
+                        <p class="phone">1900-63-39-72 / 0167-606-8909</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 offset-md-1">
@@ -35,6 +35,6 @@
     </section>
 
     <section class="copyright">
-        Công ty cổ phần tập đoàn cgroup. msdn: 0315056158
+        Cuộc thi XStartup được tổ chức bởi Zikzak co-working Space trực thuộc tập đoàn Cgroup.
     </section>
 </div>

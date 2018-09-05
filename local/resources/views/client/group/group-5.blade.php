@@ -16,9 +16,11 @@
                 var filename = $('.file')[0].files[0].name;
 
                 if (isVideo(filename)){
+                    // console.log($('.file')[0].files[0].size);
                     if($('.file')[0].files[0].size > 209715200){
                         $('.file-name').addClass('text-danger');
                         $('.file-name').html("File quá lớn.");
+                        return;
                     }
                     $('.file-name').removeClass('text-danger');
                     $('.file-name').html(filename);
@@ -26,10 +28,6 @@
                     $('.file-name').addClass('text-danger');
                     $('.file-name').html("File không đúng định dạng.");
                 }
-            });
-
-            $('.add-image').click(function(){
-                $('#myModal').modal();
             });
         });
 
@@ -100,11 +98,6 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="add-image">
-                            <div class="plus"></div>
-                        </div>
-                    </div>
                 </div>
 
                 <h2 class="section-label mt-5">Thông tin bài thi</h2>
@@ -178,17 +171,5 @@
                 </div>
             </div>
         </section>
-    </div>
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="padding: 50px;">
-                <form class="add-member" style="margin-top: 0;">
-                    <labe>Email</labe>
-                    <input type="email" name="">
-                    <button>Thêm thành viên</button>
-                </form>
-            </div>
-        </div>
     </div>
 @stop
