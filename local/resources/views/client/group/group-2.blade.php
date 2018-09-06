@@ -67,7 +67,7 @@
                     </div>
 
                     <div>
-                        @if($group->user_created == \Illuminate\Support\Facades\Auth::user()->id)
+                        @if($group->user_created == \Illuminate\Support\Facades\Auth::user()->id && $list_user->count() < 3)
                             <form class="add-member" id="add-member" action="{{route('add_member')}}" method="post">
                                 {{csrf_field()}}
                                 <labe>Email</labe>

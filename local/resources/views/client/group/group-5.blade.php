@@ -71,7 +71,7 @@
 
         <section class="su-section">
             <div class="container">
-                <h2 class="section-label">{{$group->name}}</h2>
+                <h2 class="section-label">{{$group->name}}<a href="{{route('delete_group',$group->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa')" class="btn {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}" title="Xóa nhóm"><i class="fa fa-trash text-danger"></i></a></h2>
 
                 <p class="mt-5">Bao gồm các thành viên</p>
 
@@ -80,7 +80,7 @@
                         <div class="col-12 col-md-4 col-lg-4">
                             <div class="member-item" style="position: relative">
                                 @if($user->id != $group->user_created)
-                                    <a style="position: absolute;top: 15px;right: 15px;" class="text-danger {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}" href="{{route('remove_member',$user->id)}}">Xóa</a>
+                                    <a onclick="return confirm('Bạn chắc chắn muốn xóa')" style="position: absolute;top: 15px;right: 15px;" class="text-danger {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}" href="{{route('remove_member',$user->id)}}" title="Xóa thành viên"><i class="fa fa-trash text-danger"></i></a>
                                 @endif
                                 <div class="ava" style="background-image:url({{file_exists(storage_path('app/user/resized500-'.$user->avatar)) ? asset('local/storage/app/user/resized500-'.$user->avatar) : asset('local/resources/assets/images/default-image.png')}})"></div>
                                 <div class="name">{{$user->fullname}}</div>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="col-12 col-md-4 col-lg-4 {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}">
+                    <div class="col-12 col-md-4 col-lg-4 {{(\Illuminate\Support\Facades\Auth::user()->id == $group->user_created && $list_user->count() < 3) ? '' : 'd-none'}}">
                         <div class="add-image">
                             <div class="plus"></div>
                         </div>

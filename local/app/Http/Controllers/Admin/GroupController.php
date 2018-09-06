@@ -61,4 +61,5 @@ class GroupController extends Controller
 
         return view('admin.groups.watch_video',$data);
     }
+
 }

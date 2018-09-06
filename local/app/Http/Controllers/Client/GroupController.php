@@ -207,4 +207,12 @@ class GroupController extends Controller
             return back()->with('error','Cập nhật không thành công');
         }
     }
+
+    function delete_group($id){
+        $group = Group::find($id);
+        $user_ids = explode(',',$group->user_id);
+        DB::table('accounts')->whereIn('id',$user_ids)->update(['group_id'=> null]);
+        $group->delete();
+        return redirect()->route('home')->with('success','Xóa nhóm thành công!');
+    }
 }
