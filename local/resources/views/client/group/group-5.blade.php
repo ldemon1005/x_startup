@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="col-12 col-md-4 col-lg-4 {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}">
+                    <div class="col-12 col-md-4 col-lg-4 {{Auth::user()->id == $group->user_created ? '' : 'd-none'}}">
                         <div class="add-image">
                             <div class="plus"></div>
                         </div>
