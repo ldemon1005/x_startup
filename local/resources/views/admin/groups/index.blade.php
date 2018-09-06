@@ -62,7 +62,7 @@
                                         <td>{{date('d/m/Y H:m',$group->created_at)}}</td>
                                         <td></td>
                                         <td>{{$group->name_topic}}</td>
-                                        <td>{{$group->source}}</td>
+                                        <td>{{getSourceGroup($group->source)}}</td>
                                         <td>
                                             <button {{($group->url_video == null || !file_exists(storage_path('app/video/'.$group->url_video)))  ? 'disabled' : ''}} onclick="wathch_video('{{route('watch_video',$group->id)}}')" class="btn btn-primary">Xem video</button>
                                         </td>
