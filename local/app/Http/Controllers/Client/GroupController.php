@@ -117,7 +117,7 @@ class GroupController extends Controller
 
         DB::table('group')->where('id',$req['group_id'])->update(['user_id' => $user_ids]);
 
-        return redirect()->route('group_1')->with('success','Thêm thành viên thành công');
+        return back()->with('success','Thêm thành viên thành công');
     }
 
     function remove_member($id){
@@ -195,7 +195,7 @@ class GroupController extends Controller
 
             $file = $request->file('video');
             $filename = $user->id.'-'.$file->getClientOriginalName();
-            $path = storage_path().'app/video/';
+            $path = storage_path().'/app/video/';
             $file->move($path, $filename);
 
             $req['url_video'] = $filename;

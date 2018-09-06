@@ -50,6 +50,7 @@
                                     <th>Chủ để</th>
                                     <th>Tên chủ đề</th>
                                     <th>Nguồn</th>
+                                    <th>Video</th>
                                     <th class="text-center">Chi tiết</th>
                                     <th class="text-center">Trạng thái</th>
                                 </tr>
@@ -61,7 +62,10 @@
                                         <td>{{date('d/m/Y H:m',$group->created_at)}}</td>
                                         <td></td>
                                         <td>{{$group->name_topic}}</td>
-                                        <td>{{$group->source}}</td>
+                                        <td>{{getSourceGroup($group->source)}}</td>
+                                        <td>
+                                            <button {{($group->url_video == null || !file_exists(storage_path('app/video/'.$group->url_video)))  ? 'disabled' : ''}} onclick="wathch_video('{{route('watch_video',$group->id)}}')" class="btn btn-primary">Xem video</button>
+                                        </td>
                                         <td class="text-center">
                                             <a style="cursor: pointer" onclick="view_detail('{{$group->id}}')"><i class="fa fa-eye text-primary"></i></a>
 
@@ -125,8 +129,7 @@
                 }
             });
         }
-
-
+        
         function view_detail(id) {
             $.ajax({
                 url: '/admin/group/detail_group/'+id,
@@ -139,6 +142,12 @@
                     $('#detail_group').modal('show');
                 }
             });
+        }
+        
+        function wathch_video(url) {
+            newwindow=window.open(url,'X-startup','height=500,width=800,top=150,left=200, location=0');
+            if (window.focus) {newwindow.focus()}
+            return false;
         }
     </script>
 @stop

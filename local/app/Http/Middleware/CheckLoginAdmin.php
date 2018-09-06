@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\Account;
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class CheckLoginAdmin
 {
@@ -21,6 +22,8 @@ class CheckLoginAdmin
             return $next($request);
         }
         else{
+            Auth::logout();
+            Session::flush();
             return redirect('login');
         }
     }
