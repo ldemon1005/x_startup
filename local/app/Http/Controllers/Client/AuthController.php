@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
@@ -119,4 +120,54 @@ class AuthController extends Controller
         }
     }
 
+    public $email;
+
+    function forget_password(Request $request){
+        $email = $request->get('email');
+        $user = DB::table('accounts')->where('email',$email)->first();
+
+        if(!$user){
+            return redirect()->route('home')->with('error','Email không tồn tại trên hệ thống');
+        }
+        $this->email = $email;
+        $data = [
+            'link' => asset('form_forget_pass?email='.$email)
+        ];
+        Mail::send('client.send_mail', $data, function ($message) {
+            $message->to($this->email, $this->email)->subject('Email phản hồi từ X-startup');
+        });
+
+        return redirect()->route('home')->with('success','Chúng tôi đã gửi 1 email tới mail của bạn');
+    }
+
+    function form_forget_pass(Request $request){
+        $email = $request->get('email');
+        $data = [
+            'email' => $email
+        ];
+        return view('client.auth.forget_password',$data);
+    }
+
+    function action_forgot_pass(Request $request){
+        $req = $request->all();
+
+        $pass = bcrypt($req['pass_new_1']);
+
+        if(DB::table('accounts')->where('email',$req['email'])->update(['password' => $pass])){
+            $arr = ['username' => $req['email'], 'password' => $req['pass_new_1']];
+            if(Auth::attempt($arr, false)){
+                if(Auth::user()->status == 1){
+                    Auth::logout();
+                    Session::flush();
+                    return redirect()->route('login_client')->with('error','Tài khoản không hoạt động, vui lòng liên hệ ban quản trị!');
+                }
+                return redirect()->route('home')->with('success','Cập nhật mật khẩu thành công');
+            }
+            else{
+                return redirect()->route('login_client')->with('error','Cập nhật mật khẩu không thành công');
+            }
+        }else {
+            return redirect()->route('login_client')->with('error','Cập nhật mật khẩu không thành công');
+        }
+    }
 }

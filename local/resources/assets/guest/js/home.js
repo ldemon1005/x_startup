@@ -295,6 +295,28 @@ $("#change_pass").validate({
     }
 });
 
+$("#forget_pass").validate({
+    ignore: [],
+    rules: {
+        'pass_new_1': {
+            required: true,
+        },
+        'pass_new_2': {
+            required: true,
+            equalTo: "#pass_new_1"
+        }
+    },
+    messages: {
+        'pass_new_1': {
+            required: 'Vui lòng nhập mật khẩu mới'
+        },
+        'pass_new_2': {
+            required: 'Vui lòng xác nhận mật khẩu mới',
+            equalTo: 'Mật khẩu mới không khớp'
+        }
+    }
+});
+
 
 
 function changeImage(input) {
@@ -349,4 +371,8 @@ function submit_form(){
     console.log('chào');
     $('#loading').removeClass('d-none');
     $('#form-group').submit();
+}
+
+function forgot_password() {
+    $('#myModal').modal();
 }
