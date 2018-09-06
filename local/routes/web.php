@@ -22,6 +22,7 @@ Route::group(['namespace' => 'Admin','middleware' => 'CheckLoginAdmin','prefix' 
         Route::get('','GroupController@index')->name('list_group');
         Route::get('/update_status_group/{id}','GroupController@update_status')->name('update_status_group');
         Route::get('/detail_group/{id}','GroupController@detail_group')->name('detail_group');
+        Route::get('/watch_video/{id}','GroupController@watch_video')->name('watch_video');
     });
 
     Route::group(['prefix' => 'question'],function (){
