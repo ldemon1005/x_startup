@@ -29,6 +29,16 @@
         <div class="errorAlert">
             @include('errors.note')
         </div>
+		<div id="loading" class="d-none" style="background: url('{{asset('local/resources/assets/images/loading.gif')}}') no-repeat center /cover;
+				position:fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width:40%;
+				height:60%;
+				background-color: white;
+				border: 1px solid #ffffff;">
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

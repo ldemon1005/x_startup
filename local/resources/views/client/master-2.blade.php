@@ -19,6 +19,14 @@
     @yield('main')
 
     @include('client.header-footer.footer-2')
+
+    <div id="loading" class="d-none" style="background: url('{{asset('local/resources/assets/images/loading.gif')}}')">
+        Loading...
+    </div>
+
+    <div class="errorAlert">
+        @include('errors.note')
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

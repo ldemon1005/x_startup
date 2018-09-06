@@ -23,10 +23,13 @@ class GroupController extends Controller
 
             $list_career = DB::table('careers')->where('status',2)->get();
 
+            $check = $this->check_validate($group->id);
+
             $data = [
                 'group' => $group,
                 'list_user' => $list_user,
-                'list_career' => $list_career
+                'list_career' => $list_career,
+                'check' => $check
             ];
 
             return view('client.group.group-5',$data);
@@ -96,7 +99,7 @@ class GroupController extends Controller
         $user = DB::table('accounts')->where('email',$req['email'])->first();
 
         if(!$user){
-            return back()->with('error','Email chưa đăng ký tài khoản');
+            return back()->with('error','Email chưa đăng ký tài khoản, vui lòng đăng ký tài khoản để tham gia cuộc thi');
         }
 
         if($user->group_id){
@@ -194,11 +197,19 @@ class GroupController extends Controller
         if($request->hasFile('video')){
 
             $file = $request->file('video');
-            $filename = $user->id.'-'.$file->getClientOriginalName();
+            $filename = $user->id.'--'.date('d-m-Y-H-m').'--'.$file->getClientOriginalName();
             $path = storage_path().'/app/video/';
             $file->move($path, $filename);
-
             $req['url_video'] = $filename;
+        }
+
+        if($request->hasFile('description')){
+
+            $file = $request->file('description');
+            $filename = $user->id.'--'.date('d-m-Y-H-m').'--'.$file->getClientOriginalName();
+            $path = storage_path().'/app/description/';
+            $file->move($path, $filename);
+            $req['description'] = $filename;
         }
 
         if(DB::table('group')->where('id',$user->group_id)->update($req)){
@@ -214,5 +225,29 @@ class GroupController extends Controller
         DB::table('accounts')->whereIn('id',$user_ids)->update(['group_id'=> null]);
         $group->delete();
         return redirect()->route('home')->with('success','Xóa nhóm thành công!');
+    }
+
+    function check_validate($id){
+        $group = Group::find($id);
+
+        $array = [];
+
+        if($group->name == ''){
+            array_push($array,'thiếu tên dự án');
+        }
+        if($group->career == ''){
+            array_push($array,'thiếu lĩnh vực');
+        }
+        if($group->name_topic == ''){
+            array_push($array,'thiếu tên dự án');
+        }
+        if($group->description == ''){
+            array_push($array,'file mô tả dự án');
+        }
+        if($group->url_video == ''){
+            array_push($array,'file video giới thiệu');
+        }
+
+        return $array;
     }
 }

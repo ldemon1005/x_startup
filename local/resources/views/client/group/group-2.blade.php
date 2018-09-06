@@ -72,7 +72,7 @@
                                 {{csrf_field()}}
                                 <labe>Email</labe>
                                 <input value="{{$group->id}}" name="group_id" class="d-none">
-                                <input type="email" name="email">
+                                <input type="email" name="email" placeholder="Nhập email của thành viên.">
                                 <button type="submit">Thêm thành viên</button>
                             </form>
                         @endif

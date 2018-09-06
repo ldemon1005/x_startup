@@ -8,25 +8,43 @@
 @section('js')
     <script>
         $(document).ready(function() {
-            $('.upload').click(function() {
-                $('.file').click();
+            $('#video').click(function() {
+                $('#file-video').click();
             });
 
-            $('.file').change(function(){
-                var filename = $('.file')[0].files[0].name;
+            $('#description').click(function() {
+                $('#file-description').click();
+            });
+
+            $('#file-video').change(function(){
+
+                var filename = $('#file-video')[0].files[0].name;
 
                 if (isVideo(filename)){
                     // console.log($('.file')[0].files[0].size);
-                    if($('.file')[0].files[0].size > 209715200){
-                        $('.file-name').addClass('text-danger');
-                        $('.file-name').html("File quá lớn.");
+                    if($('#file-video')[0].files[0].size > 209715200){
+                        $('#name-video').addClass('text-danger');
+                        $('#name-video').html("File quá lớn.");
                         return;
                     }
-                    $('.file-name').removeClass('text-danger');
-                    $('.file-name').html(filename);
+                    $('#name-video').removeClass('text-danger');
+                    $('#name-video').html(filename);
                 }else  {
-                    $('.file-name').addClass('text-danger');
-                    $('.file-name').html("File không đúng định dạng.");
+                    $('#name-video').addClass('text-danger');
+                    $('#name-video').html("File không đúng định dạng.");
+                }
+            });
+
+            $('#file-description').change(function(){
+                console.log('chào');
+                var filename = $('#file-description')[0].files[0].name;
+
+                if (isPdf(filename)){
+                    $('#name-description').removeClass('text-danger');
+                    $('#name-description').html(filename);
+                }else  {
+                    $('#name-description').addClass('text-danger');
+                    $('#name-description').html("File không đúng định dạng.");
                 }
             });
 
@@ -39,6 +57,14 @@
             var ext = getExtension(filename);
             switch (ext.toLowerCase()) {
                 case 'mp4': return true;
+            }
+            return false;
+        }
+
+        function isPdf(filename) {
+            var ext = getExtension(filename);
+            switch (ext.toLowerCase()) {
+                case 'pdf': return true;
             }
             return false;
         }
@@ -112,8 +138,11 @@
                 <h2 class="section-label mt-5">Thông tin bài thi</h2>
 
                 <div id="group-create">
-                    <div class="notify-text mt-5">Bài thi của bạn chưa đc xác nhận</div>
-                    <form class="update-info mt-5" method="post" action="{{route('action_group_5')}}" enctype="multipart/form-data">
+                    @if(count($check) != 0)
+                        <div class="notify-text mt-5">Bài thi của bạn chưa đc xác nhận({{implode(',',$check)}})</div>
+                    @endif
+
+                    <form id="form-group" class="update-info mt-5" method="post" action="{{route('action_group_5')}}" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="group">
                             <label>Tên nhóm</label>
@@ -137,21 +166,31 @@
 
                         <div class="group">
                             <label>Mô tả</label>
-                            <textarea name="group[description]">{{$group->description}}</textarea>
+                            {{--<textarea name="group[description]">{{$group->description}}</textarea>--}}
+                            <br>
+                            <a id="description" class="upload">Upload</a>
+                            <span id="name-description" class="file-name">
+                                @if($group->description)
+                                    {{$group->description}}
+                                @else
+                                    Nhóm chưa có file mô tả nào
+                                @endif
+                            </span>
+                            <input id="file-description" class="file" style="display: none;" type="file" name="description">
                         </div>
 
                         <div class="group">
                             <label>Video (Giới thiệu nhóm, thành viên, ý tưởng, tính khả thi... Video ở định dạng mp4,và nhỏ hơn 200mb)</label>
                             <br>
-                            <a class="upload">Upload</a>
-                            <span class="file-name">
+                            <a id="video" class="upload">Upload</a>
+                            <span id="name-video" class="file-name">
                                 @if($group->url_video)
                                     {{$group->url_video}}
                                 @else
-                                    Bạn chưa có file video nào
+                                    Nhóm chưa có file video nào
                                 @endif
                             </span>
-                            <input class="file" style="display: none;" type="file" name="video">
+                            <input id="file-video" class="file" style="display: none;" type="file" name="video">
                         </div>
 
                         <div class="group">
@@ -173,14 +212,15 @@
                         </div>
 
                         <div>
-                            <a class="back">Không</a>
-                            <button type="submit">Lưu thay đổi</button>
+                            <a class="back">Hủy</a>
+                            <button onclick="submit_form()" type="button">Lưu thay đổi</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </div>
+
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -189,7 +229,7 @@
                     {{csrf_field()}}
                     <labe>Email</labe>
                     <input value="{{$group->id}}" name="group_id" class="d-none">
-                    <input type="email" name="email">
+                    <input type="email" name="email" placeholder="Nhâp email thành viên.">
                     <button type="submit">Thêm thành viên</button>
                 </form>
             </div>

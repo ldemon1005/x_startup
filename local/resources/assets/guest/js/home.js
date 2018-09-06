@@ -99,10 +99,16 @@ $("#register").validate({
             equalTo: "#password"
         },
         'card_id': {
-            required: true
+            required: true,
+            number: true,
+            minlength: 9,
+            maxlength: 12
         },
         'phone': {
-            required: true
+            required: true,
+            number: true,
+            minlength: 10,
+            maxlength: 11
         },
     },
     messages: {
@@ -121,10 +127,62 @@ $("#register").validate({
             equalTo: "Mật khẩu nhập lại không đúng"
         },
         'card_id': {
-            required: 'Vui lòng nhập số chứng minh nhân dân'
+            required: 'Vui lòng nhập số chứng minh nhân dân',
+            number: 'Số chứng minh nhân dân là một dãy số',
+            minlength: 'Số chứng minh không được nhỏ hơn 9 ký tự',
+            maxlength: 'Số chứng minh không được lớn hơn 12 ký tự'
         },
         'phone': {
-            required: 'Vui lòng nhập số điện thoại'
+            required: 'Vui lòng nhập số điện thoại',
+            number: 'Số điện thoại là một dãy số',
+            minlength: 'Số điện thoại không được nhỏ hơn 10 ký tự',
+            maxlength: 'Số điện thoại không được lớn hơn 11 ký tự'
+        },
+    }
+});
+
+$("#update-profile").validate({
+    ignore: [],
+    rules: {
+        'user[fullname]': {
+            required: true
+        },
+        'user[email]': {
+            required: true,
+            email : true
+        },
+        'user[card_id]': {
+            required: true,
+            number: true,
+            minlength: 9,
+            maxlength: 12
+        },
+        'user[phone]': {
+            required: true,
+            number: true,
+            minlength: 10,
+            maxlength: 11
+        },
+    },
+    messages: {
+        'user[fullname]': {
+            required: 'Vui lòng nhập họ và tên'
+        },
+        'user[email]': {
+            required: 'Vui lòng nhập email',
+            email: 'Email không đúng định dạng'
+        },
+        'user[card_id]': {
+            required: 'Vui lòng nhập số chứng minh nhân dân',
+            number: 'Số chứng minh nhân dân là một dãy số',
+            minlength: 'Số chứng minh không được nhỏ hơn 9 ký tự',
+            maxlength: 'Số chứng minh không được lớn hơn 12 ký tự'
+        },
+        'user[phone]': {
+            required: 'Vui lòng nhập số điện thoại',
+            number: 'Số điện thoại là một dãy số',
+            minlength: 'Số điện thoại không được nhỏ hơn 10 ký tự',
+            maxlength: 'Số điện thoại không được lớn hơn 11 ký tự'
         },
     }
 });
@@ -286,3 +344,9 @@ $(window).scroll(function(){
 $('#to-top').click(function(){
     $('html').animate({ scrollTop: 0 }, 'fast');
 });
+
+function submit_form(){
+    console.log('chào');
+    $('#loading').removeClass('d-none');
+    $('#form-group').submit();
+}
