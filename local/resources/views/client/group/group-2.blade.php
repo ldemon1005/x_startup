@@ -70,7 +70,7 @@
                         @if($group->user_created == \Illuminate\Support\Facades\Auth::user()->id)
                             <form class="add-member" id="add-member" action="{{route('add_member')}}" method="post">
                                 {{csrf_field()}}
-                                <labe>Email</labe>
+                                <label>Email</label>
                                 <input value="{{$group->id}}" name="group_id" class="d-none">
                                 <input type="email" name="email">
                                 <button type="submit">Thêm thành viên</button>

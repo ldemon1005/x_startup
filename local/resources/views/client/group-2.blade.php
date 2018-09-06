@@ -60,7 +60,7 @@
 
                     <div>
                         <form class="add-member">
-                            <labe>Email</labe>
+                            <label>Email</label>
                             <input type="email" name="">
                             <button>Thêm thành viên</button>
                         </form>

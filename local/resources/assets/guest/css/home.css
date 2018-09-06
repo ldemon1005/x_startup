@@ -756,6 +756,7 @@
 #header .login{
 	position: absolute;
 	right: 40px;
+	text-align: right;
 	top: 0;
 }
 
