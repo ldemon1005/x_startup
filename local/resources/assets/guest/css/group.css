@@ -211,7 +211,6 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    position: relative;
 }
 .member-item .ava{
     height:200px;
@@ -269,56 +268,7 @@
     font-weight: bold;
     cursor:pointer;
 }
+
 .file-name{
     font-style: italic;
-}
-.add-image{
-    position: relative;
-    height:100%;
-    width: 100%;
-    cursor: pointer;
-}
-.add-image:before,.add-image:after{
-    content:"";
-    display: block;
-    position: absolute;
-    top:0;
-    height: 100%;
-    border-top: 5px solid var(--bg-4);
-    border-bottom: 5px solid var(--bg-4);
-    width: 25%;
-}
-.add-image:before{
-    left: 0;
-    border-left: 5px solid var(--bg-4);
-}
-.add-image:after{
-    right: 0;
-    border-right: 5px solid var(--bg-4);
-}
-.plus{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 60%;
-    padding-top: 60%;
-}
-.plus:after,.plus:before{
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: var(--bg-4);
-}
-.plus:before{
-    height: 100%;
-    width: 5px;
-    top: 0;
-    left: calc(50% - 2px);
-}
-.plus:after{
-    height: 5px;
-    width: 100%;
-    left: 0;
-    top: calc(50% - 2px);
 }
