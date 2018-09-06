@@ -38,28 +38,36 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-8 offset-md-1">
-                        <form class="profile-form" action="{{route('update_user')}}" method="post" enctype="multipart/form-data">
+                        <form id="update-profile" class="profile-form" action="{{route('update_user')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <input id="img" type="file" name="img"
                                    onchange="changeImage(this)" style="display: none!important;">
-                            <div class="group">
-                                <label>Họ tên</label>
-                                <input type="text" name="user[fullname]" value="{{$user->fullname}}">
+                            <div class="row group">
+                                <label class="col-md-3">Họ tên</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="user[fullname]" value="{{$user->fullname}}">
+                                </div>
                             </div>
 
-                            <div class="group">
-                                <label>Mail</label>
-                                <input disabled type="email" name="user[email]" value="{{$user->email}}">
+                            <div class="row group">
+                                <label class="col-md-3">Mail</label>
+                                <div class="col-md-9">
+                                    <input disabled class="form-control" type="email" name="user[email]" value="{{$user->email}}">
+                                </div>
                             </div>
 
-                            <div class="group">
-                                <label>Phone</label>
-                                <input type="text" name="user[phone]" value="{{$user->phone}}">
+                            <div class="row group">
+                                <label class="col-md-3">Phone</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="user[phone]" value="{{$user->phone}}">
+                                </div>
                             </div>
 
-                            <div class="group">
-                                <label>CMND</label>
-                                <input type="text" name="user[card_id]" value="{{$user->card_id}}">
+                            <div class="row group">
+                                <label class="col-md-3">CMND</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="user[card_id]" value="{{$user->card_id}}">
+                                </div>
                             </div>
 
                             <button type="submit">Lưu thay đổi</button>

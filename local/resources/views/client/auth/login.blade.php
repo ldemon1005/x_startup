@@ -38,10 +38,24 @@
 
                                 <input type="password" placeholder="Mật khẩu" name="password">
 
-                                <button>Đăng nhập</button>
+                                <a onclick="forgot_password()" style="text-decoration: none;cursor: pointer"  class="text-warning">Quên mật khẩu</a>
+
+                                <button type="submit">Đăng nhập</button>
                             </form>
 
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" style="padding: 50px;">
+                        <form class="forgot-password" action="{{route('forget_password')}}" method="post"  style="margin-top: 0;">
+                            {{csrf_field()}}
+                            <input type="email" name="email" placeholder="Nhâp email.">
+                            <button type="submit">Quên mật khẩu</button>
+                        </form>
                     </div>
                 </div>
             </div>

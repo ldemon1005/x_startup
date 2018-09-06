@@ -38,7 +38,7 @@
                     @if($group->id == 0)
                         <form id="group_create_client" action="{{route('action_group')}}" method="post">
                             {{csrf_field()}}
-                            <label>Tạo nhóm</label>
+                            <label>Tên nhóm</label>
                             <input class="d-none" name="group[id]" value="{{$group->id}}">
                             <input type="text" name="group[name]" value="{{$group->name}}">
                             <input checked type="checkbox" name="license"> Tôi đã đọc điều khoản của chương trình <br>

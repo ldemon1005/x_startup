@@ -12,7 +12,7 @@
                     <a class="login-btn" href="{{route('login_client')}}">Đăng nhập</a>
                     <a class="signup-btn" href="{{route('register_client')}}">Đăng ký</a>
                 @else
-                    <a class="user">{{\Illuminate\Support\Facades\Auth::user()->fullname}} <span class="ava" style="background-image: url({{file_exists(storage_path('app/user/resized500-'.Auth::user()->avatar)) ? asset('local/storage/app/user/resized500-'.Auth::user()->avatar) : asset('local/resources/assets/images/default-image.png')}});"></span></a>
+                    <a class="user">{{\Illuminate\Support\Facades\Auth::user()->fullname}} <span class="ava" style="background: url({{file_exists(storage_path('app/user/resized500-'.Auth::user()->avatar)) ? asset('local/storage/app/user/resized500-'.Auth::user()->avatar) : asset('local/resources/assets/images/default-image.png')}}) no-repeat center /cover;"></span></a>
                     <div class="dropdown">
                         <ul>
                             <li><a href="{{route('profile')}}">Hồ sơ cá nhân</a></li>

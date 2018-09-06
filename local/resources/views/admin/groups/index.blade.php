@@ -50,7 +50,7 @@
                                     <th>Chủ để</th>
                                     <th>Tên chủ đề</th>
                                     <th>Nguồn</th>
-                                    <th>Video</th>
+                                    <th>Video/Mô tả</th>
                                     <th class="text-center">Chi tiết</th>
                                     <th class="text-center">Trạng thái</th>
                                 </tr>
@@ -65,6 +65,8 @@
                                         <td>{{getSourceGroup($group->source)}}</td>
                                         <td>
                                             <button {{($group->url_video == null || !file_exists(storage_path('app/video/'.$group->url_video)))  ? 'disabled' : ''}} onclick="wathch_video('{{route('watch_video',$group->id)}}')" class="btn btn-primary">Xem video</button>
+
+                                            <a class="btn btn-primary {{($group->description == null || !file_exists(storage_path('app/description/'.$group->description)))  ? 'disabled' : ''}}"  href="{{asset('local/storage/app/description/'.$group->description)}}" target="_blank">File pdf</a>
                                         </td>
                                         <td class="text-center">
                                             <a style="cursor: pointer" onclick="view_detail('{{$group->id}}')"><i class="fa fa-eye text-primary"></i></a>

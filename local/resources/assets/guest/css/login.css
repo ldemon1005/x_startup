@@ -61,3 +61,31 @@
     left: 75%;
     margin-top: calc( var(--header-height)/2 );
 }
+
+.forgot-password{
+    width: 100%;
+    padding: 35px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-top: 50px;
+}
+.forgot-password input{
+    height: 56px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--bg-5);
+    outline: none;
+    padding: 0 10px;
+}
+.forgot-password button{
+    border-radius: 15px;
+    height: 56px;
+    width: 250px;
+    line-height: 56px;
+    background-color: var(--bg-4);
+    color: var(--text-2);
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
