@@ -285,17 +285,17 @@
     position: absolute;
     top:0;
     height: 100%;
-    border-top: 5px solid var(--bg-4);
-    border-bottom: 5px solid var(--bg-4);
+    border-top: 5px solid var(--bg-5);
+    border-bottom: 5px solid var(--bg-5);
     width: 25%;
 }
 .add-image:before{
     left: 0;
-    border-left: 5px solid var(--bg-4);
+    border-left: 5px solid var(--bg-5);
 }
 .add-image:after{
     right: 0;
-    border-right: 5px solid var(--bg-4);
+    border-right: 5px solid var(--bg-5);
 }
 .plus{
     position: absolute;
@@ -309,7 +309,7 @@
     content: "";
     display: block;
     position: absolute;
-    background-color: var(--bg-4);
+    background-color: var(--bg-5);
 }
 .plus:before{
     height: 100%;
