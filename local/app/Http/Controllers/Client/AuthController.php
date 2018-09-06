@@ -68,7 +68,7 @@ class AuthController extends Controller
             if(Account::create($req)){
                 $arr = ['username' => $req['email'], 'password' => $pass];
                 Auth::attempt($arr, false);
-                return redirect()->route('home')->with('success','Đăng ký thành công');
+                return redirect()->route('group')->with('success','Đăng ký thành công');
             }else {
                 return view('client.auth.signup',$req)->with('error','Đăng ký không thành công, vui lòng thử lại ');
             }
