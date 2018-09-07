@@ -74,7 +74,7 @@ class AuthController extends Controller
                     'account' => $req
                 ];
                 Mail::send('client.send_mail_active', $data, function ($message) {
-                    $message->to($this->email, $this->email)->subject('Email phản hồi từ X-startup');
+                    $message->to($this->email, $this->email)->subject('Email xác nhận đăng ký thành viên "Cuộc thi XStartup"');
                 });
                 return redirect()->route('home')->with('success','Chúng tôi đã gửi 1 email kích hoạt tới email của bạn.');
             }else {

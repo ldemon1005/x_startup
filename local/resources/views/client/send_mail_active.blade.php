@@ -1,7 +1,3 @@
-<h3>Tên của Email: Admin_XStartup</h3>
-<h3>Chủ đề email: Email xác nhận đăng ký thành viên "Cuộc thi XStartup"</h3>
-<h2 style="margin: 20px 0"><b>Nội dung:</b></h2>
-
 <h3>Chào bạn!</h3>
 
 <h3>BQT Cuộc thi XStartup nhận được thông tin đăng ký của bạn bao gồm:</h3>
