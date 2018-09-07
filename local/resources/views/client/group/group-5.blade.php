@@ -165,7 +165,7 @@
                         </div>
 
                         <div class="group">
-                            <label>Mô tả</label>
+                            <label>Bản tóm tắt dự án</label>
                             {{--<textarea name="group[description]">{{$group->description}}</textarea>--}}
                             <br>
                             <a id="description" class="upload">Upload</a>
