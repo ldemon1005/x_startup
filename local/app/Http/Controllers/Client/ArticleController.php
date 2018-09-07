@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class ArticleController extends Controller
 {
     function index(){
-        $list_article = DB::table('article')->where('status',2)->orderByDesc('id')->paginate(8);
+        $list_article = DB::table('article')->where('status',2)->orderByDesc('id')->paginate(6);
 
         $data = [
             'list_article' => $list_article

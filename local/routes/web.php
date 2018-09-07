@@ -73,6 +73,9 @@ Route::group(['namespace' => 'Client'],function (){
     Route::post('action_forgot_pass','AuthController@action_forgot_pass')->name('action_forgot_pass');
     Route::get('form_forget_pass','AuthController@form_forget_pass')->name('form_forget_pass');
 
+
+    Route::get('active_user','AuthController@active_user')->name('active_user');
+
     Route::group(['prefix' => 'group','middleware' => 'CheckLoginClient'],function (){
        Route::get('','GroupController@index')->name('group');
        Route::get('group_1','GroupController@group_1')->name('group_1');

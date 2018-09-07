@@ -293,6 +293,7 @@
             case 1 : $str = 'Facebook';break;
             case 2 : $str = 'Bạn bè';break;
             case 3 : $str = 'Báo chí';break;
+            case 4 : $str = 'Truyền thông';break;
             case 0 : $str = 'Khác';break;
         }
         return $str;
