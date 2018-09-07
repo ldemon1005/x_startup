@@ -60,20 +60,35 @@ class AuthController extends Controller
             return view('client.auth.signup',$req)->with('error','Email hoặc số điện thoại hoặc số CMND đã tồn tại trên hệ thống ');
         }
         else {
-            $req['status'] = 2;
-            $pass = $req['password'];
+            $req['status'] = 1;
+            $password = $req['password'];
             $req['password'] = bcrypt($req['password']);
             $req['created_at'] = time();
             $req['username'] = $req['email'];
             unset($req['password_1']);
             if(Account::create($req)){
-                $arr = ['username' => $req['email'], 'password' => $pass];
-                Auth::attempt($arr, false);
-                return redirect()->route('group')->with('success','Đăng ký thành công');
+                $this->email = $req['email'];
+                $data = [
+                    'title' => 'kích hoạt tài khoản',
+                    'link' => asset('active_user?email='.$req['email'].'&password='.$password)
+                ];
+                Mail::send('client.send_mail', $data, function ($message) {
+                    $message->to($this->email, $this->email)->subject('Email phản hồi từ X-startup');
+                });
+                return redirect()->route('home')->with('success','Chúng tôi đã gửi 1 email kích hoạt tới email của bạn.');
             }else {
                 return view('client.auth.signup',$req)->with('error','Đăng ký không thành công, vui lòng thử lại ');
             }
         }
+    }
+
+    function active_user(Request $request){
+        $arr = ['username' => $request->email, 'password' => $request->password];
+
+        if(DB::table('accounts')->where('email',$request->email)->update(['status' => 2])){
+            Auth::attempt($arr, false);
+            return redirect()->route('home')->with('success','Kích hoạt tài khoản thành công');
+        }else return redirect()->route('home')->with('error','Kích hoạt tài khoản không thành công');
     }
 
 
@@ -131,6 +146,7 @@ class AuthController extends Controller
         }
         $this->email = $email;
         $data = [
+            'title' => 'quên mật khẩu',
             'link' => asset('form_forget_pass?email='.$email)
         ];
         Mail::send('client.send_mail', $data, function ($message) {

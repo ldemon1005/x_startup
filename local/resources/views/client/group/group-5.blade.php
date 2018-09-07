@@ -106,7 +106,7 @@
                         <div class="col-12 col-md-4 col-lg-4">
                             <div class="member-item" style="position: relative">
                                 @if($user->id != $group->user_created)
-                                    <a onclick="return confirm('Bạn chắc chắn muốn xóa')" style="position: absolute;top: 15px;right: 15px;" class="text-danger {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}" href="{{route('remove_member',$user->id)}}" title="Xóa thành viên"><i class="fa fa-trash text-danger"></i></a>
+                                    <a onclick="return confirm('Bạn chắc chắn muốn xóa')" style="position: absolute;top: 15px;right: 15px;" class="text-danger {{(\Illuminate\Support\Facades\Auth::user()->id == $group->user_created || \Illuminate\Support\Facades\Auth::user()->id == $user->id) ? '' : 'd-none'}}" href="{{route('remove_member',$user->id)}}" title="Xóa thành viên"><i class="fa fa-trash text-danger"></i></a>
                                 @endif
                                 <div class="ava" style="background-image:url({{file_exists(storage_path('app/user/resized500-'.$user->avatar)) ? asset('local/storage/app/user/resized500-'.$user->avatar) : asset('local/resources/assets/images/default-image.png')}})"></div>
                                 <div class="name">{{$user->fullname}}</div>
@@ -207,6 +207,7 @@
                                 <option {{$group->source == 1 ? 'selected' : ''}} value="1">Fanpage facebook</option>
                                 <option {{$group->source == 2 ? 'selected' : ''}} value="2">Bạn bè</option>
                                 <option {{$group->source == 3 ? 'selected' : ''}} value="3">Báo chí</option>
+                                <option {{$group->source == 4 ? 'selected' : ''}} value="3">Truyền thông</option>
                                 <option {{$group->source == 0 ? 'selected' : ''}} value="0">Khác</option>
                             </select>
                         </div>
