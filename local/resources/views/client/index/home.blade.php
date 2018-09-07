@@ -65,12 +65,12 @@
                             <p>Độ tuổi trên 18 tuổi.</p>
                             <p>*Lưu ý:</p>
                             <ul>
-                                <li>Mỗi thí sinh chỉ được tham gia 01 đội thi</li>
+                                <li>Mỗi thí sinh chỉ được tham gia 01 đội thi.</li>
                                 <li>Các ý tưởng, dự án đã từng đoạt giải tại các cuộc thi khởi nghiệp không được tham
-                                    gia
+                                    gia.
                                 </li>
                                 <li>Các sản phẩm, dịch vụ, dự án đã đăng ký kinh doanh không được tham gia.</li>
-                                <li>Mọi sai phạm khi phát hiện, BTC được phép hủy quyền dự thi của ứng viên</li>
+                                <li>Mọi sai phạm khi phát hiện, BTC được phép hủy quyền dự thi của ứng viên.</li>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                             <li>Nộp ý tưởng tham gia cho BTC bằng cách điền thông tin trên vào Form
                                                 đăng ký trên website
                                             </li>
-                                            <li>Bản tóm tắt ý tưởng kinh doanh (File PDF theo Mẫu: <a
+                                            <li>Bản tóm tắt ý tưởng kinh doanh (File PDF theo Mẫu: <a style="color: var(--text-4);"
                                                         href="https://docs.google.com/document/d/1KjKAwC8LrFn4uIXk6mSq1LORQU0E1u6JCKwJ8Upszo0/edit?usp=sharing">Tóm
                                                     tắt ý tưởng kinh doanh mẫu</a>)
                                             </li>
@@ -121,15 +121,13 @@
                                                 hành, tính thực tế của ý tưởng.
                                             </li>
                                         </ul>
-                                        <p><b>Kết quả Vòng 1</b>: chọn ra 60 dự án nổi bật nhất của 2 khu vực Bắc và Nam
-                                            vào ngày 10/10/2018</p>
+                                        <p><b>Kết quả Vòng 1</b>: Công bố 60 dự án nổi bật nhất (30 đội khu vực miền Bắc và 30 đội khu vực miền Nam) ngày 10/10/2018</p>
                                         <b>Lưu ý:</b>
                                         <ul>
                                             <li>Những dự án hợp lệ là những dự án đã điền đầy đủ thông tin và gửi
                                                 video
                                             </li>
-                                            <li>Không giới hạn số lượng đội thi tham gia, 01 thành viên chỉ được tham
-                                                gia 01 đội thi
+                                            <li>Không giới hạn số lượng đội thi tham gia, 01 thành viên chỉ được tham gia 01 đội thi
                                             </li>
                                         </ul>
                                     </div>
@@ -206,10 +204,10 @@
                                     <ul>
                                         <li>Vòng 3 bắt đầu từ 01/11/2018</li>
                                         <li>12/11/2018 Các đội khu vực miền Bắc trình bày, phản biện dự án kinh doanh
-                                            của mình trước BGK tại khu vực miền Bắc.
+                                            của mình trước BGK tại Tầng 5, Tòa nhà Diamond Flower, số 1 Hoàng Đạo Thúy, Thanh Xuân, Hà Nội.
                                         </li>
                                         <li>15/11/2018 Các đội khu vực miền Nam trình bày, phản biện dự án kinh doanh
-                                            của mình trước BGK tại tại khu vực miền Nam
+                                            của mình trước BGK tại tại Tòa nhà Cphone, số 456 Xô Viết Nghệ Tĩnh, Phường 25, Quận Bình Thạnh, TP. HCM.
                                         </li>
                                         <li>17/11/2018 Thông báo kết quả cho 06 đội vào Chung Kết.</li>
                                     </ul>
@@ -230,22 +228,7 @@
                                     <br>
                                     Các đội có 10 phút để trình bày và 10 phút phản biện ý tưởng sản phẩm và kế hoạch
                                     của mình trước BGK
-                                    <br>
-                                    <b>*Lưu ý:</b>
-                                    <ul>
-                                        <li>10 đội khu vực miền Bắc sẽ trực tiếp thuyết phục BGK để được đi vào vòng
-                                            Chung Kết bằng cách trực tiếp present trước BGK tại địa điểm
-                                        </li>
-                                        <li>[HN] Tầng 5, Tòa nhà Diamond Flower, số 1 Hoàng Đạo Thúy, Thanh Xuân,
-                                            HN.
-                                        </li>
-                                        <li>10 đội khu vực miền Nam sẽ thuyết phục BGK để được đi vào vòng Chung Kết
-                                            bằng cách trực tiêp thuyết trình trước BGK tại địa điểm
-                                        </li>
-                                        <li>[HCM] Tòa nhà Cphone, 456 Xô Viết Nghệ Tĩnh, phường 25, Bình
-                                            Thạnh, HCM.
-                                        </li>
-                                    </ul>
+
                                 </div>
                             </div>
 
@@ -258,7 +241,7 @@
                                     <p><b>Lịch trình Vòng 4:</b></p>
                                     <ul>
                                         <li>Từ 24/11/2018 – 23/12/2018 Các đội hoàn thiện nội dung chuẩn bị cho vòng
-                                            chung kết.
+                                            Chung Kết.
                                         </li>
                                         <li>24/12/2018 Vòng 4: Nhân tố X</li>
                                     </ul>
@@ -373,13 +356,13 @@
                                         </li>
                                         <li>01 năm sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
                                         <li>01 năm book phòng miễn phí trên Ctogo</li>
-                                        <li>Quà tặng đến từ Cgroup + kỷ niệm chương + giấy chứng nhận</li>
+                                        <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
                                         <li>01 khóa học tiếng anh với người bản ngữ 1 năm</li>
                                         <li>Được lên Tạp chí Việt Nam Hội Nhập (tạp chí in + e-magazine)</li>
                                         <li>Chuyến đi seminar tại singapore</li>
-                                        <li>Cgroup đầu tư dự án startup</li>
+                                        <li>CGroup đầu tư dự án startup</li>
                                         <li>Được hỗ trợ truyền thông trong 6 tháng</li>
-                                        <li>Được BQT Cgroup làm mentor trong dự án startup</li>
+                                        <li>Được BQT CGroup làm mentor trong dự án startup</li>
                                     </ul>
                                 </div>
                             </div>
@@ -397,10 +380,10 @@
                                         </li>
                                         <li>03 tháng sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
                                         <li>Voucher giảm giá 30% khi book phòng trên Ctogo</li>
-                                        <li>Quà tặng đến từ Cgroup + kỷ niệm chương + giấy chứng nhận</li>
+                                        <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
                                         <li>01 khóa học tiếng anh với người bản ngữ 03 tháng</li>
                                         <li>Được lên Tạp chí Việt Nam Hội Nhập (tạp chí in + e-magazine)</li>
-                                        <li>Được đặc cách trở thành member Cgroup</li>
+                                        <li>Được đặc cách trở thành member CGroup</li>
                                     </ul>
                                 </div>
                             </div>
@@ -416,7 +399,7 @@
                                         <li>02 tháng sử dụng dịch vụ chỗ ngồi miễn phí tại Zikzak co-working Space</li>
                                         <li>02 tháng sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
                                         <li>Voucher giảm giá 15% khi book phòng trên Ctogo</li>
-                                        <li>Quà tặng đến từ Cgroup + kỷ niệm chương + giấy chứng nhận</li>
+                                        <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
                                         <li>01 khóa học tiếng anh với người bản ngữ 02 tháng</li>
                                     </ul>
                                 </div>
@@ -431,7 +414,7 @@
                                         <li>Voucher giảm giá 50% khi mua Cphone</li>
                                         <li>01 tháng sử dụng dịch vụ chỗ ngồi miễn phí tại Zikzak co-working Space</li>
                                         <li>01 tháng sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
-                                        <li>Quà tặng đến từ Cgroup + kỷ niệm chương + giấy chứng nhận</li>
+                                        <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
                                         <li>Voucher giảm giá 10% khi book phòng trên Ctogo</li>
                                         <li>01 khóa học tiếng anh với người bản ngữ 01 tháng</li>
                                     </ul>

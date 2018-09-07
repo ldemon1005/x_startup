@@ -21,6 +21,7 @@
 	display: block;
 	padding-top: 56.25%;
 }
+
 .glitch__img {
 	position: absolute;
 	top: calc(-1 * var(--gap-vertical));
@@ -33,9 +34,11 @@
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 }
-.glitch__img:nth-child(n+2) {
+
+.glitch__img:nth-child(n+2){
 	opacity: 0;
 }
+
 .xstartup{
 	height: calc( var(--glitch-height) - 200px ) ;
 	width: var(--glitch-width) ;
@@ -49,6 +52,7 @@
 	animation-iteration-count: infinite;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
 }
+
 /*.xblue{
 	content: "";
 	position: absolute;
@@ -63,6 +67,7 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }*/
+
 .xred{
 	content: "";
 	position: absolute;
