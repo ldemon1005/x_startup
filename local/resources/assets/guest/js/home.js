@@ -225,50 +225,6 @@ $("#add-member").validate({
     }
 });
 
-$("#info_project").validate({
-    ignore: [],
-    rules: {
-        'group[name_topic]': {
-            required: true
-        },
-        'group[career]': {
-            required: true
-        },
-        'group[description]': {
-            required: true
-        },
-        'group[url_video]': {
-            required: true
-        },
-        'group[type_product]': {
-            required: true
-        },
-        'group[source]': {
-            required: true
-        }
-    },
-    messages: {
-        'group[name_topic]': {
-            required: 'Vui lòng nhập tên dự án'
-        },
-        'group[career]': {
-            required: 'Vui lòng chọn ngành nghề'
-        },
-        'group[description]': {
-            required: 'Vui lòng nhập mô tả'
-        },
-        'group[url_video]': {
-            required: 'Vui lòng chọn video'
-        },
-        'group[type_product]': {
-            required: 'Vui lòng chọn loại sản phẩm'
-        },
-        'group[source]': {
-            required: 'Vui lòng chọn nguồn thông tin'
-        }
-    }
-});
-
 $("#change_pass").validate({
     ignore: [],
     rules: {
@@ -320,6 +276,106 @@ $("#forget_pass").validate({
 });
 
 
+$("#form-group").validate({
+    ignore: [],
+    rules: {
+        'group[name]': {
+            required: true,
+        },
+        'group[name_topic]': {
+            required: true,
+        },
+        'group[career]': {
+            required: true,
+        },
+        'name-description_1': {
+            required: true,
+        },
+        'name-video_1': {
+            required: true,
+        },
+        'group[type_product]': {
+            required: true,
+        },
+        'group[source]': {
+            required: true,
+        },
+    },
+    messages: {
+        'group[name]': {
+            required: 'Thiếu tên nhóm',
+        },
+        'group[name_topic]': {
+            required: 'Thiếu tên dự án',
+        },
+        'group[career]': {
+            required: 'Thiếu tên lĩnh vự',
+        },
+        'name-description_1': {
+            required: 'Thiếu file mô tả',
+        },
+        'name-video_1': {
+            required: 'Thiếu file video giới thiệu',
+        },
+        'group[type_product]': {
+            required: 'Thiếu loại mô hình sản phẩm',
+        },
+        'group[source]': {
+            required: 'Thiếu nguồn thông tin',
+        },
+    },
+    // invalidHandler: submit_form()
+});
+
+
+$("#info_project").validate({
+    ignore: [],
+    rules: {
+        'group[name_topic]': {
+            required: true,
+        },
+        'group[career]': {
+            required: true,
+        },
+        'name-description_1': {
+            required: true,
+        },
+        'name-video_1': {
+            required: true,
+        },
+        'group[type_product]': {
+            required: true,
+        },
+        'group[source]': {
+            required: true,
+        },
+    },
+    messages: {
+        'group[name]': {
+            required: 'Thiếu tên nhóm',
+        },
+        'group[name_topic]': {
+            required: 'Thiếu tên dự án',
+        },
+        'group[career]': {
+            required: 'Thiếu tên lĩnh vự',
+        },
+        'name-description_1': {
+            required: 'Thiếu file mô tả',
+        },
+        'name-video_1': {
+            required: 'Thiếu file video giới thiệu',
+        },
+        'group[type_product]': {
+            required: 'Thiếu loại mô hình sản phẩm',
+        },
+        'group[source]': {
+            required: 'Thiếu nguồn thông tin',
+        },
+    },
+    // invalidHandler: info_project()
+});
+
 
 function changeImage(input) {
     //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
@@ -370,9 +426,13 @@ $('#to-top').click(function(){
 });
 
 function submit_form(){
-    console.log('chào');
-    $('#loading').removeClass('d-none');
-    $('#form-group').submit();
+    if($('#form-group').valid()) $('#loading').removeClass('d-none');
+    // $('#form-group').submit();
+}
+
+function info_project(){
+    if($('#info_project')) $('#loading').removeClass('d-none');
+    // $('#info_project').submit();
 }
 
 function forgot_password() {

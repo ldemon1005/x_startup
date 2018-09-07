@@ -33,7 +33,7 @@
                 </thead>
                 <tbody>
                 @foreach($list_user as $user)
-                    <tr class="{{$user->id == $group->user_created ? 'text-primary' : ''}}">
+                    <tr class="{{$user->id == $group->user_created ? 'text-primary' : ''}} {{$user->id == $group->admin ? 'text-danger' : ''}}">
                         <td>{{$user->fullname}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>

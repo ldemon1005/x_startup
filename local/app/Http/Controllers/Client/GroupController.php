@@ -58,6 +58,7 @@ class GroupController extends Controller
             $req['created_at'] = time();
             $req['user_created'] = $user->id;
             $req['user_id'] = $user->id;
+            $req['admin'] = $user->id;
 
             $group = Group::create($req);
             if($group->id){
@@ -165,6 +166,8 @@ class GroupController extends Controller
 
         $group = Group::find($user->group_id);
 
+
+
         $data = [
             'group' => $group,
             'list_career' => $list_career
@@ -177,9 +180,29 @@ class GroupController extends Controller
         $req = $request->get('group');
 
         $user = Auth::user();
+        if($request->hasFile('video')){
+            $file = $request->file('video');
+            $filename = $user->id.'--'.date('d-m-Y-H-m').'--'.$file->getClientOriginalName();
+            $path = storage_path().'/app/video/';
+            $file->move($path, $filename);
+            $req['url_video'] = $filename;
+        }
+
+        if($request->hasFile('description')){
+            $file = $request->file('description');
+            $filename = $user->id.'--'.date('d-m-Y-H-m').'--'.$file->getClientOriginalName();
+            $path = storage_path().'/app/description/';
+            $file->move($path, $filename);
+            $req['description'] = $filename;
+        }
 
         if(DB::table('group')->where('id',$user->group_id)->update($req)){
-            return redirect()->route('group_complete');
+            $arr = $this->check_validate($user->group_id);
+            if(count($arr) == 0){
+                return redirect()->route('group_complete');
+            }else {
+                return redirect()->route('group');
+            }
         }else {
             return redirect()->route('group_3')->with('error','Nộp bài không thành công');
         }
@@ -249,5 +272,15 @@ class GroupController extends Controller
         }
 
         return $array;
+    }
+
+    function setup_admin($user_id){
+        $user = Auth::user();
+
+        if(DB::table('group')->where('id',$user->group_id)->update(['admin' => $user_id])){
+            return back()->with('success','Ủy quyền thành công');
+        }else {
+            return back()->with('error','Ủy quyền không thành công');
+        }
     }
 }

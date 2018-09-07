@@ -87,6 +87,7 @@ Route::group(['namespace' => 'Client'],function (){
        Route::post('add_member','GroupController@add_member')->name('add_member');
        Route::get('remove_member/{id}','GroupController@remove_member')->name('remove_member');
        Route::get('delete_group/{id}','GroupController@delete_group')->name('delete_group');
+       Route::get('setup_admin/{id}','GroupController@setup_admin')->name('setup_admin');
     });
 
     Route::group(['prefix' => 'article'],function (){
