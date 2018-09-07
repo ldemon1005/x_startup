@@ -22,13 +22,14 @@
 
                 if (isVideo(filename)){
                     // console.log($('.file')[0].files[0].size);
-                    if($('#file-video')[0].files[0].size > 209715200){
+                    if($('#file-video')[0].files[0].size > 1610612736){
                         $('#name-video').addClass('text-danger');
                         $('#name-video').html("File quá lớn.");
                         return;
                     }
                     $('#name-video').removeClass('text-danger');
                     $('#name-video').html(filename);
+                    $('#name-video_1').val(filename);
                 }else  {
                     $('#name-video').addClass('text-danger');
                     $('#name-video').html("File không đúng định dạng.");
@@ -42,6 +43,7 @@
                 if (isPdf(filename)){
                     $('#name-description').removeClass('text-danger');
                     $('#name-description').html(filename);
+                    $('#name-description_1').val(filename);
                 }else  {
                     $('#name-description').addClass('text-danger');
                     $('#name-description').html("File không đúng định dạng.");
@@ -97,7 +99,7 @@
 
         <section class="su-section">
             <div class="container">
-                <h2 class="section-label">{{$group->name}}<a href="{{route('delete_group',$group->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa')" class="btn {{\Illuminate\Support\Facades\Auth::user()->id == $group->user_created ? '' : 'd-none'}}" title="Xóa nhóm"><i class="fa fa-trash text-danger"></i></a></h2>
+                <h2 class="section-label">{{$group->name}}<a href="{{route('delete_group',$group->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa')" class="btn {{\Illuminate\Support\Facades\Auth::user()->id == $group->admin ? '' : 'd-none'}}" title="Xóa nhóm"><i class="fa fa-trash text-danger"></i></a></h2>
 
                 <p class="mt-5">Bao gồm các thành viên</p>
 
@@ -105,12 +107,13 @@
                     @foreach($list_user as $user)
                         <div class="col-12 col-md-4 col-lg-4">
                             <div class="member-item" style="position: relative">
-                                @if($user->id != $group->user_created)
-                                    <a onclick="return confirm('Bạn chắc chắn muốn xóa')" style="position: absolute;top: 15px;right: 15px;" class="text-danger {{(\Illuminate\Support\Facades\Auth::user()->id == $group->user_created || \Illuminate\Support\Facades\Auth::user()->id == $user->id) ? '' : 'd-none'}}" href="{{route('remove_member',$user->id)}}" title="Xóa thành viên"><i class="fa fa-trash text-danger"></i></a>
+                                @if($user->id != $group->admin)
+                                    <a onclick="return confirm('Bạn chắc chắn muốn xóa')" style="position: absolute;top: 15px;right: 15px;" class="text-danger {{(\Illuminate\Support\Facades\Auth::user()->id == $group->admin || \Illuminate\Support\Facades\Auth::user()->id == $user->id) ? '' : 'd-none'}}" href="{{route('remove_member',$user->id)}}" title="Xóa thành viên"><i class="fa fa-trash text-danger"></i></a>
+                                    <a onclick="return confirm('Bạn chắc chắn muốn ủy quyển')" style="position: absolute;top: 15px;right: 40px;" class="text-primary {{(\Illuminate\Support\Facades\Auth::user()->id == $group->admin || \Illuminate\Support\Facades\Auth::user()->id == $user->id) ? '' : 'd-none'}}" href="{{route('setup_admin',$user->id)}}" title="Ủy quyền nhóm trưởng"><i class="fa fa-layer-group text-primary"></i></a>
                                 @endif
                                 <div class="ava" style="background-image:url({{file_exists(storage_path('app/user/resized500-'.$user->avatar)) ? asset('local/storage/app/user/resized500-'.$user->avatar) : asset('local/resources/assets/images/default-image.png')}})"></div>
                                 <div class="name">{{$user->fullname}}</div>
-                                <div class="position {{$user->id == $group->user_created ? 'lead' : ''}}">{{$user->id == $group->user_created ? 'Trưởng nhóm' : 'Thành viên'}}</div>
+                                <div class="position {{$user->id == $group->admin ? 'lead' : ''}}">{{$user->id == $group->admin ? 'Trưởng nhóm' : 'Thành viên'}}</div>
                                 <table class="info">
                                     <tr>
                                         <td>Số điện thoại</td>
@@ -128,7 +131,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <div class="col-12 col-md-4 col-lg-4 {{(\Illuminate\Support\Facades\Auth::user()->id == $group->user_created && $list_user->count() < 3) ? '' : 'd-none'}}">
+                    <div class="col-12 col-md-4 col-lg-4 {{(\Illuminate\Support\Facades\Auth::user()->id == $group->admin && $list_user->count() < 3) ? '' : 'd-none'}}">
                         <div class="add-image">
                             <div class="plus"></div>
                         </div>
@@ -177,10 +180,12 @@
                                 @endif
                             </span>
                             <input id="file-description" class="file" style="display: none;" type="file" name="description">
+
+                            <input id="name-description_1" value="{{$group->description}}" style="display: none;" name="name-description">
                         </div>
 
                         <div class="group">
-                            <label>Video (Giới thiệu nhóm, thành viên, ý tưởng, tính khả thi... Video ở định dạng mp4,và nhỏ hơn 200mb)</label>
+                            <label>Video (Giới thiệu nhóm, thành viên, ý tưởng, tính khả thi... Video ở định dạng mp4,và nhỏ hơn 1.5gb)</label>
                             <br>
                             <a id="video" class="upload">Upload</a>
                             <span id="name-video" class="file-name">
@@ -191,6 +196,8 @@
                                 @endif
                             </span>
                             <input id="file-video" class="file" style="display: none;" type="file" name="video">
+
+                            <input id="name-video_1" value="{{$group->url_video}}" class="file" style="display: none;" name="name-video">
                         </div>
 
                         <div class="group">
@@ -214,7 +221,7 @@
 
                         <div>
                             {{--<a class="back">Hủy</a>--}}
-                            <button onclick="submit_form()" type="button">Lưu thay đổi</button>
+                            <button onclick="submit_form()" type="submit">Lưu thay đổi</button>
                         </div>
                     </form>
                 </div>

@@ -33,8 +33,15 @@
 
     @include('client.header-footer.footer-2')
 
-    <div id="loading" class="d-none" style="background: url('{{asset('local/resources/assets/images/loading.gif')}}')">
-        Loading...
+    <div id="loading" class="d-none" style="background: url('{{asset('local/resources/assets/images/loading.gif')}}') no-repeat center /cover;
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:40%;
+            height:60%;
+            background-color: white;
+            border: 1px solid #ffffff;">
     </div>
 
     <div class="errorAlert">
