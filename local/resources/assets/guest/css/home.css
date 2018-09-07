@@ -788,6 +788,7 @@
 #header .user{
 	color: var(--text-2);
 	font-weight: bold;
+	cursor: pointer;
 }
 
 #header .user .ava{
@@ -810,9 +811,11 @@
     font-weight: 600;
     display: none;
 }
+
 #header .dropdown ul li {
     line-height: 2;
 }
+
 #header .dropdown ul li a {
     color: unset;
     text-decoration: none;

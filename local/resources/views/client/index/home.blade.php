@@ -32,20 +32,11 @@
                         <div class="introduce">
                             <p>Được tổ chức bởi Zikzak co-working Space trực thuộc tập đoàn Cgroup</p>
                             <img src="{{ asset('local/resources/assets/guest/image') }}/zikzak.png">
-                            <h5>ZIK ZAK - HỆ SINH THÁI KHỞI NGHIỆP NĂNG ĐỘNG NHẤT Việt Nam</h5>
-                            <div>
-                                ZikZak là một không gian làm việc chung và chuyên nghiệp mà CGroup đã ấp ủ tạo dựng từ
-                                lâu. Cho đến tháng 6 năm 2018, ZikZak đã được ra đời. Người gây dựng nên ZikZak chính là
-                                anh Đoàn Công Chung – CEO & Chủ tịch HĐQT CGroup - là một Start Up thành công trong lĩnh
-                                vực công nghệ. Anh Chung nắm bắt và đồng cảm với tâm lý của StartUp, Freelancer và các
-                                doanh nghiệp vừa và nhỏ ( SME) là luôn cần một không gian làm việc thoải mái để thỏa sức
-                                sáng tạo và tạo nên hiệu suất làm việc tốt nhất. Đặc biệt là, qua nhiều năm làm việc,
-                                Anh nhận thấy điều dẫn đến cái chết yểu của các StartUp mới chính là mức chi phí vận
-                                hành quá cao, làm giảm sự cạnh tranh và là cái phanh làm kìm hãm sự phát triển.
-                                <br>
-                                Hiểu được điều đó, ZikZak ra đời để lấp khoảng trống còn thiếu của các StartUp. Cùng với
-                                đó, ZikZak tạo ra cho các StartUp, Freelancer cơ hội học hỏi và điều kiện làm việc thoải
-                                mái, có thể dễ dàng mở rộng mối quan hệ, tìm kiếm cơ hội đầu tư.
+                            <h5>GIỚI THIỆU CHUNG VỀ CUỘC THI XSTARTUP</h5>
+                            <div style="text-align: justify;">
+                                XStartup là một sự kiện đáng chú ý nhất trong năm 2018. Đây là cuộc thi khởi nghiệp dành riêng cho các bạn trẻ trên toàn quốc.
+                                <br><br>
+                                XStartup - nơi khiến những ý tưởng đang ấp ủ thành hiện thực. Với mục đích ươm mầm những dự án khởi nghiệp, giúp những bạn trẻ thực hiện được ước mơ của mình, cuộc thi muốn thấy sức trẻ trong thế hệ mới - một thế hệ DÁM NGHĨ - DÁM LÀM và LÀM ĐƯỢC.
                             </div>
                         </div>
                     </div>
