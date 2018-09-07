@@ -4,7 +4,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/home.css">
 @stop
 @section('js')
-
+    <script>
+        $('html, body').animate({
+            scrollTop: $(window.location.hash).offset().top
+        }, 1000);
+    </script>
 @stop
 @section('main')
     <div id="main">
@@ -20,7 +24,11 @@
                 <div class="xstartup">
                     <div class="xblue"></div>
                     <div class="xred"></div>
+                    @if( Auth::guest() )
                     <a class="home-signup-btn" href="{{route('register_client')}}">Đăng ký tham gia cuộc thi</a>
+                    @else
+                        <a class="home-signup-btn" href="{{route('group')}}">Nộp bài dự thi</a>
+                    @endif
                 </div>
             </div>
         </section>
@@ -442,7 +450,7 @@
             </div>
         </section>
 
-        <section class="su-section section-6">
+        <section class="su-section section-6" id="terms">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-4 col-lg-4">

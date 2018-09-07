@@ -77,6 +77,7 @@
                                 <br>
                                 <a class="upload">Upload</a> <span class="file-name">Bạn chưa có file video nào</span>
                                 <input class="file" style="display: none;" type="file" name="">
+                                
                             </div>
 
                             <div class="group">
