@@ -70,7 +70,7 @@
                         @if($group->user_created == \Illuminate\Support\Facades\Auth::user()->id && $list_user->count() < 3)
                             <form class="add-member" id="add-member" action="{{route('add_member')}}" method="post">
                                 {{csrf_field()}}
-                                <labe>Email</labe>
+                                <label>Email</label>
                                 <input value="{{$group->id}}" name="group_id" class="d-none">
                                 <input type="email" name="email" placeholder="Nhập email của thành viên.">
                                 <button type="submit">Thêm thành viên</button>
@@ -78,7 +78,7 @@
                         @endif
                         <div>
                             <a class="back" href="{{route('group')}}">Quay lại</a>
-                            <a class="red-btn" href="{{route('group_3')}}">Bước tiếp theo</a>
+                            <a class="btn btn-primary" href="{{route('group_3')}}">Bước tiếp theo</a>
                         </div>
                     </div>
                 </div>

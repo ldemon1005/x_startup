@@ -213,7 +213,7 @@
                         </div>
 
                         <div>
-                            <a class="back">Hủy</a>
+                            {{--<a class="back">Hủy</a>--}}
                             <button onclick="submit_form()" type="button">Lưu thay đổi</button>
                         </div>
                     </form>

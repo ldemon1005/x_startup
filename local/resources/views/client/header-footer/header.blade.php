@@ -26,4 +26,6 @@
     </section>
 </div>
 
-<div id="to-top"><img src="{{ asset('local/resources/assets/guest/image') }}/arrows.ico"></div>
+<div id="to-top"><img src="{{  asset('local/resources/assets/guest/image/arrows.ico') }}"></div>
+
+<a id="messenger" href="https://www.facebook.com/messages/t/zikzakcoworkingspace" target="_blank"></a>

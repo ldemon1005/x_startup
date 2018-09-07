@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XStartup</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <meta property="og:url" content="@yield('fb_url')"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="@yield('fb_title')"/>
+    <meta property="og:description" content="@yield('fb_des')"/>
+    <meta property="og:image" content="@yield('fb_img')"/>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/reset.css">
@@ -13,6 +18,14 @@
     @yield('css')
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=893251737550173&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <div id="wrapper">
     @include('client.header-footer.header')
 

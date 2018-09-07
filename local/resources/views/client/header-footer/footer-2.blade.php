@@ -1,5 +1,5 @@
 <div id="footer">
     <section class="copyright">
-        Công ty cổ phần tập đoàn cgroup. msdn: 0315056158
+        Cuộc thi XStartup được tổ chức bởi Zikzak co-working Space trực thuộc tập đoàn Cgroup.
     </section>
 </div>
