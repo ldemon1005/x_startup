@@ -34,9 +34,12 @@
                             <img src="{{ asset('local/resources/assets/guest/image') }}/zikzak.png">
                             <h5>GIỚI THIỆU CHUNG VỀ CUỘC THI XSTARTUP</h5>
                             <div style="text-align: justify;">
-                                XStartup là một sự kiện đáng chú ý nhất trong năm 2018. Đây là cuộc thi khởi nghiệp dành riêng cho các bạn trẻ trên toàn quốc.
+                                XStartup là một sự kiện đáng chú ý nhất trong năm 2018. Đây là cuộc thi khởi nghiệp dành
+                                riêng cho các bạn trẻ trên toàn quốc.
                                 <br><br>
-                                XStartup - nơi khiến những ý tưởng đang ấp ủ thành hiện thực. Với mục đích ươm mầm những dự án khởi nghiệp, giúp những bạn trẻ thực hiện được ước mơ của mình, cuộc thi muốn thấy sức trẻ trong thế hệ mới - một thế hệ DÁM NGHĨ - DÁM LÀM và LÀM ĐƯỢC.
+                                XStartup - nơi khiến những ý tưởng đang ấp ủ thành hiện thực. Với mục đích ươm mầm những
+                                dự án khởi nghiệp, giúp những bạn trẻ thực hiện được ước mơ của mình, cuộc thi muốn thấy
+                                sức trẻ trong thế hệ mới - một thế hệ <b>DÁM NGHĨ - DÁM LÀM</b> và <b>LÀM ĐƯỢC</b>.
                             </div>
                         </div>
                     </div>
@@ -90,7 +93,7 @@
                                 <div class="content-text"><h4>Ý TƯỞNG (27/08/2018 – 10/10/2018)</h4>
 
                                     <div class="content-text">
-                                        <p>Lịch trình Vòng 1:
+                                        <p><b>Lịch trình Vòng 1:</b>
                                             <br>
                                             Thời gian: Thí sinh chính thức nộp hồ sơ từ ngày <b>10/09/2018 –
                                                 05/10/2018</b>
@@ -103,7 +106,8 @@
                                             <li>Nộp ý tưởng tham gia cho BTC bằng cách điền thông tin trên vào Form
                                                 đăng ký trên website
                                             </li>
-                                            <li>Bản tóm tắt ý tưởng kinh doanh (File PDF theo Mẫu: <a style="color: var(--text-4);"
+                                            <li>Bản tóm tắt ý tưởng kinh doanh (File PDF theo Mẫu: <a
+                                                        style="color: var(--text-1);"
                                                         href="https://docs.google.com/document/d/1KjKAwC8LrFn4uIXk6mSq1LORQU0E1u6JCKwJ8Upszo0/edit?usp=sharing">Tóm
                                                     tắt ý tưởng kinh doanh mẫu</a>)
                                             </li>
@@ -112,13 +116,15 @@
                                                 hành, tính thực tế của ý tưởng.
                                             </li>
                                         </ul>
-                                        <p><b>Kết quả Vòng 1</b>: Công bố 60 dự án nổi bật nhất (30 đội khu vực miền Bắc và 30 đội khu vực miền Nam) ngày 10/10/2018</p>
+                                        <p><b>Kết quả Vòng 1</b>: Công bố 60 dự án nổi bật nhất (30 đội khu vực miền
+                                            Bắc và 30 đội khu vực miền Nam) ngày 10/10/2018</p>
                                         <b>Lưu ý:</b>
                                         <ul>
                                             <li>Những dự án hợp lệ là những dự án đã điền đầy đủ thông tin và gửi
                                                 video
                                             </li>
-                                            <li>Không giới hạn số lượng đội thi tham gia, 01 thành viên chỉ được tham gia 01 đội thi
+                                            <li>Không giới hạn số lượng đội thi tham gia, 01 thành viên chỉ được tham
+                                                gia 01 đội thi
                                             </li>
                                         </ul>
                                     </div>
@@ -130,10 +136,13 @@
                                  aria-labelledby="v-pills-profile-tab">
                                 <div class="content-text">
                                     <h4>LAN TỎA (11/10/2018 – 29/10/2018)</h4>
+                                    <p><b>Lịch trình Vòng 2:</b></p>
                                     <b>Hình thức:</b>
                                     <ul>
                                         <li>Thi Online, video của các đội tham dự qua Vòng 1 sẽ được đăng tải trên
-                                            Fanpage Zikzak co-working Space kèm theo tên <b>Nhóm</b> và <b>Mã số dự
+                                            Fanpage <a href="https://www.facebook.com/zikzakcoworkingspace/"
+                                                       style=" color: var(--text-1);">Zikzak co-working Space</a> kèm
+                                            theo <b>Tên nhóm</b> và <b>Mã số dự
                                                 thi</b>. Các đội sẽ có nhiệm vụ Like, Share, tăng độ lan tỏa ý tưởng của
                                             mình.
                                         </li>
@@ -143,7 +152,7 @@
                                         </li>
 
                                         <li>Điểm số sẽ 50% do khán giả bình chọn và 50% do BGK chấm điểm. Điểm số tối
-                                            đa 1 đội đạt được là 60 điểm
+                                            đa 01 đội đạt được là 60 điểm
                                         </li>
                                     </ul>
 
@@ -160,22 +169,21 @@
 
                                                 <li>- Đội nào đạt số like/comment/share cao nhất sẽ dành 30 điểm; tương
                                                     ứng đội
-                                                    thấp nhất sẽ dành 1 điểm
+                                                    thấp nhất sẽ dành 01 điểm
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>Về điểm số của BGK:
                                             <ul>
-                                                <li>- Điểm số tối đa của 1 BGK chấm cho 1 đội sẽ là 30 điểm.</li>
-                                                <li>- Sau khi 4 BGK chấm điểm cho 1 đội, số điểm đó sẽ chia cho 4 để ra
-                                                    kết quả
-                                                    chấm điểm cuối cùng của tổ BGK cho đội đó.
+                                                <li>- Điểm số tối đa của 01 BGK chấm cho 01 đội sẽ là 30 điểm.</li>
+                                                <li>- Sau khi BGK chấm điểm cho mỗi đội, điểm của mỗi đội thi là trung
+                                                    bình cộng điểm của các thành viên BGK.
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li>Xếp hạng:</b> thang điểm 60</li>
-                                        <li>Điểm số cuối cùng cho 1 đội = Bình chọn khán giả + chấm điểm của BGK</li>
+                                        <li>Điểm số cuối cùng cho 01 đội = Bình chọn khán giả + chấm điểm của BGK</li>
                                     </ul>
                                     <p><b>Lưu ý:</b> Nếu phát hiện gian lận (Like, Comment, Share), BTC được phép hủy
                                         quyền dự thi của ứng viên.</p>
@@ -195,10 +203,12 @@
                                     <ul>
                                         <li>Vòng 3 bắt đầu từ 01/11/2018</li>
                                         <li>12/11/2018 Các đội khu vực miền Bắc trình bày, phản biện dự án kinh doanh
-                                            của mình trước BGK tại Tầng 5, Tòa nhà Diamond Flower, số 1 Hoàng Đạo Thúy, Thanh Xuân, Hà Nội.
+                                            của mình trước BGK tại Tầng 5, Tòa nhà Diamond Flower, số 1 Hoàng Đạo
+                                            Thúy, Thanh Xuân, Hà Nội.
                                         </li>
                                         <li>15/11/2018 Các đội khu vực miền Nam trình bày, phản biện dự án kinh doanh
-                                            của mình trước BGK tại tại Tòa nhà Cphone, số 456 Xô Viết Nghệ Tĩnh, Phường 25, Quận Bình Thạnh, TP. HCM.
+                                            của mình trước BGK tại tại Tòa nhà Cphone, số 456 Xô Viết Nghệ Tĩnh,
+                                            Phường 25, Quận Bình Thạnh, TP. HCM.
                                         </li>
                                         <li>17/11/2018 Thông báo kết quả cho 06 đội vào Chung Kết.</li>
                                     </ul>
@@ -213,13 +223,15 @@
                                     </ul>
 
                                     <p><b>Hình thức:</b></p>
-                                    Thi Offline tại 2 khu vực miền Bắc và miền Nam
-                                    <br>
-                                    Tổng số đội: 20 đội, trong đó có 10 đội khu vực miền Bắc và 10 đội khu vực miền Nam.
-                                    <br>
-                                    Các đội có 10 phút để trình bày và 10 phút phản biện ý tưởng sản phẩm và kế hoạch
-                                    của mình trước BGK
-
+                                    <ul>
+                                        <li>Thi Offline tại 2 khu vực miền Bắc và miền Nam</li>
+                                        <li>Tổng số đội: 20 đội, trong đó có 10 đội khu vực miền Bắc và 10 đội khu vực
+                                            miền Nam.
+                                        </li>
+                                        <li>Các đội có 10 phút để trình bày và 10 phút phản biện ý tưởng sản phẩm và kế
+                                            hoạch của mình trước BGK
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -231,28 +243,29 @@
 
                                     <p><b>Lịch trình Vòng 4:</b></p>
                                     <ul>
-                                        <li>Từ 24/11/2018 – 23/12/2018 Các đội hoàn thiện nội dung chuẩn bị cho vòng
+                                        <li>Từ 24/11/2018 – 23/12/2018: Các đội hoàn thiện nội dung chuẩn bị cho vòng
                                             Chung Kết.
                                         </li>
                                         <li>24/12/2018 Vòng 4: Nhân tố X</li>
                                     </ul>
-                                    <b>*Công tác chuẩn bị:</b>
+                                    <b>Công tác chuẩn bị:</b>
                                     <br>
                                     Để chuẩn bị cho Vòng 4: Các đội sẽ phải hoàn thiện:
                                     <ul>
                                         <li>BẢN KẾ HOẠCH KINH DOANH CHI TIẾT</li>
                                         <li>BẢNG CÂN ĐỐI TÀI CHÍNH</li>
                                         <li>THIẾT KẾ BỘ NHẬN DIỆN THƯƠNG HIỆU</li>
-                                        <li>TVC QUẢNG BÁ Ý TƯỞNG/ SẢN PHẨM</li>
+                                        <li>TVC QUẢNG BÁ Ý TƯỞNG/SẢN PHẨM</li>
                                         <li>SẢN PHẨM MẪU</li>
                                     </ul>
                                     <b>Hình thức:</b>
                                     <ul>
-                                        <li>6 đội thi lọt vào vòng Chung Kết sẽ đối đầu trực tiếp với nhau và thuyết
-                                            phục BGK, các vị khách mời, các nhà đầu tư cùng 1000 khán giả để giành lấy
+                                        <li>06 đội thi lọt vào vòng Chung Kết sẽ đối đầu trực tiếp với nhau và thuyết
+                                            phục BGK, các vị khách mời, các nhà đầu tư cùng 1.000 khán giả để giành lấy
                                             ngôi vị Quán quân danh giá.
                                         </li>
-                                        <li>Nội dung thi: thí sinh thuyết trình về dự án trong 20 phút, sau đó phản biện
+                                        <li>Nội dung thi: Mỗi đội thi thuyết trình về dự án trong 20 phút, sau đó phản
+                                            biện
                                             với Hội đồng giám khảo trong vòng 20 phút.
                                         </li>
                                     </ul>
@@ -366,7 +379,7 @@
                                         <li>Tiền mặt: 6.000.000 VNĐ</li>
                                         <li>Tặng mỗi thành viên chiếc điện thoại Cphone</li>
                                         <li>Voucher giảm giá 20% khi mua Cphone</li>
-                                        <li>Tặng 03 tháng sử dụng miễn phí dịch vụ chỗ ngồi tại Zikzak co-working space
+                                        <li>Tặng 03 tháng sử dụng miễn phí dịch vụ chỗ ngồi tại Zikzak co-working Space
                                             cho cả đội
                                         </li>
                                         <li>03 tháng sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
@@ -417,6 +430,15 @@
 
 
                 <h5 class="note">Tất cả các đội thi lọt vào vòng bán kết được hỗ trợ 1.000.000 đồng.</h5>
+                <br>
+                <div class="content-text">
+                    <h5>Tổng giá trị giải thưởng dành cho 14 đội dừng chân tại vòng Bán kết là 10.000.000 VNĐ
+                    bao gồm:</h5>
+                    <ul>
+                        <li>01 tháng sử dụng dịch vụ chỗ ngồi miễn phí tại Zikzak co-working Space</li>
+                        <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
