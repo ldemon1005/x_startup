@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Session;
 class AuthController extends Controller
 {
     function form_login(){
-        return view('client.auth.login');
+        return view('client.auth.login_form');
     }
 
     function login(Request $request){
