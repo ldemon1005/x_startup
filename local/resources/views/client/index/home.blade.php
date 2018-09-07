@@ -357,11 +357,11 @@
                                         <li>01 năm sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
                                         <li>01 năm book phòng miễn phí trên Ctogo</li>
                                         <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
-                                        <li>01 khóa học tiếng anh với người bản ngữ 1 năm</li>
-                                        <li>Được lên Tạp chí Việt Nam Hội Nhập (tạp chí in + e-magazine)</li>
-                                        <li>Chuyến đi seminar tại singapore</li>
+                                        <li>01 khóa học tiếng anh với người bản ngữ 01 năm</li>
+                                        <li>Được lên Tạp chí Việt Nam Hội nhập (Tạp chí in + E-magazine)</li>
+                                        <li>Chuyến đi seminar tại Singapore</li>
                                         <li>CGroup đầu tư dự án startup</li>
-                                        <li>Được hỗ trợ truyền thông trong 6 tháng</li>
+                                        <li>Được hỗ trợ truyền thông trong 06 tháng</li>
                                         <li>Được BQT CGroup làm mentor trong dự án startup</li>
                                     </ul>
                                 </div>
@@ -375,14 +375,14 @@
                                         <li>Tiền mặt: 6.000.000 VNĐ</li>
                                         <li>Tặng mỗi thành viên chiếc điện thoại Cphone</li>
                                         <li>Voucher giảm giá 20% khi mua Cphone</li>
-                                        <li>Tặng 03 tháng sử dụng miễn phí dịch vụ chỗ ngồi tại zikzak co-working space
+                                        <li>Tặng 03 tháng sử dụng miễn phí dịch vụ chỗ ngồi tại Zikzak co-working space
                                             cho cả đội
                                         </li>
                                         <li>03 tháng sử dụng dịch vụ hosting, domain, vps tại Ctech</li>
                                         <li>Voucher giảm giá 30% khi book phòng trên Ctogo</li>
                                         <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
                                         <li>01 khóa học tiếng anh với người bản ngữ 03 tháng</li>
-                                        <li>Được lên Tạp chí Việt Nam Hội Nhập (tạp chí in + e-magazine)</li>
+                                        <li>Được lên Tạp chí Việt Nam Hội nhập (Tạp chí in + E-magazine)</li>
                                         <li>Được đặc cách trở thành member CGroup</li>
                                     </ul>
                                 </div>

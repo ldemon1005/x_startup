@@ -483,6 +483,9 @@
 	color: var(--text-1);
 	font-weight: bold;
 }
+.content-text{
+	text-align: justify;
+}
 .content-text>h6{
 	font-size: var(--font-size-2);
 	font-weight: bold;
