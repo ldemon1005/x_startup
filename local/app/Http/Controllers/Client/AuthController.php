@@ -70,9 +70,10 @@ class AuthController extends Controller
                 $this->email = $req['email'];
                 $data = [
                     'title' => 'kích hoạt tài khoản',
-                    'link' => asset('active_user?email='.$req['email'].'&password='.$password)
+                    'link' => asset('active_user?email='.$req['email'].'&password='.$password),
+                    'account' => $req
                 ];
-                Mail::send('client.send_mail', $data, function ($message) {
+                Mail::send('client.send_mail_active', $data, function ($message) {
                     $message->to($this->email, $this->email)->subject('Email phản hồi từ X-startup');
                 });
                 return redirect()->route('home')->with('success','Chúng tôi đã gửi 1 email kích hoạt tới email của bạn.');

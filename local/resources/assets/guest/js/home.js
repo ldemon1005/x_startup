@@ -93,6 +93,7 @@ $("#register").validate({
         },
         'password': {
             required: true,
+            minlength: 8,
         },
         'password_1': {
             required: true,
@@ -121,6 +122,7 @@ $("#register").validate({
         },
         'password': {
             required: 'Vui lòng nhập mật khẩu',
+            minlength: 'Mật khẩu không được nhỏ hơn 8 ký tự'
         },
         'password_1': {
             required: 'Vui lòng xác nhận lại mật khẩu',
