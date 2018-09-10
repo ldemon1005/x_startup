@@ -203,7 +203,7 @@
                         <div class="group">
                             <label>Mô hình sản phẩm</label>
                             <select name="group[type_product]">
-                                <option {{$group->type_product == 1 ? 'selected' : ''}} value="1">Không</option>
+                                <option {{$group->type_product == 1 ? 'selected' : ''}} value="1">Chưa</option>
                                 <option {{$group->type_product == 2 ? 'selected' : ''}} value="2">Có</option>
                             </select>
                         </div>
