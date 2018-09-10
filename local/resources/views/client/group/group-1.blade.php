@@ -41,7 +41,10 @@
                             <label>Tên nhóm</label>
                             <input class="d-none" name="group[id]" value="{{$group->id}}">
                             <input type="text" name="group[name]" value="{{$group->name}}">
-                            <input checked type="checkbox" name="license"> Tôi đã đọc điều khoản của chương trình <br>
+                            <input checked type="checkbox" name="license"> Tôi đã đọc <a href="{{ asset('/#terms') }}"
+                                                                                         id="terms"
+                                                                                         style="color: var(--text-1);">điều
+                                khoản</a> của chương trình <br>
                             <button type="submit">Tạo nhóm</button>
                         </form>
                     @else
@@ -51,7 +54,11 @@
                                 <label>Tên nhóm</label>
                                 <input class="d-none" name="group[id]" value="{{$group->id}}">
                                 <input type="text" name="group[name]" value="{{$group->name}}">
-                                <input checked type="checkbox" name="license"> Tôi đã đọc điều khoản của chương trình <br>
+                                <input checked type="checkbox" name="license"> Tôi đã đọc <a
+                                        href="{{ asset('/#terms') }}"
+                                        id="terms"
+                                        style="color: var(--text-1);">điều khoản</a> của chương trình
+                                <br>
                                 <button type="submit">Cập nhật</button>
                                 <a href="{{route('group_1')}}" class="btn btn-primary">Tiếp</a>
                             </form>
@@ -59,8 +66,13 @@
                             <form>
                                 <label>Tên nhóm</label>
                                 <input disabled type="text" name="" value="{{$group->name}}">
-                                <input disabled checked type="checkbox" name="license"> Tôi đã đọc điều khoản của chương trình <br>
-                                <a class="btn btn-primary" href="{{route('group_1')}}" style="color: white;">Tiếp theo</a>
+                                <input disabled checked type="checkbox" name="license"> Tôi đã đọc <a
+                                        href="{{ asset('/#terms') }}"
+                                        id="terms"
+                                        style="color: var(--text-1);">điều khoản</a> của chương
+                                trình <br>
+                                <a class="btn btn-primary" href="{{route('group_1')}}" style="color: white;">Tiếp
+                                    theo</a>
                             </form>
                         @endif
                     @endif

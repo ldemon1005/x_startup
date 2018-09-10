@@ -142,7 +142,7 @@
 
                 <div id="group-create">
                     @if(count($check) != 0)
-                        <div class="notify-text mt-5">Bài thi của bạn chưa đc xác nhận({{implode(',',$check)}})</div>
+                        <div class="notify-text mt-5">Bài thi của bạn chưa đc xác nhận({{implode(', ',$check)}})</div>
                     @endif
 
                     <form id="form-group" class="update-info mt-5" method="post" action="{{route('action_group_5')}}" enctype="multipart/form-data">
@@ -168,7 +168,7 @@
                         </div>
 
                         <div class="group">
-                            <label>Bản tóm tắt dự án</label>
+                            <label>Bản tóm tắt dự án(File PDF)</label>
                             {{--<textarea name="group[description]">{{$group->description}}</textarea>--}}
                             <br>
                             <a id="description" class="upload">Upload</a>
