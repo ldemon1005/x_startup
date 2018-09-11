@@ -37,6 +37,7 @@
                                     <th>Tiêu đề bài viết</th>
                                     <th>Avatar</th>
                                     <th>Ngày tạo</th>
+                                    <th>Ngày chạy</th>
                                     <th>Tác giả</th>
                                     <th class="text-center">Trạng thái</th>
                                     <th class="text-center">Thao tác</th>
@@ -48,10 +49,11 @@
                                         <td>{{$article->title}}</td>
                                         <td>
                                             <div class="avatar">
-                                                <img src="">
+                                                <img src="{{file_exists(storage_path('app/article/resized500-'.$article->avatar)) ? asset('local/storage/app/article/resized500-'.$article->avatar) : asset('local/resources/assets/images/default-image.png')}}">
                                             </div>
                                         </td>
                                         <td>{{date('d/m/Y H:m',$article->created_at)}}</td>
+                                        <td>{{date('d/m/Y H:m',$article->release_time)}}</td>
                                         <td>{{$article->author}}</td>
                                         <td class="text-center">
                                             <button id="{{$article->id}}" onclick="update_status({{$article->id}})" class="btn btn-block btn-sm {{$article->status == 2 ? 'btn-success': 'btn-danger'}}">{{$article->status == 2 ? 'Hoạt đông': 'Không hoạt đông'}}</button>

@@ -87,7 +87,7 @@
 #group-create form{
     margin-top: 20px;
 }
-#group-create button, #group-create a.red-btn, .complete button, .complete a.red-btn{
+#group-create button.change, #group-create a.red-btn, .complete button, .complete a.red-btn{
     border-radius: 15px;
     height: 56px;
     width: 250px;
@@ -101,7 +101,7 @@
     display: inline-block;
     text-align: center;
 }
-#group-create a.back,.complete a.back{
+#group-create a.back,.complete a.back ,button.not-change{
     display: inline-block;
     text-decoration: none;
     border-radius: 15px;

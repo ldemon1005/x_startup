@@ -33,7 +33,7 @@
 }
 .news-item .content .title{
     font-weight: bold;
-    position: absolute;
+    /*position: absolute;*/
     left: 15px;
     right: 15px;
     color: unset;

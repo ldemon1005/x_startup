@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class ArticleController extends Controller
 {
     function index(){
-        $list_article = DB::table('article')->where('status',2)->orderByDesc('id')->paginate(6);
+        $list_article = DB::table('article')->where('status',2)->where('release_time','<=',time())->orderByDesc('release_time')->paginate(6);
 
         $data = [
             'list_article' => $list_article
@@ -23,6 +23,10 @@ class ArticleController extends Controller
         $slug = explode('---n-',$slug);
 
         $article = Article::find($slug[1]);
+
+        if($article->status != 2 || $article->release_time > time()){
+            return redirect()->route('home');
+        }
 
         $article_related = DB::table('article')->where('status',2)->orderByDesc('id')->take(3)->get();
 

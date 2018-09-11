@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>XStartup</title>
-    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="icon" type="image/png" href="{{asset('favicon.png')}}"/>
 
     <meta property="og:url" content="@yield('fb_url')"/>
     <meta property="og:type" content="article"/>

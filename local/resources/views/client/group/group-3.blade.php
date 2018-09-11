@@ -180,7 +180,7 @@
 
                             <div>
                                 <a class="back" href="{{route('group_1')}}">Quay lại</a>
-                                <button onclick="info_project()" type="submit">Nộp bài</button>
+                                <button onclick="info_project()" class="change" type="submit">Nộp bài</button>
                             </div>
                         </form>
                     </div>

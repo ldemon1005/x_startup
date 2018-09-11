@@ -31,11 +31,20 @@ class ArticleController extends Controller
                 'caption' => '',
                 'status' => 2,
                 'content' => '',
-                'author' => ''
+                'author' => '',
+                'release_time' => (object)[
+                    'day' => date('Y-m-d',time()),
+                    'h' => date('h:i A',time())
+                ],
             ];
             $article = (object)$article;
         }else {
             $article = Article::find($id);
+            $date = $article->release_time;
+            $article->release_time = (object)[
+                'day' => date('Y-m-d',$date),
+                'h' => date('h:i A',$date)
+            ];
         }
 
         $data = [
@@ -60,6 +69,8 @@ class ArticleController extends Controller
         if ($request->hasFile('img')) {
             $req['avatar'] = saveImageArticle([$image], 'article');
         }
+
+        $req['release_time'] = strtotime($req['release_time']['day'].' '.$req['release_time']['h']);
 
         if($req['id'] == 0){
             $req['created_at'] = time();

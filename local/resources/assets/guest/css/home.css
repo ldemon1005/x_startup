@@ -468,7 +468,7 @@
 	font-size: var(--font-size-h2);
 	font-weight: bold;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 .section-label:after{
 	content: "";

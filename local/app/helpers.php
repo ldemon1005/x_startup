@@ -266,26 +266,7 @@
 	    return $url;
     }
 
-    
-    function level_format($level){
-    	switch ($level) {
-    		case 1:
-    			return 'SuperAdmin';
-    			break;
-    		case 2:
-    			return 'Phó tổng biên tập';
-    			break;
-    		case 3:
-    			return 'Biên tập viên';
-    			break;
-    		case 4:
-    			return 'Phóng viên';
-    			break;
-    		default:
-    			return 'Lỗi';
-    			break;
-    	}
-    }
+
 
     function getSourceGroup($status){
 	    $str = '';

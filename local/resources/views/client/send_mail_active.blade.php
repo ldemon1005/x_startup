@@ -14,5 +14,5 @@
 
 ---------------
 <div style="text-align: left">
-    <img src="{{asset('local/resources/assets/guest/logo.png')}}" alt="X-startup">
+    <img src="{{asset('local/resources/assets/guest/image/logo.png')}}" alt="X-startup">
 </div>

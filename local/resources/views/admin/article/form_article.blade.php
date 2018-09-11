@@ -53,6 +53,32 @@
                                         <div class="col-sm-10">
                                             <textarea type="text" name="article[caption]" class="form-control"
                                                       placeholder="Mô tả">{{$article->caption}}</textarea>
+                                            {{--<textarea id="editor2" name="article[caption]" rows="10"--}}
+                                                      {{--cols="5">--}}
+                                                                {{--{{ $article->caption != '' ? $article->caption : 'Mô tả' }}--}}
+                                                            {{--</textarea>--}}
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <label class="col-sm-2">Ngày phát hành <span class="text-danger">*</span></label>
+                                        <div class="col-sm-8">
+                                            <input type="date" name="article[release_time][day]" required
+                                                   value="{{$article->release_time->day}}" min="1000-01-01"
+                                                   max="3000-12-31" class="form-control">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="bootstrap-timepicker">
+                                                <div class="input-group">
+                                                    <input type="text" name="article[release_time][h]"
+                                                           value="{{$article->release_time->h}}" class="form-control timepicker">
+
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                                                    </div>
+                                                </div>
+                                                <!-- /.form group -->
+                                            </div>
                                         </div>
                                     </div>
 
@@ -141,6 +167,18 @@
                 filebrowserFlashUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
             });
         });
+
+        // $(function () {
+        //     CKEDITOR.replace('editor2', {
+        //         height: '100px',
+        //         filebrowserBrowseUrl: 'plugins/ckfinder/ckfinder.html',
+        //         filebrowserImageBrowseUrl: 'plugins/ckfinder/ckfinder.html?type=Images',
+        //         filebrowserFlashBrowseUrl: 'plugins/ckfinder/ckfinder.html?type=Flash',
+        //         filebrowserUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        //         filebrowserImageUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        //         filebrowserFlashUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+        //     });
+        // });
 
     </script>
 

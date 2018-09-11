@@ -90,9 +90,9 @@ Route::group(['namespace' => 'Client'],function (){
        Route::get('setup_admin/{id}','GroupController@setup_admin')->name('setup_admin');
     });
 
-    Route::group(['prefix' => 'article'],function (){
+    Route::group(['prefix' => 'tin-tuc'],function (){
         Route::get('','ArticleController@index')->name('list_article_client');
-        Route::get('detail/{slug}','ArticleController@detail')->name('detail_client');
+        Route::get('{slug}','ArticleController@detail')->name('detail_client');
     });
 });
 

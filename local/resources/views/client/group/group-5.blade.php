@@ -76,6 +76,12 @@
             return parts[parts.length - 1];
         }
 
+        function change_value() {
+            $('#reload').removeClass('d-none');
+            $('#change').removeClass('not-change');
+            $('#change').addClass('change');
+        }
+
     </script>
 @stop
 
@@ -142,24 +148,24 @@
 
                 <div id="group-create">
                     @if(count($check) != 0)
-                        <div class="notify-text mt-5">Bài thi của bạn chưa đc xác nhận({{implode(', ',$check)}})</div>
+                        <div class="notify-text mt-5">Bài thi của bạn chưa được xác nhận ({{implode(', ',$check)}})</div>
                     @endif
 
                     <form id="form-group" class="update-info mt-5" method="post" action="{{route('action_group_5')}}" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="group">
                             <label>Tên nhóm</label>
-                            <input type="text" name="group[name]" value="{{$group->name}}">
+                            <input type="text" name="group[name]" onchange="change_value()" value="{{$group->name}}">
                         </div>
 
                         <div class="group">
                             <label>Tên dự án</label>
-                            <input type="text" name="group[name_topic]" value="{{$group->name_topic}}">
+                            <input type="text" name="group[name_topic]" onchange="change_value()" value="{{$group->name_topic}}">
                         </div>
 
                         <div class="group">
                             <label>Lĩnh vực</label>
-                            <select name="group[career]">
+                            <select name="group[career]" onchange="change_value()">
                                 @foreach($list_career as $career)
                                     <option {{$group->career == $career->id ? 'selected' : ''}} value="{{$career->id}}">{{$career->name}}</option>
                                 @endforeach
@@ -181,7 +187,7 @@
                             </span>
                             <input id="file-description" class="file" style="display: none;" type="file" name="description">
 
-                            <input id="name-description_1" value="{{$group->description}}" style="display: none;" name="name-description">
+                            <input id="name-description_1" value="{{$group->description}}" onchange="change_value()" style="display: none;" name="name-description">
                         </div>
 
                         <div class="group">
@@ -197,12 +203,12 @@
                             </span>
                             <input id="file-video" class="file" style="display: none;" type="file" name="video">
 
-                            <input id="name-video_1" value="{{$group->url_video}}" class="file" style="display: none;" name="name-video">
+                            <input id="name-video_1" value="{{$group->url_video}}" onchange="change_value()" class="file" style="display: none;" name="name-video">
                         </div>
 
                         <div class="group">
                             <label>Mô hình sản phẩm</label>
-                            <select name="group[type_product]">
+                            <select name="group[type_product]" onchange="change_value()">
                                 <option {{$group->type_product == 1 ? 'selected' : ''}} value="1">Chưa</option>
                                 <option {{$group->type_product == 2 ? 'selected' : ''}} value="2">Có</option>
                             </select>
@@ -210,7 +216,7 @@
 
                         <div class="group">
                             <label>Bạn biết cuộc thi qua phương tiện?</label>
-                            <select name="group[source]">
+                            <select name="group[source]" onchange="change_value()">
                                 <option {{$group->source == 1 ? 'selected' : ''}} value="1">Fanpage facebook</option>
                                 <option {{$group->source == 2 ? 'selected' : ''}} value="2">Bạn bè</option>
                                 <option {{$group->source == 3 ? 'selected' : ''}} value="3">Báo chí</option>
@@ -220,8 +226,8 @@
                         </div>
 
                         <div>
-                            {{--<a class="back">Hủy</a>--}}
-                            <button onclick="submit_form()" type="submit">Lưu thay đổi</button>
+                            <a id="reload" class="back d-none" onclick="location.reload();">Hủy</a>
+                            <button id="change" onclick="submit_form()" type="submit" class="not-change">Lưu thay đổi</button>
                         </div>
                     </form>
                 </div>
@@ -235,7 +241,6 @@
             <div class="modal-content" style="padding: 50px;">
                 <form class="add-member" action="{{route('add_member')}}" method="post"  style="margin-top: 0;">
                     {{csrf_field()}}
-                    <labe>Email</labe>
                     <input value="{{$group->id}}" name="group_id" class="d-none">
                     <input type="email" name="email" placeholder="Nhâp email thành viên.">
                     <button type="submit">Thêm thành viên</button>

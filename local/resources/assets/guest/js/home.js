@@ -431,7 +431,7 @@ function submit_form(){
 }
 
 function info_project(){
-    if($('#info_project')) $('#loading').removeClass('d-none');
+    if($('#info_project').valid()) $('#loading').removeClass('d-none');
     // $('#info_project').submit();
 }
 

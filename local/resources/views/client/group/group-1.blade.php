@@ -45,7 +45,7 @@
                                                                                          id="terms"
                                                                                          style="color: var(--text-1);">điều
                                 khoản</a> của chương trình <br>
-                            <button type="submit">Tạo nhóm</button>
+                            <button class="change" type="submit">Tạo nhóm</button>
                         </form>
                     @else
                         @if($group->user_created == \Illuminate\Support\Facades\Auth::user()->id)

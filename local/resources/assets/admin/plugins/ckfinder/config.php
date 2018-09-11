@@ -32,8 +32,8 @@ $config['authentication'] = function () {
 /*============================ License Key ============================================*/
 // https://docs.ckeditor.com/ckfinder/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = '';
-$config['licenseKey']  = '';
+$config['licenseName'] = 'xstartup.zikzak-co.vn';
+$config['licenseKey']  = 'CF2FWFSJSX8YDTMEJSDXACY9TLWPW';
 
 /*============================ CKFinder Internal Directory ============================*/
 // https://docs.ckeditor.com/ckfinder/ckfinder3-php/configuration.html#configuration_options_privateDir

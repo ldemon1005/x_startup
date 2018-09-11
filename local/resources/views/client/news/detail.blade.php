@@ -22,19 +22,23 @@
 @section('main')
     <div id="main">
         <section class="section-1">
-            <div class="main-image" style="background-image: url({{file_exists(storage_path('app/article/resized500-'.$article->avatar)) ? asset('local/storage/app/article/resized500-'.$article->avatar) : asset('local/resources/assets/images/default-image.png')}})"></div>
+            <div class="main-image" style="background-image: url({{file_exists(storage_path('app/article/'.$article->avatar)) ? asset('local/storage/app/article/'.$article->avatar) : asset('local/resources/assets/images/default-image.png')}})"></div>
         </section>
 
         <section class="su-section">
             <div class="container">
                 <div class="article">
-                    <h1>{{$article->title}}</h1>
+                    <h1 style="text-align: justify">{{$article->title}}</h1>
                     <hr>
                     <div>
-                        <span class="date">{{date('d/m/Y H:m',$article->created_at)}}</span>
+                        <span class="date">{{date('d/m/Y H:m',$article->release_time)}}</span>
                         <div class="float-right">
                             <div class="fb-like" data-href="{{route('detail_client',$article->slug.'---n-'.$article->id)}}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                         </div>
+                    </div>
+                    <hr>
+                    <div style="font-weight: bold;font-size: 14px;font-family: 'Arial';text-align: justify">
+                        {!! $article->caption !!}
                     </div>
                     <hr>
                     <div>
@@ -56,6 +60,10 @@
                                    style="background-image: url({{file_exists(storage_path('app/article/resized500-'.$related->avatar)) ? asset('local/storage/app/article/resized500-'.$related->avatar) : asset('local/resources/assets/images/default-image.png')}})"></a>
                                 <div class="content">
                                     <a href="" class="title">{{$related->title}}</a>
+                                    <br>
+                                    <a href="{{route('detail_client',$related->slug.'---n-'.$related->id)}}" class="title" style="font-weight: normal !important;position: absolute;text-transform : none !important;">
+                                        {!! cut_string($related->caption,120) !!}
+                                    </a>
                                     <div class="date">{{date('d-m-Y',$related->created_at)}}</div>
                                     <a href="{{route('detail_client',$related->slug.'---n-'.$related->id)}}" class="see-more">Xem thêm</a>
                                 </div>
