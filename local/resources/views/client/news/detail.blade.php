@@ -16,6 +16,21 @@
         .section-1{
             margin-top: var(--header-height);
         }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 @stop
 
@@ -74,4 +89,6 @@
             </div>
         </section>
     </div>
+@stop
+@section('js')
 @stop

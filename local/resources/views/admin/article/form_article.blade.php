@@ -168,18 +168,20 @@
             });
         });
 
-        // $(function () {
-        //     CKEDITOR.replace('editor2', {
-        //         height: '100px',
-        //         filebrowserBrowseUrl: 'plugins/ckfinder/ckfinder.html',
-        //         filebrowserImageBrowseUrl: 'plugins/ckfinder/ckfinder.html?type=Images',
-        //         filebrowserFlashBrowseUrl: 'plugins/ckfinder/ckfinder.html?type=Flash',
-        //         filebrowserUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        //         filebrowserImageUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        //         filebrowserFlashUploadUrl: 'plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
-        //     });
-        // });
-
+        CKEDITOR.on( 'instanceReady', function( evt ) {
+            evt.editor.dataProcessor.htmlFilter.addRules( {
+                elements: {
+                    img: function(el) {
+                        el.addClass('zb');
+                    },
+                    iframe: function( element ) {
+                        if ( !element.parent || !( element.parent.name == 'div' && element.parent.hasClass( 'video-wrapper' ) ) ) {
+                            element.wrapWith( new CKEDITOR.htmlParser.element( 'div', { 'class': 'video-wrapper' } ) );
+                        }
+                    }
+                }
+            });
+        });
     </script>
 
     <script>

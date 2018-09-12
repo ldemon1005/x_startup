@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/fonts.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/base.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/css') }}/jquery.zbox.css">
 	@yield('css')
 
 <!-- Facebook Pixel Code -->
@@ -88,6 +89,16 @@
 <script type="text/javascript" src="{{ asset('local/resources/assets/guest/js') }}/imageloaded.js"></script>
 <script type="text/javascript" src="{{ asset('local/resources/assets/js/jquery.validate.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('local/resources/assets/guest/js') }}/home.js"></script>
+<script type="text/javascript" src="{{ asset('local/resources/assets/js') }}/jquery.zbox.js"></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    jQuery(document).ready(function(){
+        jQuery(".zb").zbox( { margin:40 } );
+    });
+    //]]>
+</script>
 
 
     <script>
