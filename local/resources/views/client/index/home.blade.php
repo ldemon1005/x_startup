@@ -98,13 +98,12 @@
                             <!-- Vòng 1 -->
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                  aria-labelledby="v-pills-home-tab">
-                                <div class="content-text"><h4>Ý TƯỞNG (27/08/2018 – 10/10/2018)</h4>
+                                <div class="content-text"><h4>Ý TƯỞNG (10/09/2018 – 20/10/2018)</h4>
 
                                     <div class="content-text">
                                         <p><b>Lịch trình Vòng 1:</b>
                                             <br>
-                                            Thời gian: Thí sinh chính thức nộp hồ sơ từ ngày <b>10/09/2018 –
-                                                05/10/2018</b>
+                                            Thời gian: Thí sinh chính thức nộp hồ sơ từ ngày <b>10/09/2018 – 20/10/2018</b>
                                         </p>
                                         <b>Hình thức:</b>
                                         <ul>
@@ -143,7 +142,7 @@
                             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                  aria-labelledby="v-pills-profile-tab">
                                 <div class="content-text">
-                                    <h4>LAN TỎA (11/10/2018 – 29/10/2018)</h4>
+                                    <h4>LAN TỎA (25/10/2018 – 31/10/2018)</h4>
                                     <p><b>Lịch trình Vòng 2:</b></p>
                                     <b>Hình thức:</b>
                                     <ul>
@@ -206,10 +205,10 @@
                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                  aria-labelledby="v-pills-messages-tab">
                                 <div class="content-text">
-                                    <h4>BÙNG NỔ (01/11/2018 – 15/11/2018)</h4>
+                                    <h4>BÙNG NỔ (12/11/2018 – 15/11/2018)</h4>
                                     <p><b>Lịch trình Vòng 3</b></p>
                                     <ul>
-                                        <li>Vòng 3 bắt đầu từ 01/11/2018</li>
+                                        <li>Vòng 3 bắt đầu từ 02/11/2018</li>
                                         <li>12/11/2018 Các đội khu vực miền Bắc trình bày, phản biện dự án kinh doanh
                                             của mình trước BGK tại Tầng 5, Tòa nhà Diamond Flower, số 1 Hoàng Đạo
                                             Thúy, Thanh Xuân, Hà Nội.
@@ -218,7 +217,7 @@
                                             của mình trước BGK tại tại Tòa nhà Cphone, số 456 Xô Viết Nghệ Tĩnh,
                                             Phường 25, Quận Bình Thạnh, TP. HCM.
                                         </li>
-                                        <li>17/11/2018 Thông báo kết quả cho 06 đội vào Chung Kết.</li>
+                                        <li>18/11/2018 Thông báo kết quả cho 06 đội vào Chung Kết.</li>
                                     </ul>
 
                                     Các đội có nhiệm vụ chuẩn bị cho vòng 3:
@@ -247,7 +246,7 @@
                             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                                  aria-labelledby="v-pills-settings-tab">
                                 <div class="content-text">
-                                    <h4>NHÂN TỐ X (18/11/2018 – 24/12/2018)</h4>
+                                    <h4>NHÂN TỐ X (24/11/2018 – 24/12/2018)</h4>
 
                                     <p><b>Lịch trình Vòng 4:</b></p>
                                     <ul>
