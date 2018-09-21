@@ -1,8 +1,14 @@
 @extends('client.master')
 
+@section('fb_title','XStartup')
+
+@section('fb_img')
+{{ asset('local/resources/assets/guest/image/logo.jpg') }}@stop
+
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('local/resources/assets/guest/css') }}/home.css">
 @stop
+
 @section('js')
     <script>
         $('html, body').animate({
@@ -25,7 +31,7 @@
                     <div class="xblue"></div>
                     <div class="xred"></div>
                     @if( Auth::guest() )
-                    <a class="home-signup-btn" href="{{route('register_client')}}">Đăng ký tham gia cuộc thi</a>
+                        <a class="home-signup-btn" href="{{route('register_client')}}">Đăng ký tham gia cuộc thi</a>
                     @else
                         <a class="home-signup-btn" href="{{route('group')}}">Nộp bài dự thi</a>
                     @endif
@@ -103,7 +109,8 @@
                                     <div class="content-text">
                                         <p><b>Lịch trình Vòng 1:</b>
                                             <br>
-                                            Thời gian: Thí sinh chính thức nộp hồ sơ từ ngày <b>10/09/2018 – 20/10/2018</b>
+                                            Thời gian: Thí sinh chính thức nộp hồ sơ từ ngày <b>10/09/2018 –
+                                                20/10/2018</b>
                                         </p>
                                         <b>Hình thức:</b>
                                         <ul>
@@ -440,7 +447,7 @@
                 <br>
                 <div class="content-text">
                     <h5>Tổng giá trị giải thưởng dành cho 14 đội dừng chân tại vòng Bán kết là 10.000.000 VNĐ
-                    bao gồm:</h5>
+                        bao gồm:</h5>
                     <ul>
                         <li>01 tháng sử dụng dịch vụ chỗ ngồi miễn phí tại Zikzak co-working Space</li>
                         <li>Quà tặng đến từ CGroup + kỷ niệm chương + giấy chứng nhận</li>
@@ -504,6 +511,5 @@
                 </div>
             </div>
         </section>
-
     </div>
 @stop
